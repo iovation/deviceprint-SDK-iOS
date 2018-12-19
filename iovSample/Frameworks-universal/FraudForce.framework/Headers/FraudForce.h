@@ -20,7 +20,7 @@
  * transmitted to your servers to be used in a reputation check (for example a
  * @p CheckTransactionDetails call).
  *
- * @version 5.0.0
+ * @version 5.0.1
  * @copyright 2010-2017 iovation, Inc. All rights reserved.
  *
  * iovation hereby grants to Client a nonexclusive, limited, non-transferable,

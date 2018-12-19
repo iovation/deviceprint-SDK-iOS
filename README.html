@@ -227,7 +227,7 @@ margin-top:6px;
 on an end-user’s mobile device. The FraudForce SDK inspects the device
 and generates a blackbox that contains all available device information. This
 blackbox must then be sent to your servers to be used in a transaction risk
-check via the CheckTransactionDetails API.</p>
+check via the <code>CheckTransactionDetails</code> API.</p>
 
 <figure>
 <img src="img/mobile_workflow.png" alt="Mobile SDK workflow" title="iovation mobile SDK workflow" />
@@ -259,7 +259,7 @@ mix native code with content that runs inside web view.</p>
 </tr>
 <tr>
 	<td style="text-align:left;">Version</td>
-	<td style="text-align:left;">5.0.0</td>
+	<td style="text-align:left;">5.0.1</td>
 </tr>
 <tr>
 	<td style="text-align:left;">Required OS Version</td>
@@ -786,6 +786,22 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 
 <h2 id="changes">Changes</h2>
 
+<h3 id="v5.0.1">v5.0.1</h3>
+
+<ul>
+<li>Minor recognition improvements.
+
+<ul>
+<li>Recognized devices previously returned (via <code>CheckTransactionDetails</code>) the following attributes
+
+<ul>
+<li><code>mobile.app.procName</code></li>
+<li><code>mobile.system.voipAllowed</code></li>
+</ul></li>
+<li>These values are no longer returned. In place of <code>mobile.app.procName</code>, use <code>mobile.app.exeName</code> which returns the same value.</li>
+</ul></li>
+</ul>
+
 <h3 id="v5.0.0">v5.0.0</h3>
 
 <ul>
@@ -877,7 +893,7 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 
 <h2 id="copyright">Copyright</h2>
 
-<p>Copyright (c) 2010&#8211;2017 iovation, Inc. All rights reserved.</p>
+<p>Copyright (c) 2010&#8211;2018 iovation, Inc. All rights reserved.</p>
 
 </body>
 </html>
