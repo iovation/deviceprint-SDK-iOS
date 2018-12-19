@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>iovation FraudForce SDK for iOS</title>
+    <style>/*STYLES FOR STANDARD HTML TAGS*/
+
+body {margin-left:16px;
+margin-right:12px;
+margin-top:12px;
+margin-bottom:12px;
+font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+vertical-align:top;
+color:#000;
+background: #fff;
+}
+
+h1 {font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+font-weight:normal;
+font-size:24pt;
+color:#165E53;
+vertical-align:top;
+margin-bottom:14px;
+margin-top:24px;
+letter-spacing:normal;
+}
+
+h2{font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+font-weight:700;
+font-size:18pt;
+color:#165E53;
+vertical-align:top;
+margin-bottom:14px;
+margin-top:24px;
+letter-spacing:normal;
+}
+
+h3{font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+font-weight:normal;
+font-size:15pt;
+margin-bottom:12px;
+margin-top:22px;
+color:#219181;
+letter-spacing:normal;
+}
+
+h4{font-size:12pt;
+font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+color:#333;
+margin-bottom:8px;
+margin-top:20px;
+font-weight:bold;
+letter-spacing:normal;
+}
+
+h5{font-size:12pt;
+font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+color:#333;
+margin-bottom:8px;
+margin-top:16px;
+font-weight:bold;
+font-style:italic;
+}
+
+p{
+	font-size: 14px;
+	color: #000;
+	font-family: proxima nova, proxima, helvetica, arial, sans-serif;
+	font-weight: normal;
+	margin-top:4px;
+	margin-bottom:4px;
+	line-height:15px;
+}
+
+ul{margin-left:0px;
+font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+font-weight:normal;
+font-size:14px;
+margin-top:8px;
+margin-bottom:6px;
+}
+
+
+}
+
+
+ol{margin-left:0px;
+font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+font-weight:normal;
+font-size:14px;
+margin-top:10px;
+margin-bottom:6px;
+}
+
+li{margin-top:8px;
+margin-bottom:6px;
+	line-height:15px;
+letter-spacing:normal;
+}
+
+a.link{color:#197F00;
+font-weight:300;
+}
+
+a.hover{color:#999;
+font-weight:300;
+}
+
+a.visited{color:#063;
+font-weight:300;
+}
+
+a {color:#197F00;
+font-weight:300;
+}
+
+a.prev{color:#063;
+}
+
+a.next{color:#053;
+}
+
+a:hover {color:#999}
+a:active {color:#999}
+a.active {color:#999}
+img{margin-bottom:6px;
+}
+
+table{border-spacing:0px;
+	border:1px solid #9BB0A3;
+	margin-top:12px;
+	margin-bottom:12px;
+	border-width:thin;}
+
+tr{font-family:proxima, helvetica, arial, sans-serif;}
+
+th{background-color:#79806C;
+font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+padding-left:2px;
+padding-right:2px;
+padding-top:2px;
+padding-bottom:2px;
+line-height: 15pt;
+    font-style:bold;
+	text-align:left;
+valign:top;
+color:white;
+	border:1px solid #9BB0A3;}
+
+th p {
+color:white;
+}
+
+td{text-align:left;
+	padding-left:2px;
+padding-right:1px;
+padding-top:2px;
+vertical-align:top;
+padding-bottom:1px;
+border:1px solid #9BB0A3;
+border-width:thin;
+letter-spacing:normal;
+	line-height:15px;
+font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+}
+
+td p{
+	padding-left:0px;
+padding-right:0px;
+padding-top:0px;
+vertical-align:top;
+padding-bottom:0px;
+letter-spacing:normal;
+	line-height:15px;
+font-family:proxima nova, proxima, helvetica, arial, sans-serif;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+	
+td ul{margin-left:12px;
+padding-left:4px;
+padding-right:4px;
+padding-top:0px;
+padding-bottom:2px;
+margin-bottom:2px;
+margin-top:0px;
+letter-spacing:normal;
+	line-height:15px;
+}
+
+td ul li {
+margin-top:0px;
+}
+
+ol ol {
+	list-style-type:lower-alpha;
+}
+
+li p {
+	margin-top:8px;
+}
+
+li table tbody tr td p {
+	margin-top:2px;
+}
+
+/* HTML Styling: Ensures links under p tags have underlines */
+
+p a {
+text-decoration:underline;
+}
+
+
+
+/* General HTML: Styles images */
+
+img {
+margin-top:6px;
+}
+</style>
+</head>
+<body>
+
+<h1 id="fraudforcesdkforios">FraudForce SDK for iOS</h1>
+
+<p>iovation identifies devices through information collected by an SDK run
+on an end-user’s mobile device. The FraudForce SDK inspects the device
+and generates a blackbox that contains all available device information. This
+blackbox must then be sent to your servers to be used in a transaction risk
+check via the CheckTransactionDetails API.</p>
+
+<figure>
+<img src="img/mobile_workflow.png" alt="Mobile SDK workflow" title="iovation mobile SDK workflow" />
+<figcaption>Mobile SDK workflow</figcaption>
+</figure>
+
+<p>The FraudForce SDK integrates with native and hybrid apps. Hybrid apps
+mix native code with content that runs inside web view.</p>
+
+<h2 id="integrationfilesandrequirements">Integration Files and Requirements</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">File</td>
+	<td style="text-align:left;"><code>FraudForce.framework</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Version</td>
+	<td style="text-align:left;">5.0.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Required OS Version</td>
+	<td style="text-align:left;">iOS 9.0 and higher</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Supported Devices</td>
+	<td style="text-align:left;">iPhone 4S &amp; up, iPod Touch 5th Gen &amp; up, iPad 2 &amp; up</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Required Frameworks</td>
+	<td style="text-align:left;">CoreTelephony, Security, SystemConfiguration</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Optional Frameworks</td>
+	<td style="text-align:left;">AdSupport, CoreLocation</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="installation">Installation</h2>
+
+<ol>
+<li><p>Download and unzip the SDK from <a href="https://github.com/iovation/deviceprint-SDK-iOS">Github</a>.</p></li>
+<li>Bring the universal framework into your project repository.
+
+<ul>
+<li>Create a new directory named &#8220;Frameworks-universal&#8221;. We recommend this directory be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
+<li>Copy <code>FraudForce.framework</code> from the SDK distribution into your &#8220;Frameworks-universal&#8221; directory.</li>
+</ul></li>
+<li>Prepare the staging area for build-specific frameworks.
+
+<ul>
+<li>Create a new directory, alongside the universal directory, named &#8220;Frameworks-build&#8221;.</li>
+<li>Inside of Frameworks-build, create a new directory named &#8220;FraudForce.framework&#8221;.
+
+<ul>
+<li>This is not intended to (initially) be a valid framework, rather just an empty directory that has the <code>.framework</code> extension.</li>
+</ul></li>
+</ul></li>
+<li><p>In the Finder, drag <code>FraudForce.framework</code> <strong>from Frameworks-build</strong> into the &#8220;Embedded Binaries&#8221; section of the &#8220;General&#8221; pane of the Xcode target editor.</p>
+
+<p><img src="img/drag-embed-framework.png" alt="Drag in FraudForce.framework" title="Drag FraudForce.framework into your application target" /></p>
+
+<ul>
+<li>This should also result in the framework being added to the &#8220;Linked Frameworks and Libraries&#8221; section.</li>
+<li>Additionally, this should result in <code>FraudForce.framework</code> appearing in similarly named sections in the &#8220;Build Phases&#8221; pane.</li>
+</ul></li>
+<li>Optionally add these frameworks (i.e. &#8220;Linked Frameworks and Libraries&#8221;) if your app makes use of them (and Auto Linking is off):
+
+<ul>
+<li><code>AdSupport.framework</code> — If your app displays ads. Do not include if your
+app does not use the ad framework, because the App Store will reject
+apps that include the framework but don&#8217;t use it.</li>
+<li><code>CoreLocation.framework</code> — If your app uses location monitoring. Do not
+include this framework unless your application requests geolocation
+permission from the user.</li>
+</ul></li>
+<li>Add a pre-compile build phase to your application target
+
+<ul>
+<li><p>Copy the shell script <code>slim-build-frameworks.sh</code> from the SDK distribution (<code>FraudForce SDK/build scripts</code>) into your project repository.</p></li>
+<li>Select the &#8220;+&#8221; button in the &#8220;Build Phases&#8221; pane to create a &#8220;New Run Script Phase&#8221;.
+
+<ul>
+<li>The new phase is initially named &#8220;Run Script&#8221; and is positioned as the bottom-most (final) build phase.</li>
+<li>The suggested name for this phase is &#8220;Slim Frameworks For Build&#8221; (though the name does not affect the function of this phase).</li>
+</ul></li>
+<li>Reposition the new phase to precede the &#8220;Compile Sources&#8221; phase.
+
+<ul>
+<li>Under normal conditions, this will result in the phase being located below &#8220;Target Dependencies&#8221;.</li>
+</ul>
+
+<figure>
+<img src="img/run-script-phase.png" alt="Setup build script" title="Position and configure build script" />
+<figcaption>Setup build script</figcaption>
+</figure></li>
+<li>Configure and confirm the new build phase
+
+<ul>
+<li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
+<li>In the text-input area, enter the project-relative path to the iovation-provided script <code>slim-build-frameworks.sh</code>.</li>
+</ul></li>
+<li>Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in the above steps).
+
+<ul>
+<li>Specifically, <code>INPUT_FRAMEWORKS_DIR</code> (Frameworks-universal) and <code>OUTPUT_FRAMEWORKS_DIR</code> (Frameworks-build) variables must be set to the absolute paths for the appropriate directories.</li>
+<li>As provided, the script expects both directories to be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
+</ul></li>
+</ul></li>
+<li>If your app has enabled the &#8220;Keychain Sharing&#8221; capability:
+
+<ul>
+<li>Add &#8220;com.iovation.stm&#8221; to its list of Keychain Groups</li>
+<li>Add the key <code>AppIdentifierPrefix</code> with the string value
+<code>$(AppIdentifierPrefix)</code> to your app&#8217;s <code>Info.plist</code>.</li>
+</ul></li>
+</ol>
+
+<h2 id="submissionpreparation">Submission Preparation</h2>
+
+<p>The FraudForce framework provides full support for Apple&#8217;s bitcode technology. If your iOS app includes
+bitcode then additional configuration of your Xcode project is required to enable symbolication of FraudForce
+stack frames in the crash logs of your app. The necessary symbolic information must be included in the
+Xcode archive (i.e. <code>.xcarchive</code> bundle) of your application prior to its submission to the App Store.</p>
+
+<ol>
+<li>Bring the framework <code>.bcsymbolmap</code> files into your project repository.
+
+<ul>
+<li>Create a new directory named &#8220;Frameworks-bcsymbolmap&#8221;. We recommend this directory be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
+<li>Copy the <code>.bcsymbolmap</code> files from the SDK distribution (<code>FraudForce SDK/BCSymbolMaps</code>) into your &#8220;Frameworks-bcsymbolmap&#8221; directory.
+
+<ul>
+<li>There should be three such files (representing armv7, armv7s, and arm64 architectures).</li>
+</ul></li>
+</ul></li>
+<li>Add a script to the &#8220;Archive&#8221; scheme of your application target.
+
+<ul>
+<li><p>Copy the shell script <code>add-framework-symbols-to-app-archive.sh</code> from the SDK distribution (<code>FraudForce SDK/build scripts</code>) into your project repository.</p></li>
+<li><p>From the target popup button in the Xcode toolbar, ensure your application target is selected and chose &#8220;Edit Scheme…&#8221; from the popup menu.</p>
+
+<p><img src="img/target-popup-menu.png" alt="Open scheme editor" title="Use the target popup to edit schemes" /></p></li>
+<li>In the scheme editor, select the disclosure triangle for the &#8220;Archive&#8221; item and then select &#8220;Post-actions&#8221;.
+
+<ul>
+<li>Select the &#8220;+&#8221; button in order to create a &#8220;New Run Script Action&#8221;.</li>
+<li>The new action is initially named &#8220;Run Script&#8221;. The suggested name for this action is &#8220;Archive Framework Symbols&#8221; (though the name does not affect the function of this action).</li>
+</ul>
+
+<figure>
+<img src="img/scheme-editor.png" alt="Setup archive script" title="Configure the script action" />
+<figcaption>Setup archive script</figcaption>
+</figure></li>
+<li>Configure and confirm the new script action.
+
+<ul>
+<li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
+<li>The &#8220;Provide build settings from&#8221; popup button should be set to the application target.</li>
+<li>In the text-input area, enter the absolute path to the iovation-provided script <code>add-framework-symbols-to-app-archive.sh</code>.
+
+<ul>
+<li>For example, if the script is located in a <code>bin</code> directory that is alongside the app&#8217;s <code>.xcodeproj</code> file then it should read, <code>&quot;${PROJECT_DIR}/bin/add-framework-symbols-to-app-archive.sh&quot;</code></li>
+<li>The quotes are an important concern, since this allows for proper execution when path elements include spaces.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in both the above steps and in the &#8220;Installation&#8221; section).
+
+<ul>
+<li>Specifically, <code>BUILD_FRAMEWORKS_DIR</code> (Frameworks-build) and <code>INPUT_BCSYMBOLMAP_DIR</code> (Frameworks-bcsymbolmap) variables must be set to the absolute paths for the appropriate directories.</li>
+<li>As provided, the script expects both directories to be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
+</ul></li>
+<li>(optional) Customize the logging of script output as you desire.
+
+<ul>
+<li>By default, Xcode does not handle or display output from scheme-based scripts, thus, the script redirects <code>stdout</code> and <code>stderr</code> to a (unique) log file in <code>/var/tmp</code>.</li>
+<li>Change the output redirection or ignore all script output by removing redirection (which is declared near the start of the script).</li>
+</ul></li>
+</ol>
+
+<h2 id="sampleprojects">Sample Projects</h2>
+
+<p>This download includes two sample Xcode projects that demonstrate the integration of the FraudForce
+SDK for iOS. These projects require at least Xcode 8 and iOS 9.0.</p>
+
+<ul>
+<li><p>The <code>iovSample/iovSampleSwift.Xcodeproj</code> project uses Swift to demonstrate
+two integration techniques: UIKit and WebKit. Each is implemented in its own
+view controller, and may be tested in a tabbed interface on a simulator or device.</p></li>
+<li><p>The <code>iovSample/iovSample.Xcodeproj</code> project uses Objective-C to demonstrate
+three integration techniques: UIKit, UIWebView, and WebKit. Each is implemented
+in its own view controller, and may be tested in a tabbed interface on a
+simulator or device.</p></li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>Use the <code>FraudForce</code> API to enable the FraudForce SDK to start collecting blackbox
+data asynchronously, and to generate a new blackbox to submit to your back-end service.</p>
+
+<ol>
+<li><p>Import it into your app delegate and call <code>+start</code> when the application
+becomes active:</p>
+
+<pre><code>[FraudForce start];
+</code></pre>
+
+<p>This method starts a low-priority thread that silently collects data from
+the device with minimal impact on your app.</p></li>
+<li><p>Include your &#8220;Subscriber Key&#8221; in your application&#8217;s <code>Info.plist</code>, using the key <code>IOVSubKey</code>.</p>
+
+<pre><code>&lt;key&gt;IOVSubKey&lt;/key&gt;
+&lt;string&gt;6S7EJX4BM7HuKUmriUOuQvXta9mBUs4tAVtGToP6tUY=&lt;/string&gt;
+</code></pre>
+
+<p>This is strongly recommended for all integrations, and it is required for network connections.</p></li>
+<li><p>(optional) Provide a <code>FraudForceDelegate</code> object, which is required for network connections.</p>
+
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{
+    [FraudForce delegation:self];
+</code></pre>
+
+<p>…</p>
+
+<pre><code>- (BOOL)shouldEnableNetworkCalls
+{
+    return YES;
+}
+</code></pre></li>
+<li><p>To generate a new blackbox, call <code>+blackbox</code>:</p>
+
+<pre><code>NSString *blackbox = [FraudForce blackbox];
+</code></pre></li>
+<li><p>Submit the blackbox to your service. The service should then send
+it to iovation to evaluate the transaction. See the iovSample Xcode
+projects included with the download for a sample implementation.</p></li>
+</ol>
+
+<h3 id="newfeatures">New Features!</h3>
+
+<p>Versions 5.0.0 and above include the ability to make a network call to iovation&#8217;s service. This
+enables the FraudForce SDK to collect additional network information. By default this functionality
+is turned off and will need to be enabled via a <code>FraudForceDelegate</code> object. Usage of this
+feature requires a subscriber key be provided. Please contact your iovation client representative to
+acquire a subscriber key.</p>
+
+<h3 id="important">Important!</h3>
+
+<p>The blackbox returned from <code>+blackbox</code> should never be empty. An empty blackbox
+indicates there is a problem with the integration of the SDK or that the protection
+offered by the system may have been compromised.</p>
+
+<h2 id="asynchronousprocessingintegration">Asynchronous Processing Integration</h2>
+
+<p>Each of the native and hybrid integration methods described below benefit
+from starting the SDK asynchronous processing whenever your application
+becomes active. To do so, import <code>FraudForce</code> and call <code>+start</code> in the
+<code>-applicationDidBecomeActive:</code> method of your app delegate:</p>
+
+<pre><code>#import &quot;SampleAppDelegate.h&quot;
+@import FraudForce;
+
+-applicationDidBecomeActive:(UIApplication *)application
+{
+    [FraudForce start];
+}
+</code></pre>
+
+<p>The <code>+start</code> method automatically registers a notification handler to be
+called when the application goes into the background. This handler asks the
+OS for time to finish any tasks it has running.</p>
+
+<h2 id="integratingintonativeapps">Integrating Into Native Apps</h2>
+
+<p>To integrate into a native app using UIKit:</p>
+
+<ol>
+<li><p>Start the asynchronous data collection as described in the
+<a href="#asynchronousprocessingintegration">Asynchronous Processing Integration</a> section.</p></li>
+<li><p>Import <code>FraudForce</code> and call <code>+blackbox</code> wherever you need a blackbox:</p>
+
+<pre><code>#import &quot;SampleViewController.h&quot;
+@import FraudForce;
+
+@implementation SampleViewController
+@property (strong, nonatomic) UILabel *blackbox;
+
+// Button press updates text field with blackbox value
+- (IBAction)changeMessage:(id)sender
+{
+    self.blackbox.text = [FraudForce blackbox];
+}
+
+@end
+</code></pre></li>
+</ol>
+
+<p>A more extensive example, including submitting a blackbox in an HTTP request,
+may be found in the <code>SampleUIKitViewController</code> class for both Swift (iovSampleSwift) and
+Objective-C (iovSample) in the sample Xcode projects included in the FraudForce SDK download.</p>
+
+<h2 id="uiwebviewintegration">UIWebView Integration</h2>
+
+<p>If you use <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/index.html" title="UIWebView Class Reference">UIWebView</a> to run web content inside your hybrid app, you can
+integrate iovation in two ways, both of which use UIWebViewDelegate. Choose
+which approach to follow based on your use case:</p>
+
+<ul>
+<li><p>Scenario 1: Building and sending blackboxes when HTML pages load. This is
+the simplest approach but only applies when you can link blackbox
+submission to the loading of a specific page.</p></li>
+<li><p>Scenario 2: Building and sending blackboxes when users submit transactions.</p></li>
+</ul>
+
+<h3 id="scenario1:generatingblackboxeswhenhtmlpagesload">Scenario 1: Generating Blackboxes When HTML Pages Load</h3>
+
+<p>Follow these steps to generate a blackbox every time an HTML page loads in
+the web view:</p>
+
+<ol>
+<li><p>Start the asynchronous data collection as described in the
+<a href="#asynchronousprocessingintegration">Asynchronous Processing Integration</a> section.</p></li>
+<li><p>On the HTML pages from which you will submit transactions, add a hidden
+form field that will store the blackbox.</p></li>
+<li><p>In your <code>UIWebViewDelegate</code>&#8217;s <code>-webViewDidFinishLoad:</code> delegate method,
+call <code>-stringByEvaluatingJavaScriptFromString:</code> on the web view to inject
+the JavaScript that generates the blackbox and writes it to the hidden
+form field.</p></li>
+</ol>
+
+<p>See the following complete example:</p>
+
+<pre><code>#import &quot;SampleWebViewController.h&quot;
+@import FraudForce;
+
+// Make it a UIWebViewDelegate.
+@interface SampleWebViewController &lt;UIWebViewDelegate&gt;
+@end
+
+@implementation SampleWebViewController
+
+- (void)webViewDidFinishLoad:(UIWebView *)wv {
+    NSString *bb = [FraudForce blackbox];
+    [wv stringByEvaluatingJavaScriptFromString:[NSString
+        stringWithFormat:@&quot;document.getElementById('bbox').value = '%@'&quot;,  bb
+    ]];
+}
+
+@end
+</code></pre>
+
+<h3 id="scenario2:generatingblackboxeswhenuserssubmittransactions">Scenario 2: Generating Blackboxes When Users Submit Transactions</h3>
+
+<p>If the HTML loaded into the UIWebView only sometimes needs a blackbox, such
+as when submitting a transaction, inject a JavaScript function into each page
+that builds and submits the blackbox collected by the SDK. To do so:</p>
+
+<ol>
+<li><p>Start the asynchronous data collection as described in the
+<a href="#asynchronousprocessingintegration">Asynchronous Processing Integration</a> section.</p></li>
+<li><p>On the HTML pages from which you will submit transactions, add a hidden
+form field that will store the blackbox.</p></li>
+<li><p>In your <code>UIWebViewDelegate</code>&#8217;s <code>-webViewDidFinishLoad:</code> delegate method,
+call <code>-stringByEvaluatingJavaScriptFromString:</code> on the web view to inject
+a JavaScript function into the page:</p>
+
+<pre><code>[wv stringByEvaluatingJavaScriptFromString:@&quot; \
+    var Blackbox = { \
+        injectInto: function(id) { \
+            var iframe = document.createElement('IFRAME'); \
+            iframe.setAttribute('src', 'iov://blackbox/fill#' + id); \
+            document.documentElement.appendChild(iframe); \
+            iframe.parentNode.removeChild(iframe); \
+            iframe = null; \
+        } \
+    } \
+ &quot;];
+</code></pre>
+
+<p>Calling this function from the HTML page triggers an out-of-band request
+with a URL where:</p>
+
+<ul>
+<li>The scheme is <code>iov</code></li>
+<li>The URL fragment is the name of the hidden form field on the HTML page.</li>
+</ul></li>
+<li><p>Next, add code to the
+<code>-webView:shouldStartLoadWithRequest:navigationType:</code> delegate method to
+capture requests to the custom <code>iov://</code> URL, generate the blackbox, and
+populate the hidden form field. Add the following method to the
+<code>UIWebViewDelegate</code>:</p>
+
+<pre><code>- (BOOL)webView:(UIWebView *)wv
+shouldStartLoadWithRequest:(NSURLRequest *)request
+            navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSURL *url = request.URL;
+    // Return true if it is not an iov:// URL.
+    if (![url.scheme isEqualToString:@&quot;iov&quot;]) return YES;
+
+    // Get the fragment identifying the hidden field to populate or return.
+    NSString *frag = url.fragment;
+    if (frag == nil) return YES;
+
+    // Inject the blackbox into the hidden field.
+    NSString *bb = [FraudForce blackbox];
+    [wv stringByEvaluatingJavaScriptFromString:[NSString
+        stringWithFormat:@&quot;document.getElementById('%@').value = '%@'&quot;, frag, bb
+    ]];
+
+    // Return false to prevent a request and reload.
+    return NO;
+}
+</code></pre>
+
+<p>Consider adding code to check the domain and other attributes of the
+requesting document to ensure it is allowed to have a blackbox.</p></li>
+<li><p>Then, anywhere on the page where you need a blackbox, such as on form
+submission, have the page call the injected function with the ID of the
+hidden field to populate with the blackbox:</p>
+
+<pre><code>&lt;form name=&quot;txn&quot; onsubmit=&quot;try { Blackbox.injectInto('bbox'); } catch(e) {} return true;&quot;&gt;
+    &lt;input type=&quot;hidden&quot; id=&quot;bbox&quot; name=&quot;bbox&quot; /&gt;
+    &lt;!-- Other fields as required ---&gt;
+    &lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><strong>NOTE:</strong> The <code>try</code>/<code>catch</code> statement ignores errors if none of the
+<code>Blackbox.injectInto</code> object hierarchy exists. This is essential if
+the HTML will be used outside an of your app.</p></li>
+</ol>
+
+<p>Find a complete example in the <code>SampleUIWebViewController</code> class (Objective-C)
+in the iovSample Xcode project included in the FraudForce SDK download.</p>
+
+<h2 id="webkitintegration">WebKit Integration</h2>
+
+<p>For a hybrid application using <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Reference/WebKit/ObjC_classic/index.html" title="WebKit Framework Reference">WebKit</a>, create a JavaScript message handler
+and add it to the context of the web view.</p>
+
+<ol>
+<li><p>Start the asynchronous data collection as described in the
+<a href="#asynchronousprocessingintegration">Asynchronous Processing Integration</a> section.</p></li>
+<li><p>Build a view controller that implements the WKScriptMessageHandler
+protocol. Here’s an example in Swift:</p>
+
+<pre><code>import UIKit
+import WebKit
+import FraudForce
+
+class SampleWebKitViewController: UIViewController, WKScriptMessageHandler
+{
+    weak var webView: WKWebView?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Set up Blackbox.injectInto() via a user script.
+        var js = &quot;var Blackbox = { injectInto: function (id) {\n&quot;
+               + &quot;    window.webkit.messageHandlers.bb.postMessage(id)\n&quot;
+               + &quot; } }\n&quot;
+        let userScript = WKUserScript(
+            source: js, 
+            injectionTime: .atDocumentEnd, 
+            forMainFrameOnly: true)
+
+        // Set up bb notification.
+        let userContentController = WKUserContentController()
+        userContentController.addUserScript(userScript)
+        userContentController.add(self, name: &quot;bb&quot;)
+        let configuration = WKWebViewConfiguration()
+        configuration.userContentController = userContentController
+
+        // Create the web view.
+        let webKitView = WKWebView(frame: self.view.bounds, configuration: configuration)
+        self.view.addSubview(webKitView)
+        webKitView.translatesAutoresizingMaskIntoConstraints = true
+        webKitView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        webView = webKitView
+    }
+}
+</code></pre>
+
+<p>In this example, we added a script handler called &#8220;bb&#8221; and appointed the
+view controller itself as the delegate. The <code>Blackbox.injectInto()</code>
+function calls into this handler.</p></li>
+<li><p>To hook up this script handler, add the following method to handle
+notifications from JavaScript running in the web view. This example
+assumes that an HTML ID for a hidden form field will be passed in the
+message body:</p>
+
+<pre><code>func userContentController(
+    _ userContentController: WKUserContentController,
+    didReceive message: WKScriptMessage)
+{
+    // Consider checking properties of message.webView.URL, such as the host
+    // property, to ensure that it's a request from a known source.
+    guard message.name == &quot;bb&quot; else {
+        return
+    }
+
+    // Inject the blackbox.
+    message.webView?.evaluateJavaScript(
+        &quot;document.getElementById('\(message.body)').value = '\(FraudForce.blackbox())'&quot;, 
+        completionHandler: nil)
+}
+</code></pre>
+
+<p>The last statement simply injects the blackbox from a call to
+<code>FraudForce.blackbox()</code> into the hidden form field. Consider adding code
+to check the domain and other attributes of the requesting web page to
+ensure it is allowed to have a blackbox.</p></li>
+<li><p>Then, invoke <code>FraudForce.injectinfo()</code> function any place in the HTML
+that you need a blackbox:</p>
+
+<pre><code>&lt;form name=&quot;txn&quot; onsubmit=&quot;try { FraudForce.injectInto('bbox'); } catch(e) {} return true;&quot;&gt;
+    &lt;input type=&quot;hidden&quot; id=&quot;bbox&quot; name=&quot;bbox&quot; /&gt;
+    &lt;!-- Other fields as required ---&gt;
+    &lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><strong>NOTE:</strong> The <code>try</code>/<code>catch</code> statement ignores errors if none of the
+<code>FraudForce.injectInto</code> object hierarchy exists. This is essential if
+the HTML will be used outside of your app.</p></li>
+<li><p>If you have full control over the HTML that will be loaded into
+WKWebView, including the name of a hidden field into which to inject a
+blackbox, append the code to inject the blackbox to the user script.
+Change the JavaScript variable declaration above to:</p>
+
+<pre><code>var js = &quot;var Blackbox = { injectInto: function (id) {\n&quot;
+       + &quot;    window.webkit.messageHandlers.bb.postMessage(id)\n&quot;
+       + &quot; } }\n&quot;
+       + &quot;document.getElementById('bbox').value = '\(FraudForce.blackbox())'\n&quot;
+</code></pre></li>
+</ol>
+
+<p>Find a complete example in the <code>SampleWKWebViewViewController</code> class for Swift (iovSampleSwift) and <code>SampleWebKitViewController</code>
+class for Objective-C (iovSample) in the sample Xcode projects included in the FraudForce SDK download.</p>
+
+<h2 id="changes">Changes</h2>
+
+<h3 id="v5.0.0">v5.0.0</h3>
+
+<ul>
+<li>New SDK distribution format, <code>FraudForce.framework</code> supersedes the <code>iovation.framework</code>.
+ The new framework employs a dynamic library (in place of the historical &#8220;static archive&#8221; approach),
+ which is the modern, recommended (iOS 8 and above), and more stable approach for library distribution.</li>
+<li>New ability to collect additional network information. See new &#8220;New Features!&#8221; in the &#8220;Usage&#8221; section.</li>
+<li>New blackbox compression on iOS (up to 40% reduction in blackbox size).</li>
+<li>Improved Swift compatibility.</li>
+<li>New Swift sample project <code>iovSample/iovSampleSwift.Xcodeproj</code>.</li>
+<li>Renamed <code>DevicePrint</code> class to <code>FraudForce</code>.</li>
+<li>Removed legacy <code>iovation</code> class (<code>+ioBegin</code>), which was deprecated and replaced in version 4.0.</li>
+<li>OS requirement raised to iOS 9.</li>
+</ul>
+
+<h3 id="v4.3.0">v4.3.0</h3>
+
+<ul>
+<li>Define the framework as a module, which removes integration obstacles for
+ Swift clients and improves the overall compatibility with current Xcode
+ build strategies.</li>
+<li>Deprecated the collection of device attributes that were dependent on the
+ ExternalAccessory framework (given restrictions to their availability in
+ recent versions of iOS).</li>
+</ul>
+
+<h3 id="v4.2.0">v4.2.0</h3>
+
+<ul>
+<li>Added support for bitcode apps.</li>
+<li>Dropped support for iOS 5, as required to support bitcode-enabled apps.</li>
+<li>Improved jailbreak detection.</li>
+<li>Improved cross-application device recognition for apps using a shared
+ keychain. See step 6 in the <a href="#Installation">Installation</a> section for
+ details.</li>
+</ul>
+
+<h3 id="v4.1.0">v4.1.0</h3>
+
+<ul>
+<li>Minor updates for improved iOS 9 compatibility.</li>
+<li>Converted the iovSample WebKit demo class from Swift to Objective-C for
+ better compatibility with new releases of Xcode.</li>
+<li>Minor recognition improvements.</li>
+</ul>
+
+<h3 id="v4.0.0">v4.0.0</h3>
+
+<ul>
+<li>New API, <code>DevicePrint</code>, handles low-priority asynchronous collection of
+ device data. The old <code>iovation</code> class and <code>+ioBegin</code> method remain in place
+ for backward compatibility.</li>
+<li>Now requires the SystemConfiguration framework.</li>
+<li>Expanded the iovSample project with classes demonstrating both native and
+ hybrid implementations.</li>
+<li>Added WebKit and UIWebView integration instructions.</li>
+<li>Removed autolayout from the <code>iovSample.xcode5</code> project so that it can be
+ compiled and run against iOS 5.</li>
+</ul>
+
+<h3 id="v3.1.0">v3.1.0</h3>
+
+<ul>
+<li>Collecting additional attributes to be used in forthcoming jailbreak
+ business rule.</li>
+</ul>
+
+<h3 id="v3.0.1">v3.0.1</h3>
+
+<ul>
+<li>Updated and enhanced library compression. Binary size is now at 434K.</li>
+</ul>
+
+<h3 id="v3.0.0">v3.0.0</h3>
+
+<ul>
+<li>Now distributed as a framework instead of standalone .a and .h files.</li>
+<li>Collects additional device attributes and data.</li>
+<li>Restored collection of the advertising identifier, but only if your app
+ includes the optional AdSupport framework.</li>
+<li>The CoreLocation framework is now optional; the SDK will not use it if it&#8217;s
+ not included in your app.</li>
+<li>Now require the ExternalAccessory and CoreTelephony frameworks.</li>
+<li>Added 64 bit support.</li>
+<li>Simplified the iovSample application code to more closely match current iOS
+ SDK functionality.</li>
+<li>Added iPad and Retina display support to iovSample.</li>
+</ul>
+
+<h2 id="copyright">Copyright</h2>
+
+<p>Copyright (c) 2010&#8211;2017 iovation, Inc. All rights reserved.</p>
+
+</body>
+</html>
