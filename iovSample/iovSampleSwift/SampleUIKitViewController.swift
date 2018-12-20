@@ -41,7 +41,9 @@ class SampleUIKitViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func submitBlackbox() {
@@ -81,6 +83,8 @@ class SampleUIKitViewController: UIViewController {
                         print("Response: \(statusMessage)")
                     }
                     self.displayAlert(message: "\(statusCode): \(statusMessage)", title: "Request Response")
+                } else if let err = error {
+                    self.displayAlert(message: err.localizedDescription, title: "Error")
                 }
             })
             submitBoxTask.resume()

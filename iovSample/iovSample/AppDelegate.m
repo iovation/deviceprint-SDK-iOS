@@ -2,8 +2,7 @@
 //  AppDelegate.m
 //  iovSample
 //
-//  Created by Greg Crow on 9/11/13.
-//  Copyright (c) 2013 iovation, Inc. All rights reserved.
+//  Copyright (c) 2010-2018 iovation, Inc. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -18,20 +17,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
-    // Pattern for requesting locaion tracking permission on iOS 8 and earlier.
-    // See http://nshipster.com/core-location-in-ios-8/ for details.
     if (CLLocationManager.locationServicesEnabled) {
-        if (CLLocationManager.authorizationStatus == kCLAuthorizationStatusNotDetermined) {
-            self.locationManager = [CLLocationManager new];
-            self.locationManager.delegate = self;
-            if ([CLLocationManager instancesRespondToSelector:@selector(requestWhenInUseAuthorization)]) {
+        switch (CLLocationManager.authorizationStatus) {
+            case kCLAuthorizationStatusAuthorizedAlways:
+            case kCLAuthorizationStatusAuthorizedWhenInUse:
+                // The app is authorized to track the device location. FraudForce will be able to do so as
+                // well, however, this sample app is not designed to demonstrate the collection of such data.
+                break;
+            case kCLAuthorizationStatusDenied:
+            case kCLAuthorizationStatusRestricted:
+                // (Apple docs) "If the authorization status is restricted or denied, your app is not
+                // permitted to use location services and you should abort your attempt to use them."
+                break;
+            case kCLAuthorizationStatusNotDetermined:
                 // Request permission to access location data.
+                self.locationManager = [CLLocationManager new];
+                self.locationManager.delegate = self;
                 [self.locationManager requestWhenInUseAuthorization];
-            } else {
-                // Start monitoring location to implicitly request permission.
-                [self.locationManager startUpdatingLocation];
-            }
+                break;
         }
     }
     
@@ -69,27 +72,25 @@
 
 #pragma mark - Location Manager Delegate
 
-- (void)locationManager:(CLLocationManager *)manager
-didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    // Keep waiting if not determined.
-    if (status == kCLAuthorizationStatusNotDetermined) return;
-    if (
-           status == kCLAuthorizationStatusAuthorized
-        || status == kCLAuthorizationStatusAuthorizedAlways
-        || status == kCLAuthorizationStatusAuthorizedWhenInUse
-    ) {
-        // The app is authorized to track the device location. FraudForce
-        // will be able to do so as well. This sample app does not collect
-        // lcoation itself, so we just free the object.
-        self.locationManager = nil;
-    } else {
-        // Permission to track location has been denied. Neither the app nor
-        // FraudForce will be able to track the device location unless the
-        // user grants permission in Settings. On iOS 8, you can send them
-        // right to settings at a later date.
-        // See http://nshipster.com/core-location-in-ios-8/ for examples.
-        self.locationManager = nil;
+    switch (status) {
+        case kCLAuthorizationStatusAuthorizedAlways:
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            // The app is authorized to track the device location. FraudForce will be able to do so as
+            // well, however, this sample app is not designed to demonstrate the collection of such data,
+            // so we just clear our strong referene to the object.
+            self.locationManager = nil;
+            break;
+        case kCLAuthorizationStatusDenied:
+        case kCLAuthorizationStatusRestricted:
+            // Permission to track location has been denied. Neither the app nor FraudForce will be able
+            // to track the device location unless the user grants permission in Settings.
+            self.locationManager = nil;
+            break;
+        case kCLAuthorizationStatusNotDetermined:
+            // When not determined, keep waiting (by continuing to retain the locationManager).
+            break;
     }
 }
 

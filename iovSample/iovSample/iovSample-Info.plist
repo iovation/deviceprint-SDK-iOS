@@ -19,9 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>5.0.1</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string>5.0.2</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>IOVSubKey</key>
@@ -32,20 +30,9 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This is the NSLocationAlwaysUsageDescription string. It explains to your user why your app needs to track geo-location data, and therefore why it is important that your user accept the prompt.</string>
-	<key>NSLocationUsageDescription</key>
-	<string>This is the NSLocationUsageDescription string. It explains to your user why your app needs to track geo-location data, and therefore why it is important that your user accept the prompt.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This is the NSLocationWhenInUseUsageDescription string. It explains to your user why your app needs to track geo-location data, and therefore why it is important that your user accept the prompt.</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UIMainStoryboardFile~ipad</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440432A9218CE5AA0083507F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440432A7218CE5AA0083507F /* Main.storyboard */; };
 		4432AE9D1F02EBD000A92B39 /* FraudForce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432AE9C1F02EBD000A92B39 /* FraudForce.framework */; };
 		4432AE9E1F02EBD000A92B39 /* FraudForce.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4432AE9C1F02EBD000A92B39 /* FraudForce.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6363890A19DA24B7009B0693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6363890819DA24B7009B0693 /* Main.storyboard */; };
-		63648E9A19DCC70B0046FBFC /* uiwebview.html in Resources */ = {isa = PBXBuildFile; fileRef = 63648E9919DCC70B0046FBFC /* uiwebview.html */; };
-		63648EA019DCC8980046FBFC /* SampleUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63648E9F19DCC8980046FBFC /* SampleUIWebViewController.m */; };
-		636B5FC919DC97F8003C6405 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B5FC819DC97F8003C6405 /* MasterViewController.m */; };
 		637D70861B9F97090077CBCE /* SampleWebKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637D70851B9F97090077CBCE /* SampleWebKitViewController.m */; };
 		63A1357319DF482F007E060D /* webkit.html in Resources */ = {isa = PBXBuildFile; fileRef = 63A1357119DF482F007E060D /* webkit.html */; };
 		63E92C2C1901C5BB00F2D445 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E92C2B1901C5BB00F2D445 /* CoreLocation.framework */; };
@@ -55,17 +52,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		440432A8218CE5AA0083507F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		442D073D1DC902D80092F73A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4432AE951F01963200A92B39 /* add-framework-symbols-to-app-archive.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "add-framework-symbols-to-app-archive.sh"; path = "bin/add-framework-symbols-to-app-archive.sh"; sourceTree = "<group>"; };
 		4432AE961F01963200A92B39 /* slim-build-frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "slim-build-frameworks.sh"; path = "bin/slim-build-frameworks.sh"; sourceTree = "<group>"; };
 		4432AE9C1F02EBD000A92B39 /* FraudForce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FraudForce.framework; path = "Frameworks-build/FraudForce.framework"; sourceTree = "<group>"; };
 		634D32421BC72EAB00AD74C4 /* iovSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iovSample.entitlements; sourceTree = "<group>"; };
-		6363890919DA24B7009B0693 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		63648E9919DCC70B0046FBFC /* uiwebview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uiwebview.html; sourceTree = "<group>"; };
-		63648E9E19DCC8980046FBFC /* SampleUIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleUIWebViewController.h; sourceTree = "<group>"; };
-		63648E9F19DCC8980046FBFC /* SampleUIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleUIWebViewController.m; sourceTree = "<group>"; };
-		636B5FC719DC97F8003C6405 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		636B5FC819DC97F8003C6405 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		637D70841B9F97090077CBCE /* SampleWebKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleWebKitViewController.h; sourceTree = "<group>"; };
 		637D70851B9F97090077CBCE /* SampleWebKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleWebKitViewController.m; sourceTree = "<group>"; };
 		63A1357119DF482F007E060D /* webkit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webkit.html; sourceTree = "<group>"; };
@@ -171,15 +163,11 @@
 				634D32421BC72EAB00AD74C4 /* iovSample.entitlements */,
 				6497815017E10C4300DC9FF9 /* AppDelegate.h */,
 				6497815117E10C4300DC9FF9 /* AppDelegate.m */,
-				636B5FC719DC97F8003C6405 /* MasterViewController.h */,
-				636B5FC819DC97F8003C6405 /* MasterViewController.m */,
 				6497815917E10C4300DC9FF9 /* SampleUIKitViewController.h */,
 				6497815A17E10C4300DC9FF9 /* SampleUIKitViewController.m */,
-				63648E9E19DCC8980046FBFC /* SampleUIWebViewController.h */,
-				63648E9F19DCC8980046FBFC /* SampleUIWebViewController.m */,
 				637D70841B9F97090077CBCE /* SampleWebKitViewController.h */,
 				637D70851B9F97090077CBCE /* SampleWebKitViewController.m */,
-				6363890819DA24B7009B0693 /* Main.storyboard */,
+				440432A7218CE5AA0083507F /* Main.storyboard */,
 				6497815C17E10C4300DC9FF9 /* Images.xcassets */,
 				6497814817E10C4300DC9FF9 /* Supporting Files */,
 			);
@@ -189,7 +177,6 @@
 		6497814817E10C4300DC9FF9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				63648E9919DCC70B0046FBFC /* uiwebview.html */,
 				63A1357119DF482F007E060D /* webkit.html */,
 				6497814917E10C4300DC9FF9 /* iovSample-Info.plist */,
 				6497814A17E10C4300DC9FF9 /* InfoPlist.strings */,
@@ -310,9 +297,8 @@
 			files = (
 				63A1357319DF482F007E060D /* webkit.html in Resources */,
 				6497815D17E10C4300DC9FF9 /* Images.xcassets in Resources */,
-				6363890A19DA24B7009B0693 /* Main.storyboard in Resources */,
 				6497814C17E10C4300DC9FF9 /* InfoPlist.strings in Resources */,
-				63648E9A19DCC70B0046FBFC /* uiwebview.html in Resources */,
+				440432A9218CE5AA0083507F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				636B5FC919DC97F8003C6405 /* MasterViewController.m in Sources */,
-				63648EA019DCC8980046FBFC /* SampleUIWebViewController.m in Sources */,
 				6497815B17E10C4300DC9FF9 /* SampleUIKitViewController.m in Sources */,
 				637D70861B9F97090077CBCE /* SampleWebKitViewController.m in Sources */,
 				6497815217E10C4300DC9FF9 /* AppDelegate.m in Sources */,
@@ -376,10 +360,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6363890819DA24B7009B0693 /* Main.storyboard */ = {
+		440432A7218CE5AA0083507F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6363890919DA24B7009B0693 /* en */,
+				440432A8218CE5AA0083507F /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
