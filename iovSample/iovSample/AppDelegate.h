@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  iovSample
 //
-//  Copyright (c) 2010-2018 iovation, Inc. All rights reserved.
+//  Copyright (c) 2010-2019 iovation, Inc. All rights reserved.
 //
 
 @import UIKit;

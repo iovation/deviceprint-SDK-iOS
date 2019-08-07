@@ -19,15 +19,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>5.0.2</string>
+	<string>5.0.3</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>IOVSubKey</key>
 	<string>6S7EJX4BM7HuKUmriUOuQvXta9mBUs4tAVtGToP6tUY=</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>cydia</string>
-	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>

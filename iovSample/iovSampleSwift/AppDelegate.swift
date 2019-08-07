@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  iovSampleSwift
 //
-//  Copyright © 2017 iovation Inc. All rights reserved.
+//  Copyright © 2017-2019 iovation, Inc. All rights reserved.
 //
 
 import CoreLocation
@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var locationManager: CLLocationManager?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways, .authorizedWhenInUse:

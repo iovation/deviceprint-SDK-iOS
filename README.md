@@ -20,7 +20,7 @@ Integration Files and Requirements
 |                     |                                                       |
 |---------------------|-------------------------------------------------------|
 | File                | `FraudForce.framework`                                |
-| Version             | 5.0.2                                                 |
+| Version             | 5.0.3                                                 |
 | Required OS Version | iOS 9.0 and higher                                    |
 | Supported Devices   | iPhone 4S & up, iPod Touch 5th Gen & up, iPad 2 & up  |
 | Required Frameworks | CoreTelephony, Security, SystemConfiguration          |
@@ -126,7 +126,7 @@ Sample Projects
 ---------------
 
 This download includes two sample Xcode projects that demonstrate the integration of the FraudForce 
-SDK for iOS. These projects require at least Xcode 8 and iOS 9.0.
+SDK for iOS. These projects require at least Xcode 10 and iOS 9.0.
 
 * The `iovSample/iovSampleSwift.xcodeproj` project uses Swift to demonstrate 
 two integration techniques: UIKit and WebKit. Each is implemented in its own 
@@ -354,6 +354,10 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 Changes
 -------
 
+### v5.0.3 ###
+* SDK built with Xcode's "New Build System", the default as of Xcode 10.
+* Updated sample projects. 
+
 ### v5.0.2 ###
 * Minor recognition improvements.
 * Updated the iovSample project (Objective-C) to the latest language, project, and system standards.
@@ -436,4 +440,4 @@ Changes
 Copyright
 ---------
 
-Copyright (c) 2010-2018 iovation, Inc. All rights reserved.
+Copyright (c) 2010-2019 iovation, Inc. All rights reserved.
