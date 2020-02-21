@@ -14,4 +14,4 @@ For example:
 2. Following the Carthage integration instructions (both the “Quick Start” and “Adding frameworks to an application”) produces a build failure in Xcode. Removing `FraudForce.framework` from the “Embed Frameworks” build phase fixes the error (since the Carthage-recommended Run Script phase does the same job).
 
 
-###Good luck!
+### Good luck!
