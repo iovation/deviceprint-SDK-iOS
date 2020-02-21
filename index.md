@@ -4,9 +4,10 @@
 
 For example:
 
-`binary "https://iovation.github.io/deviceprint-SDK-iOS/FraudForce.js" >= 5.0.0`
+`binary "https://iovation.github.io/deviceprint-SDK-iOS/FraudForce.json" >= 5.0.0`
 
-(Choose a "version requirement" befitting your project. 5.0.0. is the minimum version that is compatiable with Carthage.)
+* Choose a "version requirement" befitting your project.
+* `5.0.0` is the minimum version that is compatiable with Carthage.)
 
 ### Caveats
 1. `carthage update` will return an error. This is a false failure, and it has been reported in the [Carthage GitHub repo](https://github.com/Carthage/Carthage) ([issue 2514](https://github.com/Carthage/Carthage/issues/2514)).
