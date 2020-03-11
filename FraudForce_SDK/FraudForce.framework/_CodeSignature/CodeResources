@@ -14,11 +14,11 @@
 		</data>
 		<key>Headers/FraudForce.h</key>
 		<data>
-		zYoYaZWtI+l2V/zo1nwwxRGD+qE=
+		qko9X2387OmU6NZCZ6w27SM4vis=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2xw3VGzq9E6WAUL4bNpIfTO3LJ4=
+		cWDieEN+zDtV5tA+O++G7OmKaWc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,11 +53,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zYoYaZWtI+l2V/zo1nwwxRGD+qE=
+			qko9X2387OmU6NZCZ6w27SM4vis=
 			</data>
 			<key>hash2</key>
 			<data>
-			pg5WcsssZuMPwLjnd4yG9JJF7rV1bW064NuhoyY0jgI=
+			anWq1LY/YFoRQPLm5XuK8L3rVZxwHiYadot2Bz4O//Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -74,7 +74,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -105,24 +105,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -158,13 +146,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

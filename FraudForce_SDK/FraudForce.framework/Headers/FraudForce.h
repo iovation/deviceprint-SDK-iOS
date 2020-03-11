@@ -2,7 +2,7 @@
 //  FraudForce.h
 //  libiovation
 //
-//  Copyright (c) 2010-2019 iovation, Inc. All rights reserved.
+//  Copyright (c) 2010-2020 iovation, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,7 +20,7 @@
  * transmitted to your servers to be used in a reputation check (for example a
  * @p CheckTransactionDetails call).
  *
- * @version 5.0.3
+ * @version 5.0.4
  * @copyright 2010-2018 iovation, Inc. All rights reserved.
  *
  * iovation hereby grants to Client a nonexclusive, limited, non-transferable,

@@ -33,7 +33,7 @@ for UNIVERSAL_FRAMEWORK in "$(find "${INPUT_FRAMEWORKS_DIR}" -name '*.framework'
 	cp -a "${UNIVERSAL_FRAMEWORK}" "${OUTPUT_FRAMEWORKS_DIR}/."	
 	
 	# Determine the architectures of the executable file within the framework bundle.
-	FRAMEWORK_EXECUTABLE_NAME=$(defaults read "${OUTPUT_FRAMEWORK_PATH}/Info.plist" CFBundleExecutable)
+	FRAMEWORK_EXECUTABLE_NAME=$(/usr/libexec/PlistBuddy -c "Print :CFBundleExecutable" "${OUTPUT_FRAMEWORK_PATH}/Info.plist")
 	FRAMEWORK_EXECUTABLE_PATH="${OUTPUT_FRAMEWORK_PATH}/${FRAMEWORK_EXECUTABLE_NAME}"
 	EXECUTABLE_ARCHS="$(lipo -info "${FRAMEWORK_EXECUTABLE_PATH}" | rev | cut -d ':' -f1 | rev)"
 	echo "Framework (${FRAMEWORK_NAME}) executable (${FRAMEWORK_EXECUTABLE_NAME}) contains archs: ${EXECUTABLE_ARCHS}"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta charset="utf-8"/>
 	<title>iovation FraudForce SDK for iOS</title>
@@ -241,41 +241,48 @@ mix native code with content that runs inside web view.</p>
 
 <table>
 <colgroup>
-<col style="text-align:left;"/>
-<col style="text-align:left;"/>
+<col />
+<col />
 </colgroup>
 
 <thead>
 <tr>
-	<th style="text-align:left;"></th>
-	<th style="text-align:left;"></th>
+	<th>      </th>
+	<th>              </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-	<td style="text-align:left;">File</td>
-	<td style="text-align:left;"><code>FraudForce.framework</code></td>
+	<td> File    </td>
+	<td> <code>FraudForce.framework</code>        </td>
 </tr>
 <tr>
-	<td style="text-align:left;">Version</td>
-	<td style="text-align:left;">5.0.3</td>
+	<td> Version    </td>
+	<td> 5.0.4             </td>
 </tr>
 <tr>
-	<td style="text-align:left;">Required OS Version</td>
-	<td style="text-align:left;">iOS 9.0 and higher</td>
+	<td> Required OS Version </td>
+	<td> iOS 9.0 and higher         </td>
 </tr>
 <tr>
-	<td style="text-align:left;">Supported Devices</td>
-	<td style="text-align:left;">iPhone 4S &amp; up, iPod Touch 5th Gen &amp; up, iPad 2 &amp; up</td>
+	<td> Supported Devices </td>
+	<td> iPhone 4S &amp; up, iPod Touch 5th Gen &amp; up, iPad 2 &amp; up </td>
 </tr>
 <tr>
-	<td style="text-align:left;">Required Frameworks</td>
-	<td style="text-align:left;">CoreTelephony, Security, SystemConfiguration</td>
+	<td> Required Frameworks </td>
+	<td> CoreTelephony, Security, SystemConfiguration   </td>
 </tr>
 <tr>
-	<td style="text-align:left;">Optional Frameworks</td>
-	<td style="text-align:left;">AdSupport, CoreLocation</td>
+	<td> Optional Frameworks </td>
+	<td> AdSupport, CoreLocation        </td>
+</tr>
+<tr>
+	<td> </td>
+</tr>
+<tr>
+	<td> (optional) Carthage </td>
+	<td> <a href="https://iovation.github.io/deviceprint-SDK-iOS/">https://iovation.github.io/deviceprint-SDK-iOS/</a> </td>
 </tr>
 </tbody>
 </table>
@@ -283,14 +290,14 @@ mix native code with content that runs inside web view.</p>
 <h2 id="installation">Installation</h2>
 
 <ol>
-<li><p>Download and unzip the SDK from <a href="https://github.com/iovation/deviceprint-SDK-iOS">Github</a>.</p></li>
-<li>Bring the universal framework into your project repository.
+<li><p>Download and unzip the SDK from <a href="https://github.com/iovation/deviceprint-SDK-iOS/releases">Github</a>.</p></li>
+<li><p>Bring the universal framework into your project repository.</p>
 
 <ul>
 <li>Create a new directory named &#8220;Frameworks-universal&#8221;. We recommend this directory be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
 <li>Copy <code>FraudForce.framework</code> from the SDK distribution into your &#8220;Frameworks-universal&#8221; directory.</li>
 </ul></li>
-<li>Prepare the staging area for build-specific frameworks.
+<li><p>Prepare the staging area for build-specific frameworks.</p>
 
 <ul>
 <li>Create a new directory, alongside the universal directory, named &#8220;Frameworks-build&#8221;.</li>
@@ -302,13 +309,13 @@ mix native code with content that runs inside web view.</p>
 </ul></li>
 <li><p>In the Finder, drag <code>FraudForce.framework</code> <strong>from Frameworks-build</strong> into the &#8220;Embedded Binaries&#8221; section of the &#8220;General&#8221; pane of the Xcode target editor.</p>
 
-<p><img src="img/drag-embed-framework.png" alt="Drag in FraudForce.framework" title="Drag FraudForce.framework into your application target" /></p>
+<p> <img src="img/drag-embed-framework.png" alt="Drag in FraudForce.framework" title="Drag FraudForce.framework into your application target" /></p>
 
 <ul>
 <li>This should also result in the framework being added to the &#8220;Linked Frameworks and Libraries&#8221; section.</li>
 <li>Additionally, this should result in <code>FraudForce.framework</code> appearing in similarly named sections in the &#8220;Build Phases&#8221; pane.</li>
 </ul></li>
-<li>Optionally add these frameworks (i.e. &#8220;Linked Frameworks and Libraries&#8221;) if your app makes use of them (and Auto Linking is off):
+<li><p>Optionally add these frameworks (i.e. &#8220;Linked Frameworks and Libraries&#8221;) if your app makes use of them (and Auto Linking is off):</p>
 
 <ul>
 <li><code>AdSupport.framework</code> — If your app displays ads. Do not include if your
@@ -318,17 +325,17 @@ apps that include the framework but don&#8217;t use it.</li>
 include this framework unless your application requests geolocation
 permission from the user.</li>
 </ul></li>
-<li>Add a pre-compile build phase to your application target
+<li><p>Add a pre-compile build phase to your application target</p>
 
 <ul>
-<li><p>Copy the shell script <code>slim-build-frameworks.sh</code> from the SDK distribution (<code>FraudForce SDK/build scripts</code>) into your project repository.</p></li>
-<li>Select the &#8220;+&#8221; button in the &#8220;Build Phases&#8221; pane to create a &#8220;New Run Script Phase&#8221;.
+<li><p>Copy the shell script <code>slim-build-frameworks.sh</code> from the SDK distribution (<code>FraudForce_SDK/build_scripts</code>) into your project repository.</p></li>
+<li><p><p>Select the &#8220;+&#8221; button in the &#8220;Build Phases&#8221; pane to create a &#8220;New Run Script Phase&#8221;.</p>
 
 <ul>
 <li>The new phase is initially named &#8220;Run Script&#8221; and is positioned as the bottom-most (final) build phase.</li>
 <li>The suggested name for this phase is &#8220;Slim Frameworks For Build&#8221; (though the name does not affect the function of this phase).</li>
-</ul></li>
-<li>Reposition the new phase to precede the &#8220;Compile Sources&#8221; phase.
+</ul></p></li>
+<li><p>Reposition the new phase to precede the &#8220;Compile Sources&#8221; phase.</p>
 
 <ul>
 <li>Under normal conditions, this will result in the phase being located below &#8220;Target Dependencies&#8221;.</li>
@@ -338,27 +345,27 @@ permission from the user.</li>
 <img src="img/run-script-phase.png" alt="Setup build script" title="Position and configure build script" />
 <figcaption>Setup build script</figcaption>
 </figure></li>
-<li>Configure and confirm the new build phase
+<li><p><p>Configure and confirm the new build phase</p>
 
 <ul>
 <li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
 <li>In the text-input area, enter the project-relative path to the iovation-provided script <code>slim-build-frameworks.sh</code>.</li>
-</ul></li>
-<li>Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in the above steps).
+</ul></p></li>
+<li><p>Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in the above steps).</p>
 
 <ul>
 <li>Specifically, <code>INPUT_FRAMEWORKS_DIR</code> (Frameworks-universal) and <code>OUTPUT_FRAMEWORKS_DIR</code> (Frameworks-build) variables must be set to the absolute paths for the appropriate directories.</li>
 <li>As provided, the script expects both directories to be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
 </ul></li>
 </ul></li>
-<li><a name="keychain-share"></a>If your app has enabled the &#8220;Keychain Sharing&#8221; capability:
+<li><p><a name="keychain-share"></a>If your app has enabled the &#8220;Keychain Sharing&#8221; capability:</p>
 
 <ul>
 <li>Add &#8220;com.iovation.stm&#8221; to its list of Keychain Groups</li>
 <li>Add the key <code>AppIdentifierPrefix</code> with the string value
 <code>$(AppIdentifierPrefix)</code> to your app&#8217;s <code>Info.plist</code>.</li>
 </ul></li>
-<li><a name="entitle-wireless"></a>For Xcode 10 (and above), allow FraudForce to collect wireless network information:
+<li><p><a name="entitle-wireless"></a>For Xcode 10 (and above), allow FraudForce to collect wireless network information:</p>
 
 <ul>
 <li>Configure your app to include the &#8220;Access WiFi Information&#8221; capability.</li>
@@ -378,24 +385,24 @@ stack frames in the crash logs of your app. The necessary symbolic information m
 Xcode archive (i.e. <code>.xcarchive</code> bundle) of your application prior to its submission to the App Store.</p>
 
 <ol>
-<li>Bring the framework <code>.bcsymbolmap</code> files into your project repository.
+<li><p>Bring the framework <code>.bcsymbolmap</code> files into your project repository.</p>
 
 <ul>
 <li>Create a new directory named &#8220;Frameworks-bcsymbolmap&#8221;. We recommend this directory be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
-<li>Copy the <code>.bcsymbolmap</code> files from the SDK distribution (<code>FraudForce SDK/BCSymbolMaps</code>) into your &#8220;Frameworks-bcsymbolmap&#8221; directory.
+<li>Copy the <code>.bcsymbolmap</code> files from the SDK distribution (<code>FraudForce_SDK/BCSymbolMaps</code>) into your &#8220;Frameworks-bcsymbolmap&#8221; directory.
 
 <ul>
 <li>There should be three such files (representing armv7, armv7s, and arm64 architectures).</li>
 </ul></li>
 </ul></li>
-<li>Add a script to the &#8220;Archive&#8221; scheme of your application target.
+<li><p>Add a script to the &#8220;Archive&#8221; scheme of your application target.</p>
 
 <ul>
-<li><p>Copy the shell script <code>add-framework-symbols-to-app-archive.sh</code> from the SDK distribution (<code>FraudForce SDK/build scripts</code>) into your project repository.</p></li>
+<li><p>Copy the shell script <code>add-framework-symbols-to-app-archive.sh</code> from the SDK distribution (<code>FraudForce_SDK/build_scripts</code>) into your project repository.</p></li>
 <li><p>From the target popup button in the Xcode toolbar, ensure your application target is selected and chose &#8220;Edit Scheme…&#8221; from the popup menu.</p>
 
-<p><img src="img/target-popup-menu.png" alt="Open scheme editor" title="Use the target popup to edit schemes" /></p></li>
-<li>In the scheme editor, select the disclosure triangle for the &#8220;Archive&#8221; item and then select &#8220;Post-actions&#8221;.
+<p> <img src="img/target-popup-menu.png" alt="Open scheme editor" title="Use the target popup to edit schemes" /></p></li>
+<li><p>In the scheme editor, select the disclosure triangle for the &#8220;Archive&#8221; item and then select &#8220;Post-actions&#8221;.</p>
 
 <ul>
 <li>Select the &#8220;+&#8221; button in order to create a &#8220;New Run Script Action&#8221;.</li>
@@ -406,7 +413,7 @@ Xcode archive (i.e. <code>.xcarchive</code> bundle) of your application prior to
 <img src="img/scheme-editor.png" alt="Setup archive script" title="Configure the script action" />
 <figcaption>Setup archive script</figcaption>
 </figure></li>
-<li>Configure and confirm the new script action.
+<li><p>Configure and confirm the new script action.</p>
 
 <ul>
 <li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
@@ -419,13 +426,13 @@ Xcode archive (i.e. <code>.xcarchive</code> bundle) of your application prior to
 </ul></li>
 </ul></li>
 </ul></li>
-<li>Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in both the above steps and in the <a href="#installation">Installation</a> section).
+<li><p>Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in both the above steps and in the <a href="#installation">Installation</a> section).</p>
 
 <ul>
 <li>Specifically, <code>BUILD_FRAMEWORKS_DIR</code> (Frameworks-build) and <code>INPUT_BCSYMBOLMAP_DIR</code> (Frameworks-bcsymbolmap) variables must be set to the absolute paths for the appropriate directories.</li>
 <li>As provided, the script expects both directories to be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
 </ul></li>
-<li>(optional) Customize the logging of script output as you desire.
+<li><p>(optional) Customize the logging of script output as you desire.</p>
 
 <ul>
 <li>By default, Xcode does not handle or display output from scheme-based scripts, thus, the script redirects <code>stdout</code> and <code>stderr</code> to a (unique) log file in <code>/var/tmp</code>.</li>
@@ -660,6 +667,13 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 
 <h2 id="changes">Changes</h2>
 
+<h3 id="v5.0.4">v5.0.4</h3>
+
+<ul>
+<li>Improved thread safety.</li>
+<li>Updated integration scripts to support macOS Catalina.</li>
+</ul>
+
 <h3 id="v5.0.3">v5.0.3</h3>
 
 <ul>
@@ -700,8 +714,8 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 
 <ul>
 <li>New SDK distribution format, <code>FraudForce.framework</code> supersedes the <code>iovation.framework</code>.
- The new framework employs a dynamic library (in place of the historical &#8220;static archive&#8221; approach),
- which is the modern, recommended (iOS 8 and above), and more stable approach for library distribution.</li>
+The new framework employs a dynamic library (in place of the historical &#8220;static archive&#8221; approach),
+which is the modern, recommended (iOS 8 and above), and more stable approach for library distribution.</li>
 <li>New ability to collect additional network information. See &#8220;New Features!&#8221; in the <a href="#usage">Usage</a> section.</li>
 <li>New blackbox compression on iOS (up to 40% reduction in blackbox size).</li>
 <li>Improved Swift compatibility.</li>
@@ -715,11 +729,11 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 
 <ul>
 <li>Define the framework as a module, which removes integration obstacles for
- Swift clients and improves the overall compatibility with current Xcode
- build strategies.</li>
+Swift clients and improves the overall compatibility with current Xcode
+build strategies.</li>
 <li>Deprecated the collection of device attributes that were dependent on the
- ExternalAccessory framework (given restrictions to their availability in
- recent versions of iOS).</li>
+ExternalAccessory framework (given restrictions to their availability in
+recent versions of iOS).</li>
 </ul>
 
 <h3 id="v4.2.0">v4.2.0</h3>
@@ -729,7 +743,7 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 <li>Dropped support for iOS 5, as required to support bitcode-enabled apps.</li>
 <li>Improved jailbreak detection.</li>
 <li>Improved cross-application device recognition for apps using a shared
- keychain. See the <a href="#keychain-share">Installation steps</a> for details.</li>
+keychain. See the <a href="#keychain-share">Installation steps</a> for details.</li>
 </ul>
 
 <h3 id="v4.1.0">v4.1.0</h3>
@@ -737,7 +751,7 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 <ul>
 <li>Minor updates for improved iOS 9 compatibility.</li>
 <li>Converted the iovSample WebKit demo class from Swift to Objective-C for
- better compatibility with new releases of Xcode.</li>
+better compatibility with new releases of Xcode.</li>
 <li>Minor recognition improvements.</li>
 </ul>
 
@@ -745,21 +759,21 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 
 <ul>
 <li>New API, <code>DevicePrint</code>, handles low-priority asynchronous collection of
- device data. The old <code>iovation</code> class and <code>+ioBegin</code> method remain in place
- for backward compatibility.</li>
+device data. The old <code>iovation</code> class and <code>+ioBegin</code> method remain in place
+for backward compatibility.</li>
 <li>Now requires the SystemConfiguration framework.</li>
 <li>Expanded the iovSample project with classes demonstrating both native and
- hybrid implementations.</li>
+hybrid implementations.</li>
 <li>Added WebKit and UIWebView integration instructions.</li>
 <li>Removed autolayout from the <code>iovSample.xcode5</code> project so that it can be
- compiled and run against iOS 5.</li>
+compiled and run against iOS 5.</li>
 </ul>
 
 <h3 id="v3.1.0">v3.1.0</h3>
 
 <ul>
 <li>Collecting additional attributes to be used in forthcoming jailbreak
- business rule.</li>
+business rule.</li>
 </ul>
 
 <h3 id="v3.0.1">v3.0.1</h3>
@@ -774,19 +788,20 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 <li>Now distributed as a framework instead of standalone .a and .h files.</li>
 <li>Collects additional device attributes and data.</li>
 <li>Restored collection of the advertising identifier, but only if your app
- includes the optional AdSupport framework.</li>
+includes the optional AdSupport framework.</li>
 <li>The CoreLocation framework is now optional; the SDK will not use it if it&#8217;s
- not included in your app.</li>
+not included in your app.</li>
 <li>Now require the ExternalAccessory and CoreTelephony frameworks.</li>
 <li>Added 64 bit support.</li>
 <li>Simplified the iovSample application code to more closely match current iOS
- SDK functionality.</li>
+SDK functionality.</li>
 <li>Added iPad and Retina display support to iovSample.</li>
 </ul>
 
 <h2 id="copyright">Copyright</h2>
 
-<p>Copyright (c) 2010&#8211;2019 iovation, Inc. All rights reserved.</p>
+<p>Copyright (c) 2010&#8211;2020 iovation, Inc. All rights reserved.</p>
 
 </body>
 </html>
+

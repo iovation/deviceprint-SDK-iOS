@@ -20,16 +20,19 @@ Integration Files and Requirements
 |                     |                                                       |
 |---------------------|-------------------------------------------------------|
 | File                | `FraudForce.framework`                                |
-| Version             | 5.0.3                                                 |
+| Version             | 5.0.4                                                 |
 | Required OS Version | iOS 9.0 and higher                                    |
 | Supported Devices   | iPhone 4S & up, iPod Touch 5th Gen & up, iPad 2 & up  |
 | Required Frameworks | CoreTelephony, Security, SystemConfiguration          |
 | Optional Frameworks | AdSupport, CoreLocation                               |
+| |
+| (optional) Carthage | [https://iovation.github.io/deviceprint-SDK-iOS/](https://iovation.github.io/deviceprint-SDK-iOS/) |
+
 
 Installation
 ------------
 
-1.  Download and unzip the SDK from [Github](https://github.com/iovation/deviceprint-SDK-iOS).
+1.  Download and unzip the SDK from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases).
 
 2.  Bring the universal framework into your project repository.
     *   Create a new directory named "Frameworks-universal". We recommend this directory be located alongside the app's `.xcodeproj` file.
@@ -56,7 +59,7 @@ Installation
         permission from the user.
 
 6.  Add a pre-compile build phase to your application target
-    *   Copy the shell script `slim-build-frameworks.sh` from the SDK distribution (`FraudForce SDK/build scripts`) into your project repository.
+    *   Copy the shell script `slim-build-frameworks.sh` from the SDK distribution (`FraudForce_SDK/build_scripts`) into your project repository.
     *   Select the "+" button in the "Build Phases" pane to create a "New Run Script Phase".
         *   The new phase is initially named "Run Script" and is positioned as the bottom-most (final) build phase.
         *   The suggested name for this phase is "Slim Frameworks For Build" (though the name does not affect the function of this phase).
@@ -92,11 +95,11 @@ Xcode archive (i.e. `.xcarchive` bundle) of your application prior to its submis
 
 1.  Bring the framework `.bcsymbolmap` files into your project repository.
     *   Create a new directory named "Frameworks-bcsymbolmap". We recommend this directory be located alongside the app's `.xcodeproj` file.
-    *   Copy the `.bcsymbolmap` files from the SDK distribution (`FraudForce SDK/BCSymbolMaps`) into your "Frameworks-bcsymbolmap" directory.
+    *   Copy the `.bcsymbolmap` files from the SDK distribution (`FraudForce_SDK/BCSymbolMaps`) into your "Frameworks-bcsymbolmap" directory.
         *   There should be three such files (representing armv7, armv7s, and arm64 architectures).
 
 2.  Add a script to the "Archive" scheme of your application target.
-    *   Copy the shell script `add-framework-symbols-to-app-archive.sh` from the SDK distribution (`FraudForce SDK/build scripts`) into your project repository.
+    *   Copy the shell script `add-framework-symbols-to-app-archive.sh` from the SDK distribution (`FraudForce_SDK/build_scripts`) into your project repository.
     *   From the target popup button in the Xcode toolbar, ensure your application target is selected and chose "Edit Scheme…" from the popup menu.
 
          ![Open scheme editor](img/target-popup-menu.png "Use the target popup to edit schemes")
@@ -354,6 +357,10 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 Changes
 -------
 
+### v5.0.4 ###
+* Improved thread safety.
+* Updated integration scripts to support macOS Catalina.
+
 ### v5.0.3 ###
 * SDK built with Xcode's "New Build System", the default as of Xcode 10.
 * Updated sample projects. 
@@ -440,4 +447,4 @@ Changes
 Copyright
 ---------
 
-Copyright (c) 2010-2019 iovation, Inc. All rights reserved.
+Copyright (c) 2010-2020 iovation, Inc. All rights reserved.
