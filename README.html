@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>iovation FraudForce SDK for iOS</title>
+	<title>TransUnion FraudForce SDK for iOS</title>
     <style>/*STYLES FOR STANDARD HTML TAGS*/
 
 body {margin-left:16px;
@@ -223,8 +223,8 @@ margin-top:6px;
 
 <h1 id="fraudforcesdkforios">FraudForce SDK for iOS</h1>
 
-<p>iovation identifies devices through information collected by an SDK run
-on an end-user’s mobile device. The FraudForce SDK inspects the device
+<p>TransUnion identifies devices through information collected by the FraudForce
+SDK run on an end-user’s mobile device. The SDK inspects the device
 and generates a blackbox that contains all available device information. This
 blackbox must then be sent to your servers to be used in a transaction risk
 check via the <code>CheckTransactionDetails</code> API.</p>
@@ -259,7 +259,7 @@ mix native code with content that runs inside web view.</p>
 </tr>
 <tr>
 	<td> Version    </td>
-	<td> 5.0.4             </td>
+	<td> 5.1.0             </td>
 </tr>
 <tr>
 	<td> Required OS Version </td>
@@ -325,14 +325,14 @@ apps that include the framework but don&#8217;t use it.</li>
 include this framework unless your application requests geolocation
 permission from the user.</li>
 </ul></li>
-<li><p>Add a pre-compile build phase to your application target</p>
+<li><p>Add a pre-compile build phase to your application target.</p>
 
 <ul>
 <li><p>Copy the shell script <code>slim-build-frameworks.sh</code> from the SDK distribution (<code>FraudForce_SDK/build_scripts</code>) into your project repository.</p></li>
 <li><p><p>Select the &#8220;+&#8221; button in the &#8220;Build Phases&#8221; pane to create a &#8220;New Run Script Phase&#8221;.</p>
 
 <ul>
-<li>The new phase is initially named &#8220;Run Script&#8221; and is positioned as the bottom-most (final) build phase.</li>
+<li>The new phase is initially named &#8220;Run Script&#8221; and is positioned as the bottommost (final) build phase.</li>
 <li>The suggested name for this phase is &#8220;Slim Frameworks For Build&#8221; (though the name does not affect the function of this phase).</li>
 </ul></p></li>
 <li><p>Reposition the new phase to precede the &#8220;Compile Sources&#8221; phase.</p>
@@ -345,7 +345,7 @@ permission from the user.</li>
 <img src="img/run-script-phase.png" alt="Setup build script" title="Position and configure build script" />
 <figcaption>Setup build script</figcaption>
 </figure></li>
-<li><p><p>Configure and confirm the new build phase</p>
+<li><p><p>Configure and confirm the new build phase.</p>
 
 <ul>
 <li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
@@ -356,6 +356,18 @@ permission from the user.</li>
 <ul>
 <li>Specifically, <code>INPUT_FRAMEWORKS_DIR</code> (Frameworks-universal) and <code>OUTPUT_FRAMEWORKS_DIR</code> (Frameworks-build) variables must be set to the absolute paths for the appropriate directories.</li>
 <li>As provided, the script expects both directories to be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
+</ul></li>
+</ul></li>
+<li><p>Add a final build phase to your application target.</p>
+
+<ul>
+<li>Resolves Architecture building errors in Xcode 11 when alternating between device and simulator.</li>
+<li>Select the &#8220;+&#8221; button in the &#8220;Build Phases&#8221; pane to create a &#8220;New Run Script Phase&#8221;.</li>
+<li>Confirm the script is the bottommost build phase, and configure its fields.
+
+<ul>
+<li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
+<li>In the text-input area, enter the shell command <code>rm -r &quot;Frameworks-build/FraudForce.framework/&quot;</code></li>
 </ul></li>
 </ul></li>
 <li><p><a name="keychain-share"></a>If your app has enabled the &#8220;Keychain Sharing&#8221; capability:</p>
@@ -666,6 +678,20 @@ Change the JavaScript variable declaration above to:</p>
 class for Objective-C (iovSample) in the sample Xcode projects included in the FraudForce SDK download.</p>
 
 <h2 id="changes">Changes</h2>
+
+<h3 id="v5.1.0">v5.1.0</h3>
+
+<ul>
+<li>Blackbox format improvements.</li>
+<li>Performance improvements.</li>
+<li>Addressed all &#8220;Main Thread Checker&#8221; complaints.
+
+<ul>
+<li>Additional protections silence extraneous warnings and streamline development in newer Xcode environments.</li>
+<li><code>FraudForce.blackbox</code> continues to be safe to call from any thread.</li>
+</ul></li>
+<li>Updated sample projects to resolve Xcode 11 build errors.</li>
+</ul>
 
 <h3 id="v5.0.4">v5.0.4</h3>
 

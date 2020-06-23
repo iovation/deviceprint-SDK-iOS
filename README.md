@@ -1,10 +1,10 @@
-Title: iovation FraudForce SDK for iOS
+Title: TransUnion FraudForce SDK for iOS
 
 FraudForce SDK for iOS
 ===========================
 
-iovation identifies devices through information collected by an SDK run
-on an end-user’s mobile device. The FraudForce SDK inspects the device
+TransUnion identifies devices through information collected by the FraudForce 
+SDK run on an end-user’s mobile device. The SDK inspects the device
 and generates a blackbox that contains all available device information. This
 blackbox must then be sent to your servers to be used in a transaction risk
 check via the `CheckTransactionDetails` API.
@@ -20,7 +20,7 @@ Integration Files and Requirements
 |                     |                                                       |
 |---------------------|-------------------------------------------------------|
 | File                | `FraudForce.framework`                                |
-| Version             | 5.0.4                                                 |
+| Version             | 5.1.0                                                 |
 | Required OS Version | iOS 9.0 and higher                                    |
 | Supported Devices   | iPhone 4S & up, iPod Touch 5th Gen & up, iPad 2 & up  |
 | Required Frameworks | CoreTelephony, Security, SystemConfiguration          |
@@ -58,29 +58,36 @@ Installation
         include this framework unless your application requests geolocation
         permission from the user.
 
-6.  Add a pre-compile build phase to your application target
+6.  Add a pre-compile build phase to your application target.
     *   Copy the shell script `slim-build-frameworks.sh` from the SDK distribution (`FraudForce_SDK/build_scripts`) into your project repository.
     *   Select the "+" button in the "Build Phases" pane to create a "New Run Script Phase".
-        *   The new phase is initially named "Run Script" and is positioned as the bottom-most (final) build phase.
+        *   The new phase is initially named "Run Script" and is positioned as the bottommost (final) build phase.
         *   The suggested name for this phase is "Slim Frameworks For Build" (though the name does not affect the function of this phase).
     *   Reposition the new phase to precede the "Compile Sources" phase.
         *   Under normal conditions, this will result in the phase being located below "Target Dependencies".
 
         ![Setup build script](img/run-script-phase.png "Position and configure build script")
 
-    * Configure and confirm the new build phase
+    * Configure and confirm the new build phase.
         *   The "Shell" text field should read "/bin/sh" (which is the default value).
         *   In the text-input area, enter the project-relative path to the iovation-provided script `slim-build-frameworks.sh`.
     *   Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in the above steps).
         *   Specifically, `INPUT_FRAMEWORKS_DIR` (Frameworks-universal) and `OUTPUT_FRAMEWORKS_DIR` (Frameworks-build) variables must be set to the absolute paths for the appropriate directories.
         *   As provided, the script expects both directories to be located alongside the app's `.xcodeproj` file.
 
-7.  <a name="keychain-share"></a>If your app has enabled the "Keychain Sharing" capability:
+7.  Add a final build phase to your application target.
+    *  Resolves Architecture building errors in Xcode 11 when alternating between device and simulator.
+    *  Select the "+" button in the "Build Phases" pane to create a "New Run Script Phase".
+    *  Confirm the script is the bottommost build phase, and configure its fields.
+        *   The "Shell" text field should read "/bin/sh" (which is the default value).
+        *   In the text-input area, enter the shell command `rm -r "Frameworks-build/FraudForce.framework/"`
+
+8.  <a name="keychain-share"></a>If your app has enabled the "Keychain Sharing" capability:
     *   Add "com.iovation.stm" to its list of Keychain Groups
     *   Add the key `AppIdentifierPrefix` with the string value
         `$(AppIdentifierPrefix)` to your app's `Info.plist`.
 
-8.  <a name="entitle-wireless"></a>For Xcode 10 (and above), allow FraudForce to collect wireless network information:
+9.  <a name="entitle-wireless"></a>For Xcode 10 (and above), allow FraudForce to collect wireless network information:
     *   Configure your app to include the "Access WiFi Information" capability.
     *   Turning the capability on for your application target in Xcode 10 (and above) will update the app's entitlements file and provisioning profile.
         *   This entitlement is not required for (and breaks automatic code signing of) apps built by earlier versions of Xcode. 
@@ -356,6 +363,14 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 
 Changes
 -------
+
+### v5.1.0 ###
+* Blackbox format improvements.
+* Performance improvements.
+* Addressed all "Main Thread Checker" complaints.
+    * Additional protections silence extraneous warnings and streamline development in newer Xcode environments.
+    * `FraudForce.blackbox` continues to be safe to call from any thread.
+* Updated sample projects to resolve Xcode 11 build errors.
 
 ### v5.0.4 ###
 * Improved thread safety.

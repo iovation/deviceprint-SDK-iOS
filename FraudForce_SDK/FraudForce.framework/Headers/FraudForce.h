@@ -20,8 +20,8 @@
  * transmitted to your servers to be used in a reputation check (for example a
  * @p CheckTransactionDetails call).
  *
- * @version 5.0.4
- * @copyright 2010-2018 iovation, Inc. All rights reserved.
+ * @version 5.1.0
+ * @copyright 2010-2020 iovation, Inc. All rights reserved.
  *
  * iovation hereby grants to Client a nonexclusive, limited, non-transferable,
  * revocable and non-sublicensable license to install, use, copy and
@@ -145,7 +145,7 @@
 #endif
 
 /*!
- * Marshalls information about the device and returns an encrypted string, or
+ * Marshalls information about the device and returns an obfuscated string, or
  * blackbox, containing this information.
  *
  * @note The blackbox returned from @p bb should never be empty. An empty
@@ -154,7 +154,7 @@
  *
  * @since v4.0.0
  *
- * @return An NSString representing a blackbox containing encrypted device information.
+ * @return An NSString representing a blackbox containing obfuscated device information.
  *
  */
 #if __has_feature(nullability)

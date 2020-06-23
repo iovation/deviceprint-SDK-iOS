@@ -1,5 +1,12 @@
 BCSymbolMap Version: 2.0
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___czsiSymbolZeroOne_block_invoke
+___copy_helper_block_e8_32r
+___destroy_helper_block_e8_32r
 -[FFMClassZeroSix pzoSymbolZeroOne:pzoSymbolZeroTwo:]
+___53-[FFMClassZeroSix pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
+___block_descriptor_40_e8_32r_e5_v8?0l
 __OBJC_PROTOCOL_$_NSObject
 __OBJC_LABEL_PROTOCOL_$_NSObject
 __OBJC_PROTOCOL_$_FFMProtocolZeroOne
@@ -7,7 +14,13 @@ __OBJC_LABEL_PROTOCOL_$_FFMProtocolZeroOne
 Apple clang version 11.0.0 (clang-1100.0.33.17)
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVDeviceCollector.m
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK
+__53-[FFMClassZeroSix pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
 IOVBlackbox.obfuscated/IOVDeviceCollector.m
+__destroy_helper_block_e8_32r
+__copy_helper_block_e8_32r
+__czsiSymbolZeroOne_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
 czsiSymbolZeroOne
 +[FFMClassZeroTwo cztwSymbolZeroOne]
 ___36+[FFMClassZeroTwo cztwSymbolZeroOne]_block_invoke
@@ -70,7 +83,7 @@ llvm.loop.isvectorized
 -[FFMClassOneNine description]
 -[FFMClassOneNine hash]
 -[FFMClassOneNine isEqual:]
--[FFMClassOneNine conSymbolZeroFive]
++[FFMClassOneNine conSymbolZeroFive]
 -[FFMClassOneNine conSymbolZeroThree:]
 -[FFMClassOneNine conSymbolOneFour]
 -[FFMClassOneNine conSymbolZeroFour]
@@ -88,8 +101,6 @@ _cgzfoSymbolZeroOne.cgzfoSymbolZeroTwo
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/NSString+MD5.m
 IOVBlackbox.obfuscated/NSString+MD5.m
 -[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]
-___Block_byref_object_copy_
-___Block_byref_object_dispose_
 ___55-[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
 ___55-[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke_2
 ___copy_helper_block_e8_32s40s
@@ -106,8 +117,6 @@ __copy_helper_block_e8_32s40s
 __55-[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke_2
 IOVBlackbox.obfuscated/IOVHomeCollector.m
 __55-[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
-__Block_byref_object_dispose_
-__Block_byref_object_copy_
 -[FFMClassOneThree cothSymbolZeroOne:from:]
 -[FFMClassOneThree cothSymbolZeroTwo:from:]
 -[FFMClassOneThree pzoSymbolZeroOne:pzoSymbolZeroTwo:]
@@ -182,16 +191,40 @@ __33+[FFMClassTwoFour allocWithZone:]_block_invoke
 __38+[FFMClassTwoFour ctwfoSymbolTwoEight]_block_invoke
 -[NSDate(FFMCategoryZeroOne) cgzoSymbolZeroOne]
 +[NSDateFormatter(FFMCategoryZeroOne) cgzoSymbolZeroTwo]
+___56+[NSDateFormatter(FFMCategoryZeroOne) cgzoSymbolZeroTwo]_block_invoke
+_cgzoSymbolZeroTwo.cgzoSymbolZeroThree
+_cgzoSymbolZeroTwo.pred
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/NSDate+IOV.m
+__56+[NSDateFormatter(FFMCategoryZeroOne) cgzoSymbolZeroTwo]_block_invoke
 IOVBlackbox.obfuscated/NSDate+IOV.m
 +[FFMClassZeroFive czfiSymbolZeroOne]
 -[FFMClassZeroFive czfiSymbolZeroTwo]
+___37-[FFMClassZeroFive czfiSymbolZeroTwo]_block_invoke
 -[FFMClassZeroFive pzoSymbolZeroOne:pzoSymbolZeroTwo:]
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVApplicationCollector.m
 IOVBlackbox.obfuscated/IOVApplicationCollector.m
+__37-[FFMClassZeroFive czfiSymbolZeroTwo]_block_invoke
 -[FFMClassOneZero pzoSymbolZeroOne:pzoSymbolZeroTwo:]
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVLocaleCollector.m
 IOVBlackbox.obfuscated/IOVLocaleCollector.m
++[FFMClassTwoFive ctwfiSymbolZeroOne:]
+-[FFMClassTwoFive initCtwfiSymbolZeroTwo:ctwfiSymbolOneFive:]
+-[FFMClassTwoFive keyForRandom:]
+-[FFMClassTwoFive ctwfiSymbolZeroSix:length:]
+-[FFMClassTwoFive ctwfiSymbolTwoOne:length:]
+-[FFMClassTwoFive ctwfiSymbolZeroThree:]
+-[FFMClassTwoFive ctwfiSymbolTwoThree:]
+-[FFMClassTwoFive ctwfiSymbolTwoFour:]
+-[FFMClassTwoFive ctwfiSymbolTwoFive:]
+-[FFMClassTwoFive ctwfiSymbolZeroFive]
+-[FFMClassTwoFive setCtwfiSymbolZeroFive:]
+-[FFMClassTwoFive ctwfiSymbolOneFive]
+-[FFMClassTwoFive setCtwfiSymbolOneFive:]
+-[FFMClassTwoFive .cxx_destruct]
+_OBJC_IVAR_$_FFMClassTwoFive.ctwfiSymbolZeroFive
+_OBJC_IVAR_$_FFMClassTwoFive.ctwfiSymbolOneFive
+/ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVObfuscator.m
+IOVBlackbox.obfuscated/IOVObfuscator.m
 +[FFMClassTwoThree ctwzSymbolZeroOne:key:ctwthSymbolZeroOne:ctwthSymbolZeroTwo:ctwthSymbolZeroThree:sync:]
 -[FFMClassTwoThree initCtwzSymbolZeroTwo:key:ctwthSymbolZeroOne:ctwthSymbolZeroTwo:ctwthSymbolZeroThree:sync:]
 -[FFMClassTwoThree pztwSymbolZeroOne]
@@ -223,20 +256,6 @@ _OBJC_IVAR_$_FFMClassTwoThree._key
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVKeychainTokenFinder.m
 IOVBlackbox.obfuscated/IOVKeychainTokenFinder.m
 IOVBlackbox.obfuscated/IOVKeychainTokenFinder.h
-+[FFMClassOneEight coeSymbolZeroFour:]
--[FFMClassOneEight initCoeSymbolZeroFive:]
--[FFMClassOneEight coeSymbolZeroTwo:length:]
--[FFMClassOneEight coeSymbolZeroThree:length:]
--[FFMClassOneEight coeSymbolZeroEight:]
--[FFMClassOneEight coeSymbolZeroNine:]
--[FFMClassOneEight coeSymbolZeroSix:]
--[FFMClassOneEight coeSymbolZeroSeven:]
--[FFMClassOneEight coeSymbolZeroOne]
--[FFMClassOneEight setCoeSymbolZeroOne:]
--[FFMClassOneEight .cxx_destruct]
-_OBJC_IVAR_$_FFMClassOneEight.coeSymbolZeroOne
-/ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVCrypto.m
-IOVBlackbox.obfuscated/IOVCrypto.m
 +[FFMClassZeroOne czoSymbolZeroTwo:]
 +[FFMClassZeroOne czoSymbolZeroOne]
 -[FFMClassZeroOne init]
@@ -245,8 +264,6 @@ IOVBlackbox.obfuscated/IOVCrypto.m
 -[FFMClassZeroOne initCzoSymbolZeroThree:czoSymbolZeroSeven:czoSymbolZeroEight:build:date:czoSymbolZeroNine:]
 -[FFMClassZeroOne czoSymbolZeroFive]
 ___36-[FFMClassZeroOne czoSymbolZeroFive]_block_invoke
-___copy_helper_block_e8_32r
-___destroy_helper_block_e8_32r
 -[FFMClassZeroOne czoSymbolZeroFour]
 -[FFMClassZeroOne czoSymbolZeroSeven]
 -[FFMClassZeroOne setCzoSymbolZeroSeven:]
@@ -271,8 +288,6 @@ _OBJC_IVAR_$_FFMClassZeroOne._czoSymbolZeroSix
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVBlackboxDevice.m
 IOVBlackbox.obfuscated/IOVBlackboxDevice.m
 IOVBlackbox.obfuscated/IOVBlackboxDevice.h
-__destroy_helper_block_e8_32r
-__copy_helper_block_e8_32r
 __36-[FFMClassZeroOne czoSymbolZeroFive]_block_invoke
 +[FFMClassTwoZero ctwzSymbolZeroOne:url:]
 -[FFMClassTwoZero initCtwzSymbolZeroTwo:url:]
@@ -302,11 +317,12 @@ IOVBlackbox.obfuscated/IOVTokenCollector.m
 IOVBlackbox.obfuscated/IOVTelephonyCollector.m
 +[FFMClassOneOne czfoSymbolZeroOne]
 -[FFMClassOneOne pzoSymbolZeroOne:pzoSymbolZeroTwo:]
+___52-[FFMClassOneOne pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
 -[FFMClassOneOne isAsynchronous]
 -[FFMClassOneOne start]
 -[FFMClassOneOne cooSymbolZeroOne]
 ___34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke
-___34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke.103
+___34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke.106
 -[FFMClassOneOne cooSymbolZeroTwo]
 -[FFMClassOneOne cooSymbolZeroThree]
 -[FFMClassOneOne locationManager:didUpdateLocations:]
@@ -316,14 +332,16 @@ ___34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke.103
 -[FFMClassOneOne timer]
 -[FFMClassOneOne setTimer:]
 -[FFMClassOneOne .cxx_destruct]
+___block_descriptor_48_e8_32r_e5_v8?0lu40l8
 _OBJC_IVAR_$_FFMClassOneOne._lm
 _OBJC_IVAR_$_FFMClassOneOne._timer
 __OBJC_PROTOCOL_$_CLLocationManagerDelegate
 __OBJC_LABEL_PROTOCOL_$_CLLocationManagerDelegate
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVLocationCollector.m
 IOVBlackbox.obfuscated/IOVLocationCollector.m
-__34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke.103
+__34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke.106
 __34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke
+__52-[FFMClassOneOne pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
 +[FFMClassZeroEight czeSymbolZeroSix:]
 ___38+[FFMClassZeroEight czeSymbolZeroSix:]_block_invoke
 ___38+[FFMClassZeroEight czeSymbolZeroSix:]_block_invoke_2
@@ -368,6 +386,8 @@ __25-[FFMClassZeroEight main]_block_invoke
 __39-[FFMClassZeroEight czeSymbolZeroThree]_block_invoke
 __38+[FFMClassZeroEight czeSymbolZeroSix:]_block_invoke_2
 __38+[FFMClassZeroEight czeSymbolZeroSix:]_block_invoke
+-[FFMClassOneFive cofiSymbolZeroSix]
+___36-[FFMClassOneFive cofiSymbolZeroSix]_block_invoke
 +[FFMClassOneFive cofiSymbolOneSix]
 ___35+[FFMClassOneFive cofiSymbolOneSix]_block_invoke
 -[FFMClassOneFive cofiSymbolOneNine]
@@ -378,11 +398,10 @@ _cofiSymbolOneSix.pred
 /ioJenkins/workspace/Main-Cocoa-iOS-SDK/IOVBlackbox.obfuscated/IOVSystemCollector.m
 IOVBlackbox.obfuscated/IOVSystemCollector.m
 __35+[FFMClassOneFive cofiSymbolOneSix]_block_invoke
+__36-[FFMClassOneFive cofiSymbolZeroSix]_block_invoke
 cofiSymbolOneFive
 cofiSymbolOneFour
 cofiSymbolOneThree
-cofiSymbolOneTwo
-cofiSymbolZeroSix
 cofiSymbolOneZero
 cofiSymbolZeroNine
 cofiSymbolZeroSeven

@@ -217,6 +217,7 @@
 				6497813B17E10C4300DC9FF9 /* Frameworks */,
 				6497813C17E10C4300DC9FF9 /* Resources */,
 				4432AE9F1F02EBD000A92B39 /* Embed Frameworks */,
+				44BE1938249051B800424F67 /* Clean For Next Build */,
 			);
 			buildRules = (
 			);
@@ -327,6 +328,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "bin/slim-build-frameworks.sh\n";
+		};
+		44BE1938249051B800424F67 /* Clean For Next Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Clean For Next Build";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Resolves Architecture building errors in Xcode 11 when alternating between device and simulator.\nrm -r \"Frameworks-build/FraudForce.framework/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -530,7 +549,7 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.0.4;
+				MARKETING_VERSION = 5.1.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,7 +583,7 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.0.4;
+				MARKETING_VERSION = 5.1.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
