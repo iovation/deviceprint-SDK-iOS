@@ -29,7 +29,7 @@ for BUILD_FRAMEWORK_PATH in "$(find "${BUILD_FRAMEWORKS_DIR}" -name '*.framework
 	FRAMEWORK_NAME=$(basename "${BUILD_FRAMEWORK_PATH}")
 	
 	# Determine the uuids of the architectures of the executable file within the framework bundle.
-	FRAMEWORK_EXECUTABLE_NAME=$(defaults read "${BUILD_FRAMEWORK_PATH}/Info.plist" CFBundleExecutable)
+	FRAMEWORK_EXECUTABLE_NAME=$(/usr/libexec/PlistBuddy -c "Print :CFBundleExecutable" "${BUILD_FRAMEWORK_PATH}/Info.plist")
 	FRAMEWORK_EXECUTABLE_PATH="${BUILD_FRAMEWORK_PATH}/${FRAMEWORK_EXECUTABLE_NAME}"
 	EXECUTABLE_ARCHS="$(lipo -info "${FRAMEWORK_EXECUTABLE_PATH}" | rev | cut -d ':' -f1 | rev)"
 	FRAMEWORK_SLICE_UUIDS="$(xcrun dwarfdump --uuid "${FRAMEWORK_EXECUTABLE_PATH}" | awk '{ print $2 }' | tr '\n' ' ')"

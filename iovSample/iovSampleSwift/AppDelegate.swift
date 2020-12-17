@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  iovSampleSwift
 //
-//  Copyright © 2017-2019 iovation, Inc. All rights reserved.
+//  Copyright © 2017-2020 iovation, Inc. All rights reserved.
 //
 
 import CoreLocation

@@ -123,6 +123,7 @@
 				442856171EA95DDF00D0C4C8 /* Frameworks */,
 				442856181EA95DDF00D0C4C8 /* Resources */,
 				446B7CF61EB413CF000D37AE /* Embed Frameworks */,
+				44BE1939249053F000424F67 /* Clean For Next Build */,
 			);
 			buildRules = (
 			);
@@ -160,6 +161,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -200,7 +202,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bin/slim-build-frameworks.sh";
+			shellScript = "bin/slim-build-frameworks.sh\n";
+		};
+		44BE1939249053F000424F67 /* Clean For Next Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Clean For Next Build";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Resolves Architecture building errors in Xcode 11 when alternating between device and simulator.\nrm -r \"Frameworks-build/FraudForce.framework/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -343,6 +363,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/iovSampleSwift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 5.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -362,6 +383,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/iovSampleSwift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 5.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
