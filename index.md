@@ -4,7 +4,7 @@ To enable you to use Carthage to add our SDK framework to your iOS projects, we 
 
 ### Cartfile
 
-`binary "https://iovation.github.io/deviceprint-SDK-iOS/FraudForce.json" >= 5.1.0`
+`binary "https://iovation.github.io/deviceprint-SDK-iOS/FraudForce.json" >= 5.2.0`
 
 * The **_origin_** should conform to the [binary only frameworks](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#binary-only-frameworks) style.
 * Choose a [version requirement](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#version-requirement) befitting your project.
