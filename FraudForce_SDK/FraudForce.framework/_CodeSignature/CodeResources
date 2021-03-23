@@ -14,11 +14,11 @@
 		</data>
 		<key>Headers/FraudForce.h</key>
 		<data>
-		XDMwQKPIl3XdbJHM7TiTT+SV0kw=
+		NMRFHLL+2lP0TEZX2iiF/QX/LyE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JV0UOnhK5XRahPewaR6F+WcUYS8=
+		GyYeIoNB6d0mQw4JxozFZQVs7hw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -29,10 +29,6 @@
 	<dict>
 		<key>DigiCertRootCert.der</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			X7fuBjPiWdutDEya5tOPGmHH3CU=
-			</data>
 			<key>hash2</key>
 			<data>
 			dDHl9MPBzkaQd08LYeBUQIg7qaAe0Aumq9eAbtOxGM8=
@@ -40,10 +36,6 @@
 		</dict>
 		<key>EntrustRootCert.der</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			jPQn/XkMOtFmBo3oHlfvu5MictQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			Q99XdLA+f+9f5A2TGnvt8bsua0JzjE5tOEEQPTqn8zk=
@@ -51,21 +43,13 @@
 		</dict>
 		<key>Headers/FraudForce.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			XDMwQKPIl3XdbJHM7TiTT+SV0kw=
-			</data>
 			<key>hash2</key>
 			<data>
-			j3oQEnH9tsSWVhsxuXOjWvr+vKtVSWBIP5EBF5ChU88=
+			ownsi2YP3lXbbm/WTa+T6RzftPPid1QoxWAhPk9eKQk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			8IYysKhOunO9nbOT35dQehXOFzA=
-			</data>
 			<key>hash2</key>
 			<data>
 			+WHxzVheaqaid7+enhXiAKz2Sh49tjvWnhcoYX4iFQ8=

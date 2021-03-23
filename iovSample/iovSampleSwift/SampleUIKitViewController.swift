@@ -2,7 +2,7 @@
 //  SampleUIKitViewController.swift
 //  iovSampleSwift
 //
-//  Copyright © 2017-2020 iovation, Inc. All rights reserved.
+//  Copyright © 2017-2021 iovation, Inc. All rights reserved.
 //
 
 import UIKit
