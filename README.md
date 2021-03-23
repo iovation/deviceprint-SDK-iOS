@@ -20,9 +20,9 @@ Integration Files and Requirements
 |                     |                                                       |
 |---------------------|-------------------------------------------------------|
 | File                | `FraudForce.framework`                                |
-| Version             | 5.1.0                                                 |
-| Required OS Version | iOS 9.0 and higher                                    |
-| Supported Devices   | iPhone 4S & up, iPod Touch 5th Gen & up, iPad 2 & up  |
+| Version             | 5.2.0                                                 |
+| Required OS Version | iOS 11.0 and higher                                   |
+| Supported Devices   | iPhone 5S & up, iPod Touch 6th Gen & up, iPad Air & up|
 | Required Frameworks | CoreTelephony, Security, SystemConfiguration          |
 | Optional Frameworks | AdSupport, CoreLocation                               |
 | |
@@ -102,8 +102,8 @@ Xcode archive (i.e. `.xcarchive` bundle) of your application prior to its submis
 
 1.  Bring the framework `.bcsymbolmap` files into your project repository.
     *   Create a new directory named "Frameworks-bcsymbolmap". We recommend this directory be located alongside the app's `.xcodeproj` file.
-    *   Copy the `.bcsymbolmap` files from the SDK distribution (`FraudForce_SDK/BCSymbolMaps`) into your "Frameworks-bcsymbolmap" directory.
-        *   There should be three such files (representing armv7, armv7s, and arm64 architectures).
+    *   Copy the `.bcsymbolmap` file from the SDK distribution (`FraudForce_SDK/BCSymbolMaps`) into your "Frameworks-bcsymbolmap" directory.
+        *   There should be one such file (representing the arm64 architecture).
 
 2.  Add a script to the "Archive" scheme of your application target.
     *   Copy the shell script `add-framework-symbols-to-app-archive.sh` from the SDK distribution (`FraudForce_SDK/build_scripts`) into your project repository.
@@ -136,7 +136,7 @@ Sample Projects
 ---------------
 
 This download includes two sample Xcode projects that demonstrate the integration of the FraudForce 
-SDK for iOS. These projects require at least Xcode 10 and iOS 9.0.
+SDK for iOS. These projects require at least Xcode 10 and iOS 11.0.
 
 * The `iovSample/iovSampleSwift.xcodeproj` project uses Swift to demonstrate 
 two integration techniques: UIKit and WebKit. Each is implemented in its own 
@@ -364,6 +364,12 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 Changes
 -------
 
+### v5.2.0 ###
+* Performance improvements.
+* Improved handling of background tasks.
+* OS requirement raised to iOS 11.
+    * SDK supports 64-bit devices only.
+
 ### v5.1.0 ###
 * Blackbox format improvements.
 * Performance improvements.
@@ -462,4 +468,4 @@ Changes
 Copyright
 ---------
 
-Copyright (c) 2010-2020 iovation, Inc. All rights reserved.
+Copyright (c) 2010-2021 iovation, Inc. All rights reserved.

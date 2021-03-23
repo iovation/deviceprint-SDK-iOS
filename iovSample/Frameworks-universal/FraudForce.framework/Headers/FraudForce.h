@@ -2,7 +2,7 @@
 //  FraudForce.h
 //  libiovation
 //
-//  Copyright (c) 2010-2020 iovation, Inc. All rights reserved.
+//  Copyright (c) 2010-2021 iovation, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,8 +20,8 @@
  * transmitted to your servers to be used in a reputation check (for example a
  * @p CheckTransactionDetails call).
  *
- * @version 5.1.0
- * @copyright 2010-2020 iovation, Inc. All rights reserved.
+ * @version 5.2.0
+ * @copyright 2010-2021 iovation, Inc. All rights reserved.
  *
  * iovation hereby grants to Client a nonexclusive, limited, non-transferable,
  * revocable and non-sublicensable license to install, use, copy and
@@ -175,8 +175,8 @@
 @protocol FraudForceDelegate <NSObject>
 
 /*!
- * Authorizes a network call to iovation's service that enables the collection of additional network
- * information. If this method returns NO or is not implemented then the SDK will not make network calls.
+ * Authorizes limited network access during blackbox generation to enable additional data collection.
+ * If this method returns NO or is not implemented then the SDK will not make network calls.
  *
  * @since v5.0.0
  *

@@ -259,15 +259,15 @@ mix native code with content that runs inside web view.</p>
 </tr>
 <tr>
 	<td> Version    </td>
-	<td> 5.1.0             </td>
+	<td> 5.2.0             </td>
 </tr>
 <tr>
 	<td> Required OS Version </td>
-	<td> iOS 9.0 and higher         </td>
+	<td> iOS 11.0 and higher         </td>
 </tr>
 <tr>
 	<td> Supported Devices </td>
-	<td> iPhone 4S &amp; up, iPod Touch 5th Gen &amp; up, iPad 2 &amp; up </td>
+	<td> iPhone 5S &amp; up, iPod Touch 6th Gen &amp; up, iPad Air &amp; up</td>
 </tr>
 <tr>
 	<td> Required Frameworks </td>
@@ -401,10 +401,10 @@ Xcode archive (i.e. <code>.xcarchive</code> bundle) of your application prior to
 
 <ul>
 <li>Create a new directory named &#8220;Frameworks-bcsymbolmap&#8221;. We recommend this directory be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
-<li>Copy the <code>.bcsymbolmap</code> files from the SDK distribution (<code>FraudForce_SDK/BCSymbolMaps</code>) into your &#8220;Frameworks-bcsymbolmap&#8221; directory.
+<li>Copy the <code>.bcsymbolmap</code> file from the SDK distribution (<code>FraudForce_SDK/BCSymbolMaps</code>) into your &#8220;Frameworks-bcsymbolmap&#8221; directory.
 
 <ul>
-<li>There should be three such files (representing armv7, armv7s, and arm64 architectures).</li>
+<li>There should be one such file (representing the arm64 architecture).</li>
 </ul></li>
 </ul></li>
 <li><p>Add a script to the &#8220;Archive&#8221; scheme of your application target.</p>
@@ -455,7 +455,7 @@ Xcode archive (i.e. <code>.xcarchive</code> bundle) of your application prior to
 <h2 id="sampleprojects">Sample Projects</h2>
 
 <p>This download includes two sample Xcode projects that demonstrate the integration of the FraudForce
-SDK for iOS. These projects require at least Xcode 10 and iOS 9.0.</p>
+SDK for iOS. These projects require at least Xcode 10 and iOS 11.0.</p>
 
 <ul>
 <li><p>The <code>iovSample/iovSampleSwift.xcodeproj</code> project uses Swift to demonstrate
@@ -679,6 +679,18 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 
 <h2 id="changes">Changes</h2>
 
+<h3 id="v5.2.0">v5.2.0</h3>
+
+<ul>
+<li>Performance improvements.</li>
+<li>Improved handling of background tasks.</li>
+<li>OS requirement raised to iOS 11.
+
+<ul>
+<li>SDK supports 64-bit devices only.</li>
+</ul></li>
+</ul>
+
 <h3 id="v5.1.0">v5.1.0</h3>
 
 <ul>
@@ -826,7 +838,7 @@ SDK functionality.</li>
 
 <h2 id="copyright">Copyright</h2>
 
-<p>Copyright (c) 2010&#8211;2020 iovation, Inc. All rights reserved.</p>
+<p>Copyright (c) 2010&#8211;2021 iovation, Inc. All rights reserved.</p>
 
 </body>
 </html>
