@@ -1,9 +1,15 @@
-Title: TransUnion FraudForce SDK for iOS
+Title: TransUnion TruValidate Device Risk SDK for iOS
 
-FraudForce SDK for iOS
+Device Risk SDK for iOS
 ===========================
 
-TransUnion identifies devices through information collected by the FraudForce 
+## What is TruValidate Device Risk?
+
+**FraudForce is now Device Risk. Our device-based products, such as Device Risk and Device-Based Authentication (formerly ClearKey), are critical components of our fraud and identity solutions; the new names make it easy to quickly understand our extensive capabilities. We have united these solutions under the TransUnion TruValidate brand. We have taken care not to update anything that might affect your implementations; as a result you'll still see legacy names in some places.**
+
+--
+
+TransUnion identifies devices through information collected by the Device Risk 
 SDK run on an end-user’s mobile device. The SDK inspects the device
 and generates a blackbox that contains all available device information. This
 blackbox must then be sent to your servers to be used in a transaction risk
@@ -11,7 +17,7 @@ check via the `CheckTransactionDetails` API.
 
 ![Mobile SDK workflow](img/mobile_workflow.png "iovation mobile SDK workflow")
 
-The FraudForce SDK integrates with native and hybrid apps. Hybrid apps
+The Device Risk SDK integrates with native and hybrid apps. Hybrid apps
 mix native code with content that runs inside web view.
 
 Integration Files and Requirements
@@ -70,7 +76,7 @@ Installation
 
     * Configure and confirm the new build phase.
         *   The "Shell" text field should read "/bin/sh" (which is the default value).
-        *   In the text-input area, enter the project-relative path to the iovation-provided script `slim-build-frameworks.sh`.
+        *   In the text-input area, enter the project-relative path to the TransUnion-provided script `slim-build-frameworks.sh`.
     *   Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in the above steps).
         *   Specifically, `INPUT_FRAMEWORKS_DIR` (Frameworks-universal) and `OUTPUT_FRAMEWORKS_DIR` (Frameworks-build) variables must be set to the absolute paths for the appropriate directories.
         *   As provided, the script expects both directories to be located alongside the app's `.xcodeproj` file.
@@ -87,7 +93,7 @@ Installation
     *   Add the key `AppIdentifierPrefix` with the string value
         `$(AppIdentifierPrefix)` to your app's `Info.plist`.
 
-9.  <a name="entitle-wireless"></a>For Xcode 10 (and above), allow FraudForce to collect wireless network information:
+9.  <a name="entitle-wireless"></a>For Xcode 10 (and above), allow Device Risk to collect wireless network information:
     *   Configure your app to include the "Access WiFi Information" capability.
     *   Turning the capability on for your application target in Xcode 10 (and above) will update the app's entitlements file and provisioning profile.
         *   This entitlement is not required for (and breaks automatic code signing of) apps built by earlier versions of Xcode. 
@@ -95,8 +101,8 @@ Installation
 Submission Preparation
 -----------------------
 
-The FraudForce framework provides full support for Apple's bitcode technology. If your iOS app includes 
-bitcode then additional configuration of your Xcode project is required to enable symbolication of FraudForce 
+The Device Risk framework provides full support for Apple's bitcode technology. If your iOS app includes 
+bitcode then additional configuration of your Xcode project is required to enable symbolication of Device Risk 
 stack frames in the crash logs of your app. The necessary symbolic information must be included in the 
 Xcode archive (i.e. `.xcarchive` bundle) of your application prior to its submission to the App Store.
 
@@ -120,7 +126,7 @@ Xcode archive (i.e. `.xcarchive` bundle) of your application prior to its submis
     * Configure and confirm the new script action.
         *   The "Shell" text field should read "/bin/sh" (which is the default value).
         *   The "Provide build settings from" popup button should be set to the application target.
-        *   In the text-input area, enter the absolute path to the iovation-provided script `add-framework-symbols-to-app-archive.sh`.
+        *   In the text-input area, enter the absolute path to the TransUnion-provided script `add-framework-symbols-to-app-archive.sh`.
             *   For example, if the script is located in a `bin` directory that is alongside the app's `.xcodeproj` file then it should read, `"${PROJECT_DIR}/bin/add-framework-symbols-to-app-archive.sh"`
             *   The quotes are an important concern, since this allows for proper execution when path elements include spaces.
 
@@ -135,7 +141,7 @@ Xcode archive (i.e. `.xcarchive` bundle) of your application prior to its submis
 Sample Projects
 ---------------
 
-This download includes two sample Xcode projects that demonstrate the integration of the FraudForce 
+This download includes two sample Xcode projects that demonstrate the integration of the Device Risk 
 SDK for iOS. These projects require at least Xcode 10 and iOS 11.0.
 
 * The `iovSample/iovSampleSwift.xcodeproj` project uses Swift to demonstrate 
@@ -149,7 +155,7 @@ view controller, and may be tested in a tabbed interface on a simulator or devic
 Usage
 -----
 
-Use the `FraudForce` API to enable the FraudForce SDK to start collecting blackbox
+Use the `FraudForce` API to enable the Device Risk SDK to start collecting blackbox
 data asynchronously, and to generate a new blackbox to submit to your back-end service.
 
 1.  Import it into your app delegate and call `+start` when the application
@@ -184,15 +190,15 @@ data asynchronously, and to generate a new blackbox to submit to your back-end s
         NSString *blackbox = [FraudForce blackbox];
 
 4.  Submit the blackbox to your service. The service should then send
-    it to iovation to evaluate the transaction. See the iovSample Xcode
+    it to TransUnion to evaluate the transaction. See the iovSample Xcode
     projects included with the download for a sample implementation.
 
 ### New Features! ###
 
-Versions 5.0.0 and above include the ability to make a network call to iovation's service. This 
-enables the FraudForce SDK to collect additional network information. By default this functionality 
+Versions 5.0.0 and above include the ability to make a network call to TransUnion TruValidate's service. This 
+enables the Device Risk SDK to collect additional network information. By default this functionality 
 is turned off and will need to be enabled via a `FraudForceDelegate` object. Usage of this 
-feature requires a subscriber key be provided. Please contact your iovation client representative to 
+feature requires a subscriber key be provided. Please contact your TransUnion client representative to 
 acquire a subscriber key.
 
 ### Important! ###
@@ -247,7 +253,7 @@ To integrate into a native app using UIKit:
 
 A more extensive example, including submitting a blackbox in an HTTP request,
 may be found in the `SampleUIKitViewController` class for both Swift (iovSampleSwift) and 
-Objective-C (iovSample) in the sample Xcode projects included in the FraudForce SDK download.
+Objective-C (iovSample) in the sample Xcode projects included in the Device Risk SDK download.
 
 WebKit Integration
 ------------------
@@ -350,7 +356,7 @@ and add it to the context of the web view.
                + "document.getElementById('bbox').value = '\(FraudForce.blackbox())'\n"
 
 Find a complete example in the `SampleWKWebViewViewController` class for Swift (iovSampleSwift) and `SampleWebKitViewController` 
-class for Objective-C (iovSample) in the sample Xcode projects included in the FraudForce SDK download.
+class for Objective-C (iovSample) in the sample Xcode projects included in the Device Risk SDK download.
 
 
 [Intelligence Center]: https://admin.iovation.com/
@@ -468,4 +474,4 @@ Changes
 Copyright
 ---------
 
-Copyright (c) 2010-2021 iovation, Inc. All rights reserved.
+Copyright (c) 2010-2021 TransUnion. All rights reserved.
