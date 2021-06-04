@@ -25,81 +25,65 @@ Integration Files and Requirements
 
 |                     |                                                       |
 |---------------------|-------------------------------------------------------|
-| File                | `FraudForce.framework`                                |
+| File                | `FraudForce.xcframework`                              |
 | Version             | 5.2.0                                                 |
 | Required OS Version | iOS 11.0 and higher                                   |
 | Supported Devices   | iPhone 5S & up, iPod Touch 6th Gen & up, iPad Air & up|
 | Required Frameworks | CoreTelephony, Security, SystemConfiguration          |
 | Optional Frameworks | AdSupport, CoreLocation                               |
-| |
-| (optional) Carthage | [https://iovation.github.io/deviceprint-SDK-iOS/](https://iovation.github.io/deviceprint-SDK-iOS/) |
 
-
-Installation
+New XCFramework Installation
 ------------
 
-1.  Download and unzip the SDK from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases).
+1.  Download and unzip the SDK from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases). The XCFramework version of the SDK is attached to the current release as [FraudForce.xcframework.zip](https://github.com/iovation/deviceprint-SDK-iOS/releases/download/v5.2.0/FraudForce.xcframework.zip).
 
-2.  Bring the universal framework into your project repository.
-    *   Create a new directory named "Frameworks-universal". We recommend this directory be located alongside the app's `.xcodeproj` file.
-    *   Copy `FraudForce.framework` from the SDK distribution into your "Frameworks-universal" directory.
+2.  Bring `FraudForce.xcframework` into your project repository.
 
-3.  Prepare the staging area for build-specific frameworks.
-    *   Create a new directory, alongside the universal directory, named "Frameworks-build".
-    *   Inside of Frameworks-build, create a new directory named "FraudForce.framework".
-        *   This is not intended to (initially) be a valid framework, rather just an empty directory that has the `.framework` extension.
+3.  Drag and drop (or select the "+" button) to add the `FraudForce.xcframework` into the "Frameworks, Libraries, and Embedded Content" section of the "General" pane of the Xcode target editor.
+     ![Drag in FraudForce.xcframework](img/drag_n_drop_xcframework.png "Drag FraudForce.xcframework into your application target").
 
-4.  In the Finder, drag `FraudForce.framework` **from Frameworks-build** into the "Embedded Binaries" section of the "General" pane of the Xcode target editor.
+    *   This should also result in `FraudForce.xcframework` being added to appropriate sections of the "Build Phases" pane ("Link Binary With Libraries" and "Embed Frameworks").
 
-     ![Drag in FraudForce.framework](img/drag-embed-framework.png "Drag FraudForce.framework into your application target")
-
-    *   This should also result in the framework being added to the "Linked Frameworks and Libraries" section.
-    *   Additionally, this should result in `FraudForce.framework` appearing in similarly named sections in the "Build Phases" pane.
-
-5.  Optionally add these frameworks (i.e. "Linked Frameworks and Libraries") if your app makes use of them (and Auto Linking is off):
+4.   Optionally add these frameworks (i.e. "Linked Frameworks and Libraries") if your app makes use of them (and Auto Linking is off):
     *   `AdSupport.framework` — If your app displays ads. Do not include if your
         app does not use the ad framework, because the App Store will reject
-        apps that include the framework but don't use it.
+        apps that include the framework but don't use it or does not ask for permission from the user.
     *   `CoreLocation.framework` — If your app uses location monitoring. Do not
         include this framework unless your application requests geolocation
         permission from the user.
 
-6.  Add a pre-compile build phase to your application target.
-    *   Copy the shell script `slim-build-frameworks.sh` from the SDK distribution (`FraudForce_SDK/build_scripts`) into your project repository.
-    *   Select the "+" button in the "Build Phases" pane to create a "New Run Script Phase".
-        *   The new phase is initially named "Run Script" and is positioned as the bottommost (final) build phase.
-        *   The suggested name for this phase is "Slim Frameworks For Build" (though the name does not affect the function of this phase).
-    *   Reposition the new phase to precede the "Compile Sources" phase.
-        *   Under normal conditions, this will result in the phase being located below "Target Dependencies".
-
-        ![Setup build script](img/run-script-phase.png "Position and configure build script")
-
-    * Configure and confirm the new build phase.
-        *   The "Shell" text field should read "/bin/sh" (which is the default value).
-        *   In the text-input area, enter the project-relative path to the TransUnion-provided script `slim-build-frameworks.sh`.
-    *   Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in the above steps).
-        *   Specifically, `INPUT_FRAMEWORKS_DIR` (Frameworks-universal) and `OUTPUT_FRAMEWORKS_DIR` (Frameworks-build) variables must be set to the absolute paths for the appropriate directories.
-        *   As provided, the script expects both directories to be located alongside the app's `.xcodeproj` file.
-
-7.  Add a final build phase to your application target.
-    *  Resolves Architecture building errors in Xcode 11 when alternating between device and simulator.
-    *  Select the "+" button in the "Build Phases" pane to create a "New Run Script Phase".
-    *  Confirm the script is the bottommost build phase, and configure its fields.
-        *   The "Shell" text field should read "/bin/sh" (which is the default value).
-        *   In the text-input area, enter the shell command `rm -r "Frameworks-build/FraudForce.framework/"`
-
-8.  <a name="keychain-share"></a>If your app has enabled the "Keychain Sharing" capability:
+5.  <a name="keychain-share"></a>If your app has enabled the "Keychain Sharing" capability:
     *   Add "com.iovation.stm" to its list of Keychain Groups
     *   Add the key `AppIdentifierPrefix` with the string value
         `$(AppIdentifierPrefix)` to your app's `Info.plist`.
 
-9.  <a name="entitle-wireless"></a>For Xcode 10 (and above), allow Device Risk to collect wireless network information:
+6.   <a name="entitle-wireless"></a>For Xcode 10 (and above), allow Device Risk to collect wireless network information:
     *   Configure your app to include the "Access WiFi Information" capability.
     *   Turning the capability on for your application target in Xcode 10 (and above) will update the app's entitlements file and provisioning profile.
         *   This entitlement is not required for (and breaks automatic code signing of) apps built by earlier versions of Xcode. 
 
+        
+Upgrade from Universal to XCFramework Installation
+------------
+
+1. Download and unzip the XCFramework from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases/download/v5.2.0/FraudForce.xcframework.zip)  
+
+2. In the "Frameworks, Libraries, and Embedded Content" section of the "General" pane of the Xcode target editor, remove `FraudForce.framework`.
+
+3. Bring `FraudForce.xcframework` into your project repository. 
+
+4. Drag and drop (or select the "+" button) to add the `FraudForce.xcframework` into the "Frameworks, Libraries, and Embedded Content" section of the "General" pane of the Xcode target editor.
+
+5. In the "Build Phases" pane of the Xcode target editor, remove the formerly required Run Script phases related to the Universal version of the framework (which were named "Slim Frameworks For Build" and "Clean For Next Build" in prior documentation).
+
+6. The XCFramework now handles the architectures changes for Simulator and Devices.
+
+
 Submission Preparation
 -----------------------
+
+### XCFramework Notice ###
+> The utility of `.bcsymbolmap` files continues to hold true for XCFramework packaged dynamic libraries. The `FraudForce.xcframework.zip` archive includes the required `.bcsymbolmap` file for the `ios-arm64` platform. The archive script provided in the SDK distribution has not yet been updated to support XCFramework based integrations, but the workload it accomplishes for Universal based integrations is a valid template for users of XCFramework. 
 
 The Device Risk framework provides full support for Apple's bitcode technology. If your iOS app includes 
 bitcode then additional configuration of your Xcode project is required to enable symbolication of Device Risk 
@@ -375,6 +359,7 @@ Changes
 * Improved handling of background tasks.
 * OS requirement raised to iOS 11.
     * SDK supports 64-bit devices only.
+* XCFramework artifact released.
 
 ### v5.1.0 ###
 * Blackbox format improvements.
