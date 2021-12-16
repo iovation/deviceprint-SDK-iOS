@@ -1,0 +1,10 @@
+framework module FraudForce {
+    umbrella header "FraudForce.h"
+    export *
+    module * { export * }
+
+    link framework "CoreTelephony"
+    link framework "Security"
+    link framework "SystemConfiguration"
+    link framework "UIKit"
+}

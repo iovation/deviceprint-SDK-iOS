@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40658C93263764DC006E8FA9 /* FraudForce.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40658C92263764DC006E8FA9 /* FraudForce.xcframework */; };
+		40658C94263764DC006E8FA9 /* FraudForce.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40658C92263764DC006E8FA9 /* FraudForce.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		442856201EA95DDF00D0C4C8 /* SampleUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428561F1EA95DDF00D0C4C8 /* SampleUIKitViewController.swift */; };
 		442856221EA95DDF00D0C4C8 /* SampleWKWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442856211EA95DDF00D0C4C8 /* SampleWKWebViewViewController.swift */; };
 		442856251EA95DDF00D0C4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442856231EA95DDF00D0C4C8 /* Main.storyboard */; };
@@ -14,8 +16,6 @@
 		4428562A1EA95DDF00D0C4C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442856281EA95DDF00D0C4C8 /* LaunchScreen.storyboard */; };
 		4428563C1EA97B8400D0C4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4428561D1EA95DDF00D0C4C8 /* AppDelegate.swift */; };
 		4432AE901EFB32B300A92B39 /* webkit.html in Resources */ = {isa = PBXBuildFile; fileRef = 4432AE8F1EFB32B300A92B39 /* webkit.html */; };
-		4432AE9A1F01CAB700A92B39 /* FraudForce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432AE991F01CAB700A92B39 /* FraudForce.framework */; };
-		4432AE9B1F01CAB700A92B39 /* FraudForce.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4432AE991F01CAB700A92B39 /* FraudForce.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4432AE9B1F01CAB700A92B39 /* FraudForce.framework in Embed Frameworks */,
+				40658C94263764DC006E8FA9 /* FraudForce.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		40658C92263764DC006E8FA9 /* FraudForce.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FraudForce.xcframework; sourceTree = "<group>"; };
 		4428561A1EA95DDF00D0C4C8 /* iovSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iovSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4428561D1EA95DDF00D0C4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4428561F1EA95DDF00D0C4C8 /* SampleUIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUIKitViewController.swift; sourceTree = "<group>"; };
@@ -40,9 +41,6 @@
 		442856261EA95DDF00D0C4C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4428562B1EA95DDF00D0C4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4432AE8F1EFB32B300A92B39 /* webkit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webkit.html; sourceTree = "<group>"; };
-		4432AE971F01963E00A92B39 /* add-framework-symbols-to-app-archive.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "add-framework-symbols-to-app-archive.sh"; path = "../bin/add-framework-symbols-to-app-archive.sh"; sourceTree = "<group>"; };
-		4432AE981F01963E00A92B39 /* slim-build-frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "slim-build-frameworks.sh"; path = "../bin/slim-build-frameworks.sh"; sourceTree = "<group>"; };
-		4432AE991F01CAB700A92B39 /* FraudForce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FraudForce.framework; path = "Frameworks-build/FraudForce.framework"; sourceTree = "<group>"; };
 		44B4C9D61EAEBA0B00F7C40C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44B4C9DA1EAEBA4A00F7C40C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44E17D651FAA8020000F7DF4 /* iovSampleSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iovSampleSwift.entitlements; sourceTree = "<group>"; };
@@ -53,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4432AE9A1F01CAB700A92B39 /* FraudForce.framework in Frameworks */,
+				40658C93263764DC006E8FA9 /* FraudForce.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +61,6 @@
 		442856111EA95DDF00D0C4C8 = {
 			isa = PBXGroup;
 			children = (
-				4432AE941F0195D800A92B39 /* bin */,
 				4428561C1EA95DDF00D0C4C8 /* iovSampleSwift */,
 				442856311EA9681F00D0C4C8 /* Frameworks */,
 				4428561B1EA95DDF00D0C4C8 /* Products */,
@@ -97,18 +94,9 @@
 		442856311EA9681F00D0C4C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4432AE991F01CAB700A92B39 /* FraudForce.framework */,
+				40658C92263764DC006E8FA9 /* FraudForce.xcframework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4432AE941F0195D800A92B39 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				4432AE971F01963E00A92B39 /* add-framework-symbols-to-app-archive.sh */,
-				4432AE981F01963E00A92B39 /* slim-build-frameworks.sh */,
-			);
-			path = bin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,12 +106,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4428562E1EA95DDF00D0C4C8 /* Build configuration list for PBXNativeTarget "iovSampleSwift" */;
 			buildPhases = (
-				440D5A081ECB98750031EC64 /* Slim Frameworks For Build */,
 				442856161EA95DDF00D0C4C8 /* Sources */,
 				442856171EA95DDF00D0C4C8 /* Frameworks */,
 				442856181EA95DDF00D0C4C8 /* Resources */,
 				446B7CF61EB413CF000D37AE /* Embed Frameworks */,
-				44BE1939249053F000424F67 /* Clean For Next Build */,
 			);
 			buildRules = (
 			);
@@ -188,41 +174,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		440D5A081ECB98750031EC64 /* Slim Frameworks For Build */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Slim Frameworks For Build";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bin/slim-build-frameworks.sh\n";
-		};
-		44BE1939249053F000424F67 /* Clean For Next Build */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Clean For Next Build";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Resolves Architecture building errors in Xcode 11 when alternating between device and simulator.\nrm -r \"Frameworks-build/FraudForce.framework/\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		442856161EA95DDF00D0C4C8 /* Sources */ = {
@@ -344,7 +295,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -358,12 +310,15 @@
 				DEVELOPMENT_TEAM = WY8P975J56;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks-build",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/iovSampleSwift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.2.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 5.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -378,12 +333,15 @@
 				DEVELOPMENT_TEAM = WY8P975J56;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks-build",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/iovSampleSwift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.2.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 5.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

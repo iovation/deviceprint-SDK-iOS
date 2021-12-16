@@ -26,21 +26,21 @@ Integration Files and Requirements
 |                     |                                                       |
 |---------------------|-------------------------------------------------------|
 | File                | `FraudForce.xcframework`                              |
-| Version             | 5.2.0                                                 |
+| Version             | 5.3.0                                                 |
 | Required OS Version | iOS 11.0 and higher                                   |
 | Supported Devices   | iPhone 5S & up, iPod Touch 6th Gen & up, iPad Air & up|
 | Required Frameworks | CoreTelephony, Security, SystemConfiguration          |
 | Optional Frameworks | AdSupport, CoreLocation                               |
 
-New XCFramework Installation
+Installation
 ------------
 
-1.  Download and unzip the SDK from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases). The XCFramework version of the SDK is attached to the current release as [FraudForce.xcframework.zip](https://github.com/iovation/deviceprint-SDK-iOS/releases/download/v5.2.0/FraudForce.xcframework.zip).
+1.  Download and unzip the SDK from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases).
 
 2.  Bring `FraudForce.xcframework` into your project repository.
 
 3.  Drag and drop (or select the "+" button) to add the `FraudForce.xcframework` into the "Frameworks, Libraries, and Embedded Content" section of the "General" pane of the Xcode target editor.
-     ![Drag in FraudForce.xcframework](img/drag_n_drop_xcframework.png "Drag FraudForce.xcframework into your application target").
+     ![Drag in FraudForce.xcframework](img/drag_n_drop_xcframework.png "Drag FraudForce.xcframework into your application target")
 
     *   This should also result in `FraudForce.xcframework` being added to appropriate sections of the "Build Phases" pane ("Link Binary With Libraries" and "Embed Frameworks").
 
@@ -57,76 +57,37 @@ New XCFramework Installation
     *   Add the key `AppIdentifierPrefix` with the string value
         `$(AppIdentifierPrefix)` to your app's `Info.plist`.
 
-6.   <a name="entitle-wireless"></a>For Xcode 10 (and above), allow Device Risk to collect wireless network information:
+6.   <a name="entitle-wireless"></a>Allow Device Risk to collect wireless network information:
     *   Configure your app to include the "Access WiFi Information" capability.
-    *   Turning the capability on for your application target in Xcode 10 (and above) will update the app's entitlements file and provisioning profile.
-        *   This entitlement is not required for (and breaks automatic code signing of) apps built by earlier versions of Xcode. 
+        *   This capability is _optional_ but recommended (as it enables additional attribute collection). 
+        *   Turning the capability on for your application target in Xcode will update the app's entitlements file and provisioning profile.
 
         
 Upgrade from Universal to XCFramework Installation
 ------------
 
-1. Download and unzip the XCFramework from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases/download/v5.2.0/FraudForce.xcframework.zip)  
+Versions 5.0.0 (2017) through 5.1.0 (2020) were distributed exclusively as a Universal framework. Version 5.2.0 introduced an optional XCFramework asset. Beginning with version 5.3.0, XCFramework is the exclusive distribution format for the Device Risk SDK. To update a project that had previously integrated a Universal framework version of Device Risk, follow these steps to uninstall the deprecated format.
 
-2. In the "Frameworks, Libraries, and Embedded Content" section of the "General" pane of the Xcode target editor, remove `FraudForce.framework`.
+1. In the "Frameworks, Libraries, and Embedded Content" section of the "General" pane of the Xcode target editor, remove `FraudForce.framework`.
 
-3. Bring `FraudForce.xcframework` into your project repository. 
+2. In the "Build Phases" pane of the Xcode target editor, remove the formerly required Run Script phases related to the Universal version of the framework (which were named "Slim Frameworks For Build" and "Clean For Next Build" in prior documentation).
+    * The XCFramework format seamlessly packages and allows Xcode to appropriately handle the multiple architectures required to support both Simulators and Devices.
 
-4. Drag and drop (or select the "+" button) to add the `FraudForce.xcframework` into the "Frameworks, Libraries, and Embedded Content" section of the "General" pane of the Xcode target editor.
+3. Remove the "Post-actions" script from the "Archive" scheme of your application target (which was named "Archive Framework Symbols" in prior documentation).
+    * From the target popup button in the Xcode toolbar, ensure your application target is selected and choose "Edit Scheme…" from the popup menu.
+    * In the scheme editor, select the disclosure triangle for the "Archive" item and then select "Post-actions".
+    * Remove the Run Script action responsible for including `.bcsymbolmap` files for Device Risk in the application archive.
+        * The utility of `.bcsymbolmap` files continues to hold true for XCFramework-packaged, dynamic libraries (i.e. they are required to enable symbolication of Device Risk stack frames in the crash logs of subscriber apps). Now, these files are included inside of the `.xcframework` bundle and are appropriately handled by Xcode 12 and above.
 
-5. In the "Build Phases" pane of the Xcode target editor, remove the formerly required Run Script phases related to the Universal version of the framework (which were named "Slim Frameworks For Build" and "Clean For Next Build" in prior documentation).
+4. Follow the Installation instructions (above) to integrate the XCFramework version of Device Risk.
+    * Installation steps 4 - 6 should not need to be repeated given a proper installation of a recent version of Device Risk. 
 
-6. The XCFramework now handles the architectures changes for Simulator and Devices.
-
-
-Submission Preparation
------------------------
-
-### XCFramework Notice ###
-> The utility of `.bcsymbolmap` files continues to hold true for XCFramework packaged dynamic libraries. The `FraudForce.xcframework.zip` archive includes the required `.bcsymbolmap` file for the `ios-arm64` platform. The archive script provided in the SDK distribution has not yet been updated to support XCFramework based integrations, but the workload it accomplishes for Universal based integrations is a valid template for users of XCFramework. 
-
-The Device Risk framework provides full support for Apple's bitcode technology. If your iOS app includes 
-bitcode then additional configuration of your Xcode project is required to enable symbolication of Device Risk 
-stack frames in the crash logs of your app. The necessary symbolic information must be included in the 
-Xcode archive (i.e. `.xcarchive` bundle) of your application prior to its submission to the App Store.
-
-1.  Bring the framework `.bcsymbolmap` files into your project repository.
-    *   Create a new directory named "Frameworks-bcsymbolmap". We recommend this directory be located alongside the app's `.xcodeproj` file.
-    *   Copy the `.bcsymbolmap` file from the SDK distribution (`FraudForce_SDK/BCSymbolMaps`) into your "Frameworks-bcsymbolmap" directory.
-        *   There should be one such file (representing the arm64 architecture).
-
-2.  Add a script to the "Archive" scheme of your application target.
-    *   Copy the shell script `add-framework-symbols-to-app-archive.sh` from the SDK distribution (`FraudForce_SDK/build_scripts`) into your project repository.
-    *   From the target popup button in the Xcode toolbar, ensure your application target is selected and chose "Edit Scheme…" from the popup menu.
-
-         ![Open scheme editor](img/target-popup-menu.png "Use the target popup to edit schemes")
-
-    *   In the scheme editor, select the disclosure triangle for the "Archive" item and then select "Post-actions".
-        *   Select the "+" button in order to create a "New Run Script Action".
-        *   The new action is initially named "Run Script". The suggested name for this action is "Archive Framework Symbols" (though the name does not affect the function of this action).
-
-        ![Setup archive script](img/scheme-editor.png "Configure the script action")
-
-    * Configure and confirm the new script action.
-        *   The "Shell" text field should read "/bin/sh" (which is the default value).
-        *   The "Provide build settings from" popup button should be set to the application target.
-        *   In the text-input area, enter the absolute path to the TransUnion-provided script `add-framework-symbols-to-app-archive.sh`.
-            *   For example, if the script is located in a `bin` directory that is alongside the app's `.xcodeproj` file then it should read, `"${PROJECT_DIR}/bin/add-framework-symbols-to-app-archive.sh"`
-            *   The quotes are an important concern, since this allows for proper execution when path elements include spaces.
-
-3.  Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in both the above steps and in the [Installation] section).
-    *   Specifically, `BUILD_FRAMEWORKS_DIR` (Frameworks-build) and `INPUT_BCSYMBOLMAP_DIR` (Frameworks-bcsymbolmap) variables must be set to the absolute paths for the appropriate directories.
-    *   As provided, the script expects both directories to be located alongside the app's `.xcodeproj` file.
-
-4.  (optional) Customize the logging of script output as you desire.
-    *   By default, Xcode does not handle or display output from scheme-based scripts, thus, the script redirects `stdout` and `stderr` to a (unique) log file in `/var/tmp`.
-    *   Change the output redirection or ignore all script output by removing redirection (which is declared near the start of the script).
 
 Sample Projects
 ---------------
 
 This download includes two sample Xcode projects that demonstrate the integration of the Device Risk 
-SDK for iOS. These projects require at least Xcode 10 and iOS 11.0.
+SDK for iOS. These projects require at least Xcode 11 and iOS 11.0.
 
 * The `iovSample/iovSampleSwift.xcodeproj` project uses Swift to demonstrate 
 two integration techniques: UIKit and WebKit. Each is implemented in its own 
@@ -353,6 +314,13 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the D
 
 Changes
 -------
+
+### v5.3.0 ###
+* Recognition improvements.
+* Distribution is now exclusively XCFramework.
+    * Includes support for simulators on M1 (arm64) Macs.
+    * Updated sample projects to use `.xcframework`.
+    * Removed (Universal framework) integration scripts.
 
 ### v5.2.0 ###
 * Performance improvements.

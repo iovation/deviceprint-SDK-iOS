@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40658C902637648D006E8FA9 /* FraudForce.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40658C8F2637648D006E8FA9 /* FraudForce.xcframework */; };
+		40658C912637648D006E8FA9 /* FraudForce.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40658C8F2637648D006E8FA9 /* FraudForce.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		440432A9218CE5AA0083507F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440432A7218CE5AA0083507F /* Main.storyboard */; };
-		4432AE9D1F02EBD000A92B39 /* FraudForce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432AE9C1F02EBD000A92B39 /* FraudForce.framework */; };
-		4432AE9E1F02EBD000A92B39 /* FraudForce.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4432AE9C1F02EBD000A92B39 /* FraudForce.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		637D70861B9F97090077CBCE /* SampleWebKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637D70851B9F97090077CBCE /* SampleWebKitViewController.m */; };
 		63A1357319DF482F007E060D /* webkit.html in Resources */ = {isa = PBXBuildFile; fileRef = 63A1357119DF482F007E060D /* webkit.html */; };
 		63E92C2C1901C5BB00F2D445 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E92C2B1901C5BB00F2D445 /* CoreLocation.framework */; };
@@ -20,22 +20,7 @@
 		6497815217E10C4300DC9FF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6497815117E10C4300DC9FF9 /* AppDelegate.m */; };
 		6497815B17E10C4300DC9FF9 /* SampleUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6497815A17E10C4300DC9FF9 /* SampleUIKitViewController.m */; };
 		6497815D17E10C4300DC9FF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6497815C17E10C4300DC9FF9 /* Images.xcassets */; };
-		6497816417E10C4300DC9FF9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6497816317E10C4300DC9FF9 /* XCTest.framework */; };
-		6497816517E10C4300DC9FF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6497814117E10C4300DC9FF9 /* Foundation.framework */; };
-		6497816617E10C4300DC9FF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6497814517E10C4300DC9FF9 /* UIKit.framework */; };
-		6497816E17E10C4300DC9FF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6497816C17E10C4300DC9FF9 /* InfoPlist.strings */; };
-		6497817017E10C4300DC9FF9 /* iovSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6497816F17E10C4300DC9FF9 /* iovSampleTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6497816717E10C4300DC9FF9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6497813617E10C4300DC9FF9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6497813D17E10C4300DC9FF9;
-			remoteInfo = iovSample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4432AE9F1F02EBD000A92B39 /* Embed Frameworks */ = {
@@ -44,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4432AE9E1F02EBD000A92B39 /* FraudForce.framework in Embed Frameworks */,
+				40658C912637648D006E8FA9 /* FraudForce.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,11 +37,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		40658C8F2637648D006E8FA9 /* FraudForce.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FraudForce.xcframework; sourceTree = "<group>"; };
 		440432A8218CE5AA0083507F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		442D073D1DC902D80092F73A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		4432AE951F01963200A92B39 /* add-framework-symbols-to-app-archive.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "add-framework-symbols-to-app-archive.sh"; path = "bin/add-framework-symbols-to-app-archive.sh"; sourceTree = "<group>"; };
-		4432AE961F01963200A92B39 /* slim-build-frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "slim-build-frameworks.sh"; path = "bin/slim-build-frameworks.sh"; sourceTree = "<group>"; };
-		4432AE9C1F02EBD000A92B39 /* FraudForce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FraudForce.framework; path = "Frameworks-build/FraudForce.framework"; sourceTree = "<group>"; };
 		634D32421BC72EAB00AD74C4 /* iovSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iovSample.entitlements; sourceTree = "<group>"; };
 		637D70841B9F97090077CBCE /* SampleWebKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleWebKitViewController.h; sourceTree = "<group>"; };
 		637D70851B9F97090077CBCE /* SampleWebKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleWebKitViewController.m; sourceTree = "<group>"; };
@@ -66,7 +49,6 @@
 		63E92C2B1901C5BB00F2D445 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		63E92C2D1901C5C400F2D445 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		63F638F21A78441200A5DD49 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		63FA73861B34C5080093AC1B /* iovSampleTests.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = iovSampleTests.js; sourceTree = "<group>"; };
 		6497813E17E10C4300DC9FF9 /* iovSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iovSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6497814117E10C4300DC9FF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6497814517E10C4300DC9FF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -79,11 +61,6 @@
 		6497815917E10C4300DC9FF9 /* SampleUIKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleUIKitViewController.h; sourceTree = "<group>"; };
 		6497815A17E10C4300DC9FF9 /* SampleUIKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleUIKitViewController.m; sourceTree = "<group>"; };
 		6497815C17E10C4300DC9FF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6497816217E10C4300DC9FF9 /* iovSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iovSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6497816317E10C4300DC9FF9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6497816B17E10C4300DC9FF9 /* iovSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iovSampleTests-Info.plist"; sourceTree = "<group>"; };
-		6497816D17E10C4300DC9FF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6497816F17E10C4300DC9FF9 /* iovSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iovSampleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,40 +69,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				63F638F31A78441200A5DD49 /* WebKit.framework in Frameworks */,
-				4432AE9D1F02EBD000A92B39 /* FraudForce.framework in Frameworks */,
 				63E92C2E1901C5C400F2D445 /* AdSupport.framework in Frameworks */,
+				40658C902637648D006E8FA9 /* FraudForce.xcframework in Frameworks */,
 				63E92C2C1901C5BB00F2D445 /* CoreLocation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6497815F17E10C4300DC9FF9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6497816417E10C4300DC9FF9 /* XCTest.framework in Frameworks */,
-				6497816617E10C4300DC9FF9 /* UIKit.framework in Frameworks */,
-				6497816517E10C4300DC9FF9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4432AE931F0195D000A92B39 /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				4432AE951F01963200A92B39 /* add-framework-symbols-to-app-archive.sh */,
-				4432AE961F01963200A92B39 /* slim-build-frameworks.sh */,
-			);
-			name = bin;
-			sourceTree = "<group>";
-		};
 		6497813517E10C4300DC9FF9 = {
 			isa = PBXGroup;
 			children = (
-				4432AE931F0195D000A92B39 /* bin */,
 				6497814717E10C4300DC9FF9 /* iovSample */,
-				6497816917E10C4300DC9FF9 /* iovSampleTests */,
 				6497814017E10C4300DC9FF9 /* Frameworks */,
 				6497813F17E10C4300DC9FF9 /* Products */,
 			);
@@ -135,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				6497813E17E10C4300DC9FF9 /* iovSample.app */,
-				6497816217E10C4300DC9FF9 /* iovSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,16 +98,15 @@
 		6497814017E10C4300DC9FF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40658C8F2637648D006E8FA9 /* FraudForce.xcframework */,
 				442D073D1DC902D80092F73A /* Security.framework */,
 				63F638F21A78441200A5DD49 /* WebKit.framework */,
 				63CB69ED1A732718002C8E47 /* SystemConfiguration.framework */,
 				63E92C2D1901C5C400F2D445 /* AdSupport.framework */,
-				4432AE9C1F02EBD000A92B39 /* FraudForce.framework */,
 				63E92C2B1901C5BB00F2D445 /* CoreLocation.framework */,
 				63E92C271901C5A900F2D445 /* CoreTelephony.framework */,
 				6497814117E10C4300DC9FF9 /* Foundation.framework */,
 				6497814517E10C4300DC9FF9 /* UIKit.framework */,
-				6497816317E10C4300DC9FF9 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,25 +140,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6497816917E10C4300DC9FF9 /* iovSampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				63FA73861B34C5080093AC1B /* iovSampleTests.js */,
-				6497816F17E10C4300DC9FF9 /* iovSampleTests.m */,
-				6497816A17E10C4300DC9FF9 /* Supporting Files */,
-			);
-			path = iovSampleTests;
-			sourceTree = "<group>";
-		};
-		6497816A17E10C4300DC9FF9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6497816B17E10C4300DC9FF9 /* iovSampleTests-Info.plist */,
-				6497816C17E10C4300DC9FF9 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,12 +147,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6497817317E10C4300DC9FF9 /* Build configuration list for PBXNativeTarget "iovSample" */;
 			buildPhases = (
-				4432AEA01F02EC9500A92B39 /* Slim Frameworks For Build */,
 				6497813A17E10C4300DC9FF9 /* Sources */,
 				6497813B17E10C4300DC9FF9 /* Frameworks */,
 				6497813C17E10C4300DC9FF9 /* Resources */,
 				4432AE9F1F02EBD000A92B39 /* Embed Frameworks */,
-				44BE1938249051B800424F67 /* Clean For Next Build */,
 			);
 			buildRules = (
 			);
@@ -227,24 +160,6 @@
 			productName = iovSample;
 			productReference = 6497813E17E10C4300DC9FF9 /* iovSample.app */;
 			productType = "com.apple.product-type.application";
-		};
-		6497816117E10C4300DC9FF9 /* iovSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6497817617E10C4300DC9FF9 /* Build configuration list for PBXNativeTarget "iovSampleTests" */;
-			buildPhases = (
-				6497815E17E10C4300DC9FF9 /* Sources */,
-				6497815F17E10C4300DC9FF9 /* Frameworks */,
-				6497816017E10C4300DC9FF9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6497816817E10C4300DC9FF9 /* PBXTargetDependency */,
-			);
-			name = iovSampleTests;
-			productName = iovSampleTests;
-			productReference = 6497816217E10C4300DC9FF9 /* iovSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -267,9 +182,6 @@
 							};
 						};
 					};
-					6497816117E10C4300DC9FF9 = {
-						TestTargetID = 6497813D17E10C4300DC9FF9;
-					};
 				};
 			};
 			buildConfigurationList = 6497813917E10C4300DC9FF9 /* Build configuration list for PBXProject "iovSample" */;
@@ -287,7 +199,6 @@
 			projectRoot = "";
 			targets = (
 				6497813D17E10C4300DC9FF9 /* iovSample */,
-				6497816117E10C4300DC9FF9 /* iovSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,50 +215,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6497816017E10C4300DC9FF9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6497816E17E10C4300DC9FF9 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4432AEA01F02EC9500A92B39 /* Slim Frameworks For Build */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Slim Frameworks For Build";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bin/slim-build-frameworks.sh\n";
-		};
-		44BE1938249051B800424F67 /* Clean For Next Build */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Clean For Next Build";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Resolves Architecture building errors in Xcode 11 when alternating between device and simulator.\nrm -r \"Frameworks-build/FraudForce.framework/\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6497813A17E10C4300DC9FF9 /* Sources */ = {
@@ -361,23 +229,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6497815E17E10C4300DC9FF9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6497817017E10C4300DC9FF9 /* iovSampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6497816817E10C4300DC9FF9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6497813D17E10C4300DC9FF9 /* iovSample */;
-			targetProxy = 6497816717E10C4300DC9FF9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		440432A7218CE5AA0083507F /* Main.storyboard */ = {
@@ -392,14 +244,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6497814B17E10C4300DC9FF9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6497816C17E10C4300DC9FF9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6497816D17E10C4300DC9FF9 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -530,19 +374,22 @@
 				DEVELOPMENT_TEAM = 36BVZ544YC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks-build",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iovSample/iovSample-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "iovSample/iovSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.2.0;
+				MARKETING_VERSION = 5.3.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,67 +412,28 @@
 				DEVELOPMENT_TEAM = 36BVZ544YC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks-build",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iovSample/iovSample-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "iovSample/iovSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.2.0;
+				MARKETING_VERSION = 5.3.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iovSample/iovSample-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		6497817717E10C4300DC9FF9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iovSample.app/iovSample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iovSample/iovSample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "iovSampleTests/iovSampleTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		6497817817E10C4300DC9FF9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iovSample.app/iovSample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iovSample/iovSample-Prefix.pch";
-				INFOPLIST_FILE = "iovSampleTests/iovSampleTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -646,15 +454,6 @@
 			buildConfigurations = (
 				6497817417E10C4300DC9FF9 /* Debug */,
 				6497817517E10C4300DC9FF9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6497817617E10C4300DC9FF9 /* Build configuration list for PBXNativeTarget "iovSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6497817717E10C4300DC9FF9 /* Debug */,
-				6497817817E10C4300DC9FF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

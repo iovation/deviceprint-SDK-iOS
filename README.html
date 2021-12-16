@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>TransUnion FraudForce SDK for iOS</title>
+	<title>TransUnion TruValidate Device Risk SDK for iOS</title>
     <style>/*STYLES FOR STANDARD HTML TAGS*/
 
 body {margin-left:16px;
@@ -221,9 +221,15 @@ margin-top:6px;
 </head>
 <body>
 
-<h1 id="fraudforcesdkforios">FraudForce SDK for iOS</h1>
+<h1 id="devicerisksdkforios">Device Risk SDK for iOS</h1>
 
-<p>TransUnion identifies devices through information collected by the FraudForce
+<h2 id="whatistruvalidatedevicerisk">What is TruValidate Device Risk?</h2>
+
+<p><strong>FraudForce is now Device Risk. Our device-based products, such as Device Risk and Device-Based Authentication (formerly ClearKey), are critical components of our fraud and identity solutions; the new names make it easy to quickly understand our extensive capabilities. We have united these solutions under the TransUnion TruValidate brand. We have taken care not to update anything that might affect your implementations; as a result you&#8217;ll still see legacy names in some places.</strong></p>
+
+<hr />
+
+<p>TransUnion identifies devices through information collected by the Device Risk
 SDK run on an end-user’s mobile device. The SDK inspects the device
 and generates a blackbox that contains all available device information. This
 blackbox must then be sent to your servers to be used in a transaction risk
@@ -234,7 +240,7 @@ check via the <code>CheckTransactionDetails</code> API.</p>
 <figcaption>Mobile SDK workflow</figcaption>
 </figure>
 
-<p>The FraudForce SDK integrates with native and hybrid apps. Hybrid apps
+<p>The Device Risk SDK integrates with native and hybrid apps. Hybrid apps
 mix native code with content that runs inside web view.</p>
 
 <h2 id="integrationfilesandrequirements">Integration Files and Requirements</h2>
@@ -255,11 +261,11 @@ mix native code with content that runs inside web view.</p>
 <tbody>
 <tr>
 	<td> File    </td>
-	<td> <code>FraudForce.framework</code>        </td>
+	<td> <code>FraudForce.xcframework</code>        </td>
 </tr>
 <tr>
 	<td> Version    </td>
-	<td> 5.2.0             </td>
+	<td> 5.3.0             </td>
 </tr>
 <tr>
 	<td> Required OS Version </td>
@@ -277,13 +283,6 @@ mix native code with content that runs inside web view.</p>
 	<td> Optional Frameworks </td>
 	<td> AdSupport, CoreLocation        </td>
 </tr>
-<tr>
-	<td> </td>
-</tr>
-<tr>
-	<td> (optional) Carthage </td>
-	<td> <a href="https://iovation.github.io/deviceprint-SDK-iOS/">https://iovation.github.io/deviceprint-SDK-iOS/</a> </td>
-</tr>
 </tbody>
 </table>
 
@@ -291,84 +290,22 @@ mix native code with content that runs inside web view.</p>
 
 <ol>
 <li><p>Download and unzip the SDK from <a href="https://github.com/iovation/deviceprint-SDK-iOS/releases">Github</a>.</p></li>
-<li><p>Bring the universal framework into your project repository.</p>
+<li><p>Bring <code>FraudForce.xcframework</code> into your project repository.</p></li>
+<li><p>Drag and drop (or select the &#8220;+&#8221; button) to add the <code>FraudForce.xcframework</code> into the &#8220;Frameworks, Libraries, and Embedded Content&#8221; section of the &#8220;General&#8221; pane of the Xcode target editor.
+ <img src="img/drag_n_drop_xcframework.png" alt="Drag in FraudForce.xcframework" title="Drag FraudForce.xcframework into your application target" /></p>
 
 <ul>
-<li>Create a new directory named &#8220;Frameworks-universal&#8221;. We recommend this directory be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
-<li>Copy <code>FraudForce.framework</code> from the SDK distribution into your &#8220;Frameworks-universal&#8221; directory.</li>
-</ul></li>
-<li><p>Prepare the staging area for build-specific frameworks.</p>
-
-<ul>
-<li>Create a new directory, alongside the universal directory, named &#8220;Frameworks-build&#8221;.</li>
-<li>Inside of Frameworks-build, create a new directory named &#8220;FraudForce.framework&#8221;.
-
-<ul>
-<li>This is not intended to (initially) be a valid framework, rather just an empty directory that has the <code>.framework</code> extension.</li>
-</ul></li>
-</ul></li>
-<li><p>In the Finder, drag <code>FraudForce.framework</code> <strong>from Frameworks-build</strong> into the &#8220;Embedded Binaries&#8221; section of the &#8220;General&#8221; pane of the Xcode target editor.</p>
-
-<p> <img src="img/drag-embed-framework.png" alt="Drag in FraudForce.framework" title="Drag FraudForce.framework into your application target" /></p>
-
-<ul>
-<li>This should also result in the framework being added to the &#8220;Linked Frameworks and Libraries&#8221; section.</li>
-<li>Additionally, this should result in <code>FraudForce.framework</code> appearing in similarly named sections in the &#8220;Build Phases&#8221; pane.</li>
+<li>This should also result in <code>FraudForce.xcframework</code> being added to appropriate sections of the &#8220;Build Phases&#8221; pane (&#8220;Link Binary With Libraries&#8221; and &#8220;Embed Frameworks&#8221;).</li>
 </ul></li>
 <li><p>Optionally add these frameworks (i.e. &#8220;Linked Frameworks and Libraries&#8221;) if your app makes use of them (and Auto Linking is off):</p>
 
 <ul>
 <li><code>AdSupport.framework</code> — If your app displays ads. Do not include if your
 app does not use the ad framework, because the App Store will reject
-apps that include the framework but don&#8217;t use it.</li>
+apps that include the framework but don&#8217;t use it or does not ask for permission from the user.</li>
 <li><code>CoreLocation.framework</code> — If your app uses location monitoring. Do not
 include this framework unless your application requests geolocation
 permission from the user.</li>
-</ul></li>
-<li><p>Add a pre-compile build phase to your application target.</p>
-
-<ul>
-<li><p>Copy the shell script <code>slim-build-frameworks.sh</code> from the SDK distribution (<code>FraudForce_SDK/build_scripts</code>) into your project repository.</p></li>
-<li><p><p>Select the &#8220;+&#8221; button in the &#8220;Build Phases&#8221; pane to create a &#8220;New Run Script Phase&#8221;.</p>
-
-<ul>
-<li>The new phase is initially named &#8220;Run Script&#8221; and is positioned as the bottommost (final) build phase.</li>
-<li>The suggested name for this phase is &#8220;Slim Frameworks For Build&#8221; (though the name does not affect the function of this phase).</li>
-</ul></p></li>
-<li><p>Reposition the new phase to precede the &#8220;Compile Sources&#8221; phase.</p>
-
-<ul>
-<li>Under normal conditions, this will result in the phase being located below &#8220;Target Dependencies&#8221;.</li>
-</ul>
-
-<figure>
-<img src="img/run-script-phase.png" alt="Setup build script" title="Position and configure build script" />
-<figcaption>Setup build script</figcaption>
-</figure></li>
-<li><p><p>Configure and confirm the new build phase.</p>
-
-<ul>
-<li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
-<li>In the text-input area, enter the project-relative path to the iovation-provided script <code>slim-build-frameworks.sh</code>.</li>
-</ul></p></li>
-<li><p>Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in the above steps).</p>
-
-<ul>
-<li>Specifically, <code>INPUT_FRAMEWORKS_DIR</code> (Frameworks-universal) and <code>OUTPUT_FRAMEWORKS_DIR</code> (Frameworks-build) variables must be set to the absolute paths for the appropriate directories.</li>
-<li>As provided, the script expects both directories to be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
-</ul></li>
-</ul></li>
-<li><p>Add a final build phase to your application target.</p>
-
-<ul>
-<li>Resolves Architecture building errors in Xcode 11 when alternating between device and simulator.</li>
-<li>Select the &#8220;+&#8221; button in the &#8220;Build Phases&#8221; pane to create a &#8220;New Run Script Phase&#8221;.</li>
-<li>Confirm the script is the bottommost build phase, and configure its fields.
-
-<ul>
-<li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
-<li>In the text-input area, enter the shell command <code>rm -r &quot;Frameworks-build/FraudForce.framework/&quot;</code></li>
-</ul></li>
 </ul></li>
 <li><p><a name="keychain-share"></a>If your app has enabled the &#8220;Keychain Sharing&#8221; capability:</p>
 
@@ -377,85 +314,51 @@ permission from the user.</li>
 <li>Add the key <code>AppIdentifierPrefix</code> with the string value
 <code>$(AppIdentifierPrefix)</code> to your app&#8217;s <code>Info.plist</code>.</li>
 </ul></li>
-<li><p><a name="entitle-wireless"></a>For Xcode 10 (and above), allow FraudForce to collect wireless network information:</p>
+<li><p><a name="entitle-wireless"></a>Allow Device Risk to collect wireless network information:</p>
 
 <ul>
-<li>Configure your app to include the &#8220;Access WiFi Information&#8221; capability.</li>
-<li>Turning the capability on for your application target in Xcode 10 (and above) will update the app&#8217;s entitlements file and provisioning profile.
+<li>Configure your app to include the &#8220;Access WiFi Information&#8221; capability.
 
 <ul>
-<li>This entitlement is not required for (and breaks automatic code signing of) apps built by earlier versions of Xcode.</li>
+<li>This capability is <em>optional</em> but recommended (as it enables additional attribute collection).</li>
+<li>Turning the capability on for your application target in Xcode will update the app&#8217;s entitlements file and provisioning profile.</li>
 </ul></li>
 </ul></li>
 </ol>
 
-<h2 id="submissionpreparation">Submission Preparation</h2>
+<h2 id="upgradefromuniversaltoxcframeworkinstallation">Upgrade from Universal to XCFramework Installation</h2>
 
-<p>The FraudForce framework provides full support for Apple&#8217;s bitcode technology. If your iOS app includes
-bitcode then additional configuration of your Xcode project is required to enable symbolication of FraudForce
-stack frames in the crash logs of your app. The necessary symbolic information must be included in the
-Xcode archive (i.e. <code>.xcarchive</code> bundle) of your application prior to its submission to the App Store.</p>
+<p>Versions 5.0.0 (2017) through 5.1.0 (2020) were distributed exclusively as a Universal framework. Version 5.2.0 introduced an optional XCFramework asset. Beginning with version 5.3.0, XCFramework is the exclusive distribution format for the Device Risk SDK. To update a project that had previously integrated a Universal framework version of Device Risk, follow these steps to uninstall the deprecated format.</p>
 
 <ol>
-<li><p>Bring the framework <code>.bcsymbolmap</code> files into your project repository.</p>
+<li><p>In the &#8220;Frameworks, Libraries, and Embedded Content&#8221; section of the &#8220;General&#8221; pane of the Xcode target editor, remove <code>FraudForce.framework</code>.</p></li>
+<li><p>In the &#8220;Build Phases&#8221; pane of the Xcode target editor, remove the formerly required Run Script phases related to the Universal version of the framework (which were named &#8220;Slim Frameworks For Build&#8221; and &#8220;Clean For Next Build&#8221; in prior documentation).</p>
 
 <ul>
-<li>Create a new directory named &#8220;Frameworks-bcsymbolmap&#8221;. We recommend this directory be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
-<li>Copy the <code>.bcsymbolmap</code> file from the SDK distribution (<code>FraudForce_SDK/BCSymbolMaps</code>) into your &#8220;Frameworks-bcsymbolmap&#8221; directory.
+<li>The XCFramework format seamlessly packages and allows Xcode to appropriately handle the multiple architectures required to support both Simulators and Devices.</li>
+</ul></li>
+<li><p>Remove the &#8220;Post-actions&#8221; script from the &#8220;Archive&#8221; scheme of your application target (which was named &#8220;Archive Framework Symbols&#8221; in prior documentation).</p>
 
 <ul>
-<li>There should be one such file (representing the arm64 architecture).</li>
+<li>From the target popup button in the Xcode toolbar, ensure your application target is selected and choose &#8220;Edit Scheme…&#8221; from the popup menu.</li>
+<li>In the scheme editor, select the disclosure triangle for the &#8220;Archive&#8221; item and then select &#8220;Post-actions&#8221;.</li>
+<li>Remove the Run Script action responsible for including <code>.bcsymbolmap</code> files for Device Risk in the application archive.
+
+<ul>
+<li>The utility of <code>.bcsymbolmap</code> files continues to hold true for XCFramework-packaged, dynamic libraries (i.e. they are required to enable symbolication of Device Risk stack frames in the crash logs of subscriber apps). Now, these files are included inside of the <code>.xcframework</code> bundle and are appropriately handled by Xcode 12 and above.</li>
 </ul></li>
 </ul></li>
-<li><p>Add a script to the &#8220;Archive&#8221; scheme of your application target.</p>
+<li><p>Follow the Installation instructions (above) to integrate the XCFramework version of Device Risk.</p>
 
 <ul>
-<li><p>Copy the shell script <code>add-framework-symbols-to-app-archive.sh</code> from the SDK distribution (<code>FraudForce_SDK/build_scripts</code>) into your project repository.</p></li>
-<li><p>From the target popup button in the Xcode toolbar, ensure your application target is selected and chose &#8220;Edit Scheme…&#8221; from the popup menu.</p>
-
-<p> <img src="img/target-popup-menu.png" alt="Open scheme editor" title="Use the target popup to edit schemes" /></p></li>
-<li><p>In the scheme editor, select the disclosure triangle for the &#8220;Archive&#8221; item and then select &#8220;Post-actions&#8221;.</p>
-
-<ul>
-<li>Select the &#8220;+&#8221; button in order to create a &#8220;New Run Script Action&#8221;.</li>
-<li>The new action is initially named &#8220;Run Script&#8221;. The suggested name for this action is &#8220;Archive Framework Symbols&#8221; (though the name does not affect the function of this action).</li>
-</ul>
-
-<figure>
-<img src="img/scheme-editor.png" alt="Setup archive script" title="Configure the script action" />
-<figcaption>Setup archive script</figcaption>
-</figure></li>
-<li><p>Configure and confirm the new script action.</p>
-
-<ul>
-<li>The &#8220;Shell&#8221; text field should read &#8220;/bin/sh&#8221; (which is the default value).</li>
-<li>The &#8220;Provide build settings from&#8221; popup button should be set to the application target.</li>
-<li>In the text-input area, enter the absolute path to the iovation-provided script <code>add-framework-symbols-to-app-archive.sh</code>.
-
-<ul>
-<li>For example, if the script is located in a <code>bin</code> directory that is alongside the app&#8217;s <code>.xcodeproj</code> file then it should read, <code>&quot;${PROJECT_DIR}/bin/add-framework-symbols-to-app-archive.sh&quot;</code></li>
-<li>The quotes are an important concern, since this allows for proper execution when path elements include spaces.</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><p>Ensure that the initial environment variables within this script are set to appropriate values (i.e. those established in both the above steps and in the <a href="#installation">Installation</a> section).</p>
-
-<ul>
-<li>Specifically, <code>BUILD_FRAMEWORKS_DIR</code> (Frameworks-build) and <code>INPUT_BCSYMBOLMAP_DIR</code> (Frameworks-bcsymbolmap) variables must be set to the absolute paths for the appropriate directories.</li>
-<li>As provided, the script expects both directories to be located alongside the app&#8217;s <code>.xcodeproj</code> file.</li>
-</ul></li>
-<li><p>(optional) Customize the logging of script output as you desire.</p>
-
-<ul>
-<li>By default, Xcode does not handle or display output from scheme-based scripts, thus, the script redirects <code>stdout</code> and <code>stderr</code> to a (unique) log file in <code>/var/tmp</code>.</li>
-<li>Change the output redirection or ignore all script output by removing redirection (which is declared near the start of the script).</li>
+<li>Installation steps 4 - 6 should not need to be repeated given a proper installation of a recent version of Device Risk.</li>
 </ul></li>
 </ol>
 
 <h2 id="sampleprojects">Sample Projects</h2>
 
-<p>This download includes two sample Xcode projects that demonstrate the integration of the FraudForce
-SDK for iOS. These projects require at least Xcode 10 and iOS 11.0.</p>
+<p>This download includes two sample Xcode projects that demonstrate the integration of the Device Risk
+SDK for iOS. These projects require at least Xcode 11 and iOS 11.0.</p>
 
 <ul>
 <li><p>The <code>iovSample/iovSampleSwift.xcodeproj</code> project uses Swift to demonstrate
@@ -468,7 +371,7 @@ view controller, and may be tested in a tabbed interface on a simulator or devic
 
 <h2 id="usage">Usage</h2>
 
-<p>Use the <code>FraudForce</code> API to enable the FraudForce SDK to start collecting blackbox
+<p>Use the <code>FraudForce</code> API to enable the Device Risk SDK to start collecting blackbox
 data asynchronously, and to generate a new blackbox to submit to your back-end service.</p>
 
 <ol>
@@ -506,16 +409,16 @@ the device with minimal impact on your app.</p></li>
 <pre><code>NSString *blackbox = [FraudForce blackbox];
 </code></pre></li>
 <li><p>Submit the blackbox to your service. The service should then send
-it to iovation to evaluate the transaction. See the iovSample Xcode
+it to TransUnion to evaluate the transaction. See the iovSample Xcode
 projects included with the download for a sample implementation.</p></li>
 </ol>
 
 <h3 id="newfeatures">New Features!</h3>
 
-<p>Versions 5.0.0 and above include the ability to make a network call to iovation&#8217;s service. This
-enables the FraudForce SDK to collect additional network information. By default this functionality
+<p>Versions 5.0.0 and above include the ability to make a network call to TransUnion TruValidate&#8217;s service. This
+enables the Device Risk SDK to collect additional network information. By default this functionality
 is turned off and will need to be enabled via a <code>FraudForceDelegate</code> object. Usage of this
-feature requires a subscriber key be provided. Please contact your iovation client representative to
+feature requires a subscriber key be provided. Please contact your TransUnion client representative to
 acquire a subscriber key.</p>
 
 <h3 id="important">Important!</h3>
@@ -571,7 +474,7 @@ OS for time to finish any tasks it has running.</p>
 
 <p>A more extensive example, including submitting a blackbox in an HTTP request,
 may be found in the <code>SampleUIKitViewController</code> class for both Swift (iovSampleSwift) and
-Objective-C (iovSample) in the sample Xcode projects included in the FraudForce SDK download.</p>
+Objective-C (iovSample) in the sample Xcode projects included in the Device Risk SDK download.</p>
 
 <h2 id="webkitintegration">WebKit Integration</h2>
 
@@ -675,9 +578,22 @@ Change the JavaScript variable declaration above to:</p>
 </ol>
 
 <p>Find a complete example in the <code>SampleWKWebViewViewController</code> class for Swift (iovSampleSwift) and <code>SampleWebKitViewController</code>
-class for Objective-C (iovSample) in the sample Xcode projects included in the FraudForce SDK download.</p>
+class for Objective-C (iovSample) in the sample Xcode projects included in the Device Risk SDK download.</p>
 
 <h2 id="changes">Changes</h2>
+
+<h3 id="v5.3.0">v5.3.0</h3>
+
+<ul>
+<li>Recognition improvements.</li>
+<li>Distribution is now exclusively XCFramework.
+
+<ul>
+<li>Includes support for simulators on M1 (arm64) Macs.</li>
+<li>Updated sample projects to use <code>.xcframework</code>.</li>
+<li>Removed (Universal framework) integration scripts.</li>
+</ul></li>
+</ul>
 
 <h3 id="v5.2.0">v5.2.0</h3>
 
@@ -689,6 +605,7 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the F
 <ul>
 <li>SDK supports 64-bit devices only.</li>
 </ul></li>
+<li>XCFramework artifact released.</li>
 </ul>
 
 <h3 id="v5.1.0">v5.1.0</h3>
@@ -838,7 +755,7 @@ SDK functionality.</li>
 
 <h2 id="copyright">Copyright</h2>
 
-<p>Copyright (c) 2010&#8211;2021 iovation, Inc. All rights reserved.</p>
+<p>Copyright (c) 2010&#8211;2021 TransUnion. All rights reserved.</p>
 
 </body>
 </html>

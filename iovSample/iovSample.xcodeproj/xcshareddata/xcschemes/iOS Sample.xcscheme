@@ -97,23 +97,5 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
-      <PostActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Archive framework symbols"
-               scriptText = "&quot;${PROJECT_DIR}/bin/add-framework-symbols-to-app-archive.sh&quot;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "6497813D17E10C4300DC9FF9"
-                     BuildableName = "iovSample.app"
-                     BlueprintName = "iovSample"
-                     ReferencedContainer = "container:iovSample.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
-      </PostActions>
    </ArchiveAction>
 </Scheme>
