@@ -35,6 +35,26 @@ Integration Files and Requirements
 Installation
 ------------
 
+### Swift Package Manager (Preferred)
+
+Add the Swift Package through the Xcode UI as usual:
+
+1. Select project in list of Targets.
+
+2. Select the "Package Dependencies" pane.
+
+3. Click the "+" button.
+
+4. Enter this git repo's URL in the search bar.
+
+5. Select the package from the results, and click "Add Package".
+
+6. After Xcode resolves the package, select a target to add the library to.
+
+7. Follow the remaining steps in the [Finishing Up](#finishing-up) section below.
+
+### Manual
+
 1.  Download and unzip the SDK from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases).
 
 2.  Bring `FraudForce.xcframework` into your project repository.
@@ -44,7 +64,11 @@ Installation
 
     *   This should also result in `FraudForce.xcframework` being added to appropriate sections of the "Build Phases" pane ("Link Binary With Libraries" and "Embed Frameworks").
 
-4.   Optionally add these frameworks (i.e. "Linked Frameworks and Libraries") if your app makes use of them (and Auto Linking is off):
+4. Follow the remaining steps in the [Finishing Up](#finishing-up) section below.
+
+### Finishing Up
+
+1.   Optionally add these frameworks (i.e. "Linked Frameworks and Libraries") if your app makes use of them (and Auto Linking is off):
     *   `AdSupport.framework` — If your app displays ads. Do not include if your
         app does not use the ad framework, because the App Store will reject
         apps that include the framework but don't use it or does not ask for permission from the user.
@@ -52,12 +76,12 @@ Installation
         include this framework unless your application requests geolocation
         permission from the user.
 
-5.  <a name="keychain-share"></a>If your app has enabled the "Keychain Sharing" capability:
+2.  <a name="keychain-share"></a>If your app has enabled the "Keychain Sharing" capability:
     *   Add "com.iovation.stm" to its list of Keychain Groups
     *   Add the key `AppIdentifierPrefix` with the string value
         `$(AppIdentifierPrefix)` to your app's `Info.plist`.
 
-6.   <a name="entitle-wireless"></a>Allow Device Risk to collect wireless network information:
+3.   <a name="entitle-wireless"></a>Allow Device Risk to collect wireless network information:
     *   Configure your app to include the "Access WiFi Information" capability.
         *   This capability is _optional_ but recommended (as it enables additional attribute collection). 
         *   Turning the capability on for your application target in Xcode will update the app's entitlements file and provisioning profile.
@@ -314,6 +338,9 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the D
 
 Changes
 -------
+
+### v5.4.0 ###
+* Add `Package.swift` for Swift Package Manager support.
 
 ### v5.3.0 ###
 * Recognition improvements.
