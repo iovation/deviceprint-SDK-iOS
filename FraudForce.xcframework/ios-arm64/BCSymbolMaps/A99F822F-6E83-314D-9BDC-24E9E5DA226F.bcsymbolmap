@@ -1,9 +1,9 @@
 BCSymbolMap Version: 2.0
-Apple clang version 12.0.5 (clang-1205.0.22.11)
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk
-iPhoneOS14.5.sdk
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/build/Build/Intermediates.noindex/ArchiveIntermediates/FraudForce/IntermediateBuildFilesPath/libiovation.build/Release-iphoneos/FraudForce.build/DerivedSources/FraudForce_vers.c
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0
+Apple clang version 13.1.6 (clang-1316.0.21.2.5)
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk
+iPhoneOS15.5.sdk
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/build/Build/Intermediates.noindex/ArchiveIntermediates/FraudForce/IntermediateBuildFilesPath/libiovation.build/Release-iphoneos/FraudForce.build/DerivedSources/FraudForce_vers.c
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0
 ___Block_byref_object_copy_
 ___Block_byref_object_dispose_
 ___czsiSymbolZeroOne_block_invoke
@@ -11,6 +11,7 @@ ___copy_helper_block_e8_32r
 ___destroy_helper_block_e8_32r
 -[FFMClassZeroSix pzoSymbolZeroOne:pzoSymbolZeroTwo:]
 ___53-[FFMClassZeroSix pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
+___clang_at_available_requires_core_foundation_framework
 _OBJC_CLASSLIST_REFERENCES_$_
 _OBJC_SELECTOR_REFERENCES_
 _OBJC_SELECTOR_REFERENCES_.2
@@ -26,28 +27,31 @@ _OBJC_SELECTOR_REFERENCES_.29
 _OBJC_SELECTOR_REFERENCES_.31
 _OBJC_SELECTOR_REFERENCES_.35
 _OBJC_SELECTOR_REFERENCES_.39
-_OBJC_SELECTOR_REFERENCES_.43
-_OBJC_CLASSLIST_REFERENCES_$_.44
+_OBJC_CLASSLIST_REFERENCES_$_.42
+_OBJC_SELECTOR_REFERENCES_.44
 _OBJC_SELECTOR_REFERENCES_.46
-_OBJC_SELECTOR_REFERENCES_.48
-_OBJC_SELECTOR_REFERENCES_.52
-_OBJC_SELECTOR_REFERENCES_.54
-_OBJC_SELECTOR_REFERENCES_.56
-_OBJC_SELECTOR_REFERENCES_.60
-_OBJC_SELECTOR_REFERENCES_.62
-_OBJC_SELECTOR_REFERENCES_.64
-_OBJC_SELECTOR_REFERENCES_.68
-_OBJC_SELECTOR_REFERENCES_.70
-_OBJC_SELECTOR_REFERENCES_.74
-_OBJC_SELECTOR_REFERENCES_.76
-_OBJC_SELECTOR_REFERENCES_.82
-_OBJC_CLASSLIST_REFERENCES_$_.85
-_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_CLASSLIST_REFERENCES_$_.47
+_OBJC_SELECTOR_REFERENCES_.49
+_OBJC_SELECTOR_REFERENCES_.53
+_OBJC_SELECTOR_REFERENCES_.55
+_OBJC_SELECTOR_REFERENCES_.57
+_OBJC_SELECTOR_REFERENCES_.59
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_SELECTOR_REFERENCES_.73
+_OBJC_SELECTOR_REFERENCES_.75
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_SELECTOR_REFERENCES_.83
 _OBJC_SELECTOR_REFERENCES_.89
-_OBJC_CLASSLIST_REFERENCES_$_.90
-_OBJC_SELECTOR_REFERENCES_.92
+_OBJC_CLASSLIST_REFERENCES_$_.92
 _OBJC_SELECTOR_REFERENCES_.94
 _OBJC_SELECTOR_REFERENCES_.96
+_OBJC_CLASSLIST_REFERENCES_$_.97
+_OBJC_SELECTOR_REFERENCES_.99
+_OBJC_SELECTOR_REFERENCES_.101
+_OBJC_SELECTOR_REFERENCES_.103
 __OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
 __OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
 __OBJC_$_PROP_LIST_NSObject
@@ -64,9 +68,11 @@ __OBJC_METACLASS_RO_$_FFMClassZeroSix
 __OBJC_$_INSTANCE_METHODS_FFMClassZeroSix
 __OBJC_$_PROP_LIST_FFMClassZeroSix
 __OBJC_CLASS_RO_$_FFMClassZeroSix
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVDeviceCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVDeviceCollector.m
 __53-[FFMClassZeroSix pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
 IOVBlackbox.obfuscated/IOVDeviceCollector.m
+dispatch_get_main_queue
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/dispatch/queue.h
 __destroy_helper_block_e8_32r
 __copy_helper_block_e8_32r
 __czsiSymbolZeroOne_block_invoke
@@ -119,20 +125,18 @@ _OBJC_SELECTOR_REFERENCES_.33
 _OBJC_SELECTOR_REFERENCES_.37
 _OBJC_SELECTOR_REFERENCES_.41
 ___block_descriptor_40_e8_32w_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.43
 _OBJC_SELECTOR_REFERENCES_.45
 _OBJC_SELECTOR_REFERENCES_.47
 _OBJC_CLASSLIST_REFERENCES_$_.48
 _OBJC_SELECTOR_REFERENCES_.50
+_OBJC_SELECTOR_REFERENCES_.52
+_OBJC_SELECTOR_REFERENCES_.54
 _OBJC_CLASSLIST_REFERENCES_$_.55
-_OBJC_SELECTOR_REFERENCES_.57
-_OBJC_SELECTOR_REFERENCES_.59
 _OBJC_SELECTOR_REFERENCES_.61
-_OBJC_SELECTOR_REFERENCES_.63
-_OBJC_SELECTOR_REFERENCES_.65
-_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_SELECTOR_REFERENCES_.70
 _OBJC_SELECTOR_REFERENCES_.72
 _OBJC_CLASSLIST_REFERENCES_$_.73
-_OBJC_SELECTOR_REFERENCES_.75
 ___block_descriptor_40_e8_32s_e5_v8?0l
 _OBJC_SELECTOR_REFERENCES_.77
 __OBJC_$_CLASS_METHODS_FFMClassZeroTwo
@@ -144,7 +148,7 @@ _OBJC_IVAR_$_FFMClassZeroTwo._cztwSymbolZeroTwo
 __OBJC_$_INSTANCE_VARIABLES_FFMClassZeroTwo
 __OBJC_$_PROP_LIST_FFMClassZeroTwo
 __OBJC_CLASS_RO_$_FFMClassZeroTwo
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVCollectionQueue.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVCollectionQueue.m
 IOVBlackbox.obfuscated/IOVCollectionQueue.m
 IOVBlackbox.obfuscated/IOVCollectionQueue.h
 __destroy_helper_block_e8_32s
@@ -156,7 +160,7 @@ __copy_helper_block_e8_32w
 __24-[FFMClassZeroTwo start]_block_invoke_2
 __24-[FFMClassZeroTwo start]_block_invoke
 __36+[FFMClassZeroTwo cztwSymbolZeroOne]_block_invoke
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/usr/include/dispatch/once.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/dispatch/once.h
 -[NSString(FFMCategoryZeroTwo) cgztwSymbolZeroOne]
 _OBJC_CLASSLIST_REFERENCES_$_.1
 _OBJC_SELECTOR_REFERENCES_.3
@@ -171,7 +175,7 @@ __OBJC_$_CATEGORY_NSString_$_FFMCategoryZeroTwo
 iovation-string-obfuscation-aes/iovation-string-obfuscation-aes/NSString+Obfuscated.m
 /Users/Shared/newJenkinsmac03/workspace
 NSMakeRange
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
 +[FFMClassOneNine conSymbolZeroOne:]
 -[FFMClassOneNine init]
 -[FFMClassOneNine initConSymbolZeroTwo:]
@@ -193,12 +197,11 @@ _OBJC_CLASSLIST_REFERENCES_$_.27
 _OBJC_CLASSLIST_REFERENCES_$_.38
 _OBJC_SELECTOR_REFERENCES_.40
 _OBJC_SELECTOR_REFERENCES_.42
-_OBJC_SELECTOR_REFERENCES_.44
+_OBJC_SELECTOR_REFERENCES_.48
 _OBJC_CLASSLIST_REFERENCES_$_.51
-_OBJC_SELECTOR_REFERENCES_.53
-_OBJC_SELECTOR_REFERENCES_.55
 _OBJC_CLASSLIST_REFERENCES_$_.62
 _OBJC_SELECTOR_REFERENCES_.66
+_OBJC_SELECTOR_REFERENCES_.68
 __OBJC_$_CLASS_METHODS_FFMClassOneNine
 __OBJC_METACLASS_RO_$_FFMClassOneNine
 __OBJC_$_INSTANCE_METHODS_FFMClassOneNine
@@ -207,13 +210,13 @@ _OBJC_IVAR_$_FFMClassOneNine.conSymbolOneFour
 __OBJC_$_INSTANCE_VARIABLES_FFMClassOneNine
 __OBJC_$_PROP_LIST_FFMClassOneNine
 __OBJC_CLASS_RO_$_FFMClassOneNine
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVToken.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVToken.m
 IOVBlackbox.obfuscated/IOVToken.m
 -[NSString(FFMCategoryZeroFour) cgzfoSymbolZeroOne]
 _cgzfoSymbolZeroOne.cgzfoSymbolZeroTwo
 __OBJC_$_CATEGORY_INSTANCE_METHODS_NSString_$_FFMCategoryZeroFour
 __OBJC_$_CATEGORY_NSString_$_FFMCategoryZeroFour
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/NSString+MD5.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/NSString+MD5.m
 IOVBlackbox.obfuscated/NSString+MD5.m
 -[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]
 ___55-[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
@@ -233,13 +236,13 @@ __OBJC_METACLASS_RO_$_FFMClassZeroSeven
 __OBJC_$_INSTANCE_METHODS_FFMClassZeroSeven
 __OBJC_$_PROP_LIST_FFMClassZeroSeven
 __OBJC_CLASS_RO_$_FFMClassZeroSeven
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVHomeCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVHomeCollector.m
 __destroy_helper_block_e8_32s40s48r
+IOVBlackbox.obfuscated/IOVHomeCollector.m
 __copy_helper_block_e8_32s40s48r
 __destroy_helper_block_e8_32s40s
 __copy_helper_block_e8_32s40s
 __55-[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke_2
-IOVBlackbox.obfuscated/IOVHomeCollector.m
 __55-[FFMClassZeroSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
 -[FFMClassOneThree cothSymbolZeroOne:from:]
 -[FFMClassOneThree cothSymbolZeroTwo:from:]
@@ -250,13 +253,14 @@ _OBJC_CLASSLIST_REFERENCES_$_.28
 _OBJC_SELECTOR_REFERENCES_.30
 _OBJC_SELECTOR_REFERENCES_.32
 _OBJC_SELECTOR_REFERENCES_.38
+_OBJC_SELECTOR_REFERENCES_.56
 _OBJC_SELECTOR_REFERENCES_.58
 __OBJC_CLASS_PROTOCOLS_$_FFMClassOneThree
 __OBJC_METACLASS_RO_$_FFMClassOneThree
 __OBJC_$_INSTANCE_METHODS_FFMClassOneThree
 __OBJC_$_PROP_LIST_FFMClassOneThree
 __OBJC_CLASS_RO_$_FFMClassOneThree
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVNetworkCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVNetworkCollector.m
 IOVBlackbox.obfuscated/IOVNetworkCollector.m
 -[FFMClassZeroThree init]
 -[FFMClassZeroThree czthSymbolZeroOne]
@@ -272,7 +276,7 @@ __OBJC_METACLASS_RO_$_FFMClassZeroThree
 __OBJC_$_INSTANCE_METHODS_FFMClassZeroThree
 __OBJC_$_INSTANCE_VARIABLES_FFMClassZeroThree
 __OBJC_CLASS_RO_$_FFMClassZeroThree
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVBaseOperation.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVBaseOperation.m
 IOVBlackbox.obfuscated/IOVBaseOperation.m
 +[FFMClassTwoFour ctwfoSymbolTwoEight]
 ___38+[FFMClassTwoFour ctwfoSymbolTwoEight]_block_invoke
@@ -319,19 +323,18 @@ _OBJC_CLASSLIST_REFERENCES_$_.46
 _OBJC_CLASSLIST_REFERENCES_$_.49
 _OBJC_SELECTOR_REFERENCES_.51
 _OBJC_CLASSLIST_REFERENCES_$_.56
+_OBJC_SELECTOR_REFERENCES_.60
+_OBJC_SELECTOR_REFERENCES_.62
+_OBJC_SELECTOR_REFERENCES_.64
 _OBJC_CLASSLIST_REFERENCES_$_.69
-_OBJC_SELECTOR_REFERENCES_.71
-_OBJC_SELECTOR_REFERENCES_.73
-_OBJC_SELECTOR_REFERENCES_.79
 _OBJC_SELECTOR_REFERENCES_.81
-_OBJC_SELECTOR_REFERENCES_.83
 _OBJC_SELECTOR_REFERENCES_.85
+_OBJC_SELECTOR_REFERENCES_.87
 _OBJC_CLASSLIST_REFERENCES_$_.88
 _OBJC_SELECTOR_REFERENCES_.90
+_OBJC_SELECTOR_REFERENCES_.92
 _OBJC_SELECTOR_REFERENCES_.98
 _OBJC_CLASSLIST_REFERENCES_$_.99
-_OBJC_SELECTOR_REFERENCES_.101
-_OBJC_SELECTOR_REFERENCES_.103
 _OBJC_SELECTOR_REFERENCES_.105
 _OBJC_CLASSLIST_REFERENCES_$_.106
 _OBJC_SELECTOR_REFERENCES_.108
@@ -349,7 +352,7 @@ _OBJC_IVAR_$_FFMClassTwoFour.ctwfoSymbolOneFive
 __OBJC_$_INSTANCE_VARIABLES_FFMClassTwoFour
 __OBJC_$_PROP_LIST_FFMClassTwoFour
 __OBJC_CLASS_RO_$_FFMClassTwoFour
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVNuidStore.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVNuidStore.m
 IOVBlackbox.obfuscated/IOVNuidStore.m
 __destroy_helper_block_e8_32s40s48r56r
 __copy_helper_block_e8_32s40s48r56r
@@ -378,7 +381,7 @@ _cgzoSymbolZeroFour.pred
 ___block_literal_global.23
 __OBJC_$_CATEGORY_CLASS_METHODS_NSDateFormatter_$_FFMCategoryZeroOne
 __OBJC_$_CATEGORY_NSDateFormatter_$_FFMCategoryZeroOne
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/NSDate+IOV.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/NSDate+IOV.m
 __57+[NSDateFormatter(FFMCategoryZeroOne) cgzoSymbolZeroFour]_block_invoke
 IOVBlackbox.obfuscated/NSDate+IOV.m
 __56+[NSDateFormatter(FFMCategoryZeroOne) cgzoSymbolZeroTwo]_block_invoke
@@ -386,15 +389,17 @@ __56+[NSDateFormatter(FFMCategoryZeroOne) cgzoSymbolZeroTwo]_block_invoke
 -[FFMClassZeroFive czfiSymbolZeroTwo]
 ___37-[FFMClassZeroFive czfiSymbolZeroTwo]_block_invoke
 -[FFMClassZeroFive pzoSymbolZeroOne:pzoSymbolZeroTwo:]
-_OBJC_CLASSLIST_REFERENCES_$_.24
+_OBJC_CLASSLIST_REFERENCES_$_.32
 _OBJC_SELECTOR_REFERENCES_.36
+_OBJC_CLASSLIST_REFERENCES_$_.59
+_OBJC_SELECTOR_REFERENCES_.69
 __OBJC_$_CLASS_METHODS_FFMClassZeroFive
 __OBJC_CLASS_PROTOCOLS_$_FFMClassZeroFive
 __OBJC_METACLASS_RO_$_FFMClassZeroFive
 __OBJC_$_INSTANCE_METHODS_FFMClassZeroFive
 __OBJC_$_PROP_LIST_FFMClassZeroFive
 __OBJC_CLASS_RO_$_FFMClassZeroFive
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVApplicationCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVApplicationCollector.m
 IOVBlackbox.obfuscated/IOVApplicationCollector.m
 __37-[FFMClassZeroFive czfiSymbolZeroTwo]_block_invoke
 -[FFMClassOneZero pzoSymbolZeroOne:pzoSymbolZeroTwo:]
@@ -404,7 +409,7 @@ __OBJC_METACLASS_RO_$_FFMClassOneZero
 __OBJC_$_INSTANCE_METHODS_FFMClassOneZero
 __OBJC_$_PROP_LIST_FFMClassOneZero
 __OBJC_CLASS_RO_$_FFMClassOneZero
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVLocaleCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVLocaleCollector.m
 IOVBlackbox.obfuscated/IOVLocaleCollector.m
 +[FFMClassTwoFive ctwfiSymbolZeroOne:]
 -[FFMClassTwoFive initCtwfiSymbolZeroTwo:ctwfiSymbolOneFive:]
@@ -430,7 +435,7 @@ _OBJC_IVAR_$_FFMClassTwoFive.ctwfiSymbolOneFive
 __OBJC_$_INSTANCE_VARIABLES_FFMClassTwoFive
 __OBJC_$_PROP_LIST_FFMClassTwoFive
 __OBJC_CLASS_RO_$_FFMClassTwoFive
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVObfuscator.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVObfuscator.m
 IOVBlackbox.obfuscated/IOVObfuscator.m
 +[FFMClassTwoThree ctwzSymbolZeroOne:key:ctwthSymbolZeroOne:ctwthSymbolZeroTwo:ctwthSymbolZeroThree:sync:ctwthSymbolZeroEight:]
 -[FFMClassTwoThree initCtwzSymbolZeroTwo:key:ctwthSymbolZeroOne:ctwthSymbolZeroTwo:ctwthSymbolZeroThree:sync:ctwthSymbolZeroEight:]
@@ -474,7 +479,7 @@ _OBJC_IVAR_$_FFMClassTwoThree._key
 __OBJC_$_INSTANCE_VARIABLES_FFMClassTwoThree
 __OBJC_$_PROP_LIST_FFMClassTwoThree
 __OBJC_CLASS_RO_$_FFMClassTwoThree
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVKeychainTokenFinder.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVKeychainTokenFinder.m
 IOVBlackbox.obfuscated/IOVKeychainTokenFinder.m
 IOVBlackbox.obfuscated/IOVKeychainTokenFinder.h
 +[FFMClassZeroOne czoSymbolZeroTwo:]
@@ -502,17 +507,14 @@ ___36-[FFMClassZeroOne czoSymbolZeroFive]_block_invoke
 _OBJC_CLASSLIST_REFERENCES_$_.7
 _OBJC_CLASSLIST_REFERENCES_$_.11
 _OBJC_CLASSLIST_REFERENCES_$_.15
-_OBJC_CLASSLIST_REFERENCES_$_.32
 _OBJC_CLASSLIST_REFERENCES_$_.53
 _OBJC_CLASSLIST_REFERENCES_$_.78
 _OBJC_SELECTOR_REFERENCES_.80
+_OBJC_SELECTOR_REFERENCES_.82
 _OBJC_SELECTOR_REFERENCES_.86
 _OBJC_SELECTOR_REFERENCES_.88
 ___block_descriptor_40_e8_32r_e25_v32?0"NSString"816^B24l
 _OBJC_SELECTOR_REFERENCES_.91
-_OBJC_CLASSLIST_REFERENCES_$_.92
-_OBJC_CLASSLIST_REFERENCES_$_.97
-_OBJC_SELECTOR_REFERENCES_.99
 _OBJC_SELECTOR_REFERENCES_.107
 _OBJC_SELECTOR_REFERENCES_.109
 __OBJC_$_CLASS_METHODS_FFMClassZeroOne
@@ -527,7 +529,7 @@ _OBJC_IVAR_$_FFMClassZeroOne._czoSymbolZeroSix
 __OBJC_$_INSTANCE_VARIABLES_FFMClassZeroOne
 __OBJC_$_PROP_LIST_FFMClassZeroOne
 __OBJC_CLASS_RO_$_FFMClassZeroOne
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVBlackboxDevice.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVBlackboxDevice.m
 IOVBlackbox.obfuscated/IOVBlackboxDevice.m
 IOVBlackbox.obfuscated/IOVBlackboxDevice.h
 __36-[FFMClassZeroOne czoSymbolZeroFive]_block_invoke
@@ -549,7 +551,7 @@ _OBJC_IVAR_$_FFMClassTwoZero._url
 __OBJC_$_INSTANCE_VARIABLES_FFMClassTwoZero
 __OBJC_$_PROP_LIST_FFMClassTwoZero
 __OBJC_CLASS_RO_$_FFMClassTwoZero
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVFileTokenFinder.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVFileTokenFinder.m
 IOVBlackbox.obfuscated/IOVFileTokenFinder.m
 IOVBlackbox.obfuscated/IOVFileTokenFinder.h
 -[FFMClassOneSeven pzoSymbolZeroOne:pzoSymbolZeroTwo:]
@@ -600,7 +602,7 @@ __OBJC_METACLASS_RO_$_FFMClassOneSeven
 __OBJC_$_INSTANCE_METHODS_FFMClassOneSeven
 __OBJC_$_PROP_LIST_FFMClassOneSeven
 __OBJC_CLASS_RO_$_FFMClassOneSeven
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVTokenCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVTokenCollector.m
 IOVBlackbox.obfuscated/IOVTokenCollector.m
 __55-[FFMClassOneSeven coseSymbolOneZero:coseSymbolOneOne:]_block_invoke
 +[NSError(FFMCategoryZeroFive) cgzfiSymbolZeroOne:]
@@ -608,7 +610,7 @@ __55-[FFMClassOneSeven coseSymbolOneZero:coseSymbolOneOne:]_block_invoke
 __OBJC_$_CATEGORY_INSTANCE_METHODS_NSError_$_FFMCategoryZeroFive
 __OBJC_$_CATEGORY_CLASS_METHODS_NSError_$_FFMCategoryZeroFive
 __OBJC_$_CATEGORY_NSError_$_FFMCategoryZeroFive
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/NSError+StringDescriptor.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/NSError+StringDescriptor.m
 IOVBlackbox.obfuscated/NSError+StringDescriptor.m
 NSMaxRange
 -[FFMClassOneSix pzoSymbolZeroOne:pzoSymbolZeroTwo:]
@@ -617,11 +619,13 @@ __OBJC_METACLASS_RO_$_FFMClassOneSix
 __OBJC_$_INSTANCE_METHODS_FFMClassOneSix
 __OBJC_$_PROP_LIST_FFMClassOneSix
 __OBJC_CLASS_RO_$_FFMClassOneSix
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVTelephonyCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVTelephonyCollector.m
 IOVBlackbox.obfuscated/IOVTelephonyCollector.m
 +[FFMClassOneOne czfoSymbolZeroOne]
+___35+[FFMClassOneOne czfoSymbolZeroOne]_block_invoke
 -[FFMClassOneOne pzoSymbolZeroOne:pzoSymbolZeroTwo:]
 ___52-[FFMClassOneOne pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
+___52-[FFMClassOneOne pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke.17
 -[FFMClassOneOne isAsynchronous]
 -[FFMClassOneOne start]
 -[FFMClassOneOne cooSymbolZeroOne]
@@ -636,17 +640,17 @@ ___34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke
 -[FFMClassOneOne setTimer:]
 -[FFMClassOneOne .cxx_destruct]
 ___block_descriptor_48_e8_32r_e5_v8?0lu40l8
-_OBJC_CLASSLIST_REFERENCES_$_.20
-_OBJC_CLASSLIST_REFERENCES_$_.33
-_OBJC_SELECTOR_REFERENCES_.49
-_OBJC_CLASSLIST_REFERENCES_$_.66
-_OBJC_CLASSLIST_REFERENCES_$_.75
+___block_descriptor_48_e8_32s_e5_v8?0lu40l8
+_OBJC_CLASSLIST_REFERENCES_$_.22
+_OBJC_CLASSLIST_REFERENCES_$_.35
+_OBJC_SELECTOR_REFERENCES_.74
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_CLASSLIST_REFERENCES_$_.77
 _OBJC_SELECTOR_REFERENCES_.100
 _OBJC_SELECTOR_REFERENCES_.102
 _OBJC_SELECTOR_REFERENCES_.104
 _OBJC_SELECTOR_REFERENCES_.106
-_OBJC_CLASSLIST_REFERENCES_$_.111
-_OBJC_SELECTOR_REFERENCES_.113
+_OBJC_CLASSLIST_REFERENCES_$_.113
 _OBJC_SELECTOR_REFERENCES_.119
 _OBJC_SELECTOR_REFERENCES_.121
 _OBJC_IVAR_$_FFMClassOneOne._lm
@@ -663,10 +667,12 @@ __OBJC_$_INSTANCE_METHODS_FFMClassOneOne
 __OBJC_$_INSTANCE_VARIABLES_FFMClassOneOne
 __OBJC_$_PROP_LIST_FFMClassOneOne
 __OBJC_CLASS_RO_$_FFMClassOneOne
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVLocationCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVLocationCollector.m
 IOVBlackbox.obfuscated/IOVLocationCollector.m
 __34-[FFMClassOneOne cooSymbolZeroOne]_block_invoke
+__52-[FFMClassOneOne pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke.17
 __52-[FFMClassOneOne pzoSymbolZeroOne:pzoSymbolZeroTwo:]_block_invoke
+__35+[FFMClassOneOne czfoSymbolZeroOne]_block_invoke
 +[FFMClassZeroEight czeSymbolZeroSix:]
 ___38+[FFMClassZeroEight czeSymbolZeroSix:]_block_invoke
 ___38+[FFMClassZeroEight czeSymbolZeroSix:]_block_invoke_2
@@ -695,7 +701,6 @@ _czeSymbolZeroSix:.pred
 _OBJC_IVAR_$_FFMClassZeroEight.czeSymbolZeroTwo
 _OBJC_CLASSLIST_REFERENCES_$_.23
 _OBJC_CLASSLIST_REFERENCES_$_.30
-_OBJC_CLASSLIST_REFERENCES_$_.35
 _OBJC_IVAR_$_FFMClassZeroEight.czeSymbolZeroThree
 ___block_descriptor_40_e8_32s_e20_v24?0"NSData"8^B16l
 _OBJC_CLASSLIST_REFERENCES_$_.43
@@ -704,8 +709,10 @@ _OBJC_CLASSLIST_REFERENCES_$_.61
 _OBJC_CLASSLIST_REFERENCES_$_.64
 _OBJC_CLASSLIST_REFERENCES_$_.82
 _OBJC_SELECTOR_REFERENCES_.84
+_OBJC_CLASSLIST_REFERENCES_$_.85
 _OBJC_SELECTOR_REFERENCES_.93
 _OBJC_SELECTOR_REFERENCES_.95
+LOS_LOG0
 _OBJC_CLASSLIST_REFERENCES_$_.115
 _OBJC_CLASSLIST_REFERENCES_$_.136
 _OBJC_CLASSLIST_REFERENCES_$_.137
@@ -776,12 +783,13 @@ __OBJC_$_INSTANCE_METHODS_FFMClassZeroEight
 __OBJC_$_INSTANCE_VARIABLES_FFMClassZeroEight
 __OBJC_$_PROP_LIST_FFMClassZeroEight
 __OBJC_CLASS_RO_$_FFMClassZeroEight
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVHomeNetworkOperation.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVHomeNetworkOperation.m
 IOVBlackbox.obfuscated/IOVHomeNetworkOperation.m
 IOVBlackbox.obfuscated/IOVHomeNetworkOperation.h
 __destroy_helper_block_e8_32w40w
 __copy_helper_block_e8_32w40w
 __25-[FFMClassZeroEight main]_block_invoke
+__os_log_helper_16_2_1_8_64
 __39-[FFMClassZeroEight czeSymbolZeroThree]_block_invoke
 __38+[FFMClassZeroEight czeSymbolZeroSix:]_block_invoke_2
 __38+[FFMClassZeroEight czeSymbolZeroSix:]_block_invoke
@@ -792,12 +800,10 @@ ___35+[FFMClassOneFive cofiSymbolOneSix]_block_invoke
 -[FFMClassOneFive cofiSymbolOneNine]
 -[FFMClassOneFive cofiSymbolThreeOne:]
 -[FFMClassOneFive pzoSymbolZeroOne:pzoSymbolZeroTwo:]
-_OBJC_CLASSLIST_REFERENCES_$_.59
 _OBJC_SELECTOR_REFERENCES_.78
 _OBJC_CLASSLIST_REFERENCES_$_.84
 _cofiSymbolOneSix.cofiSymbolOneSeven
 _cofiSymbolOneSix.pred
-_OBJC_CLASSLIST_REFERENCES_$_.113
 _OBJC_CLASSLIST_REFERENCES_$_.116
 _OBJC_SELECTOR_REFERENCES_.118
 _OBJC_SELECTOR_REFERENCES_.122
@@ -825,7 +831,7 @@ __OBJC_METACLASS_RO_$_FFMClassOneFive
 __OBJC_$_INSTANCE_METHODS_FFMClassOneFive
 __OBJC_$_PROP_LIST_FFMClassOneFive
 __OBJC_CLASS_RO_$_FFMClassOneFive
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVSystemCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVSystemCollector.m
 IOVBlackbox.obfuscated/IOVSystemCollector.m
 __35+[FFMClassOneFive cofiSymbolOneSix]_block_invoke
 __36-[FFMClassOneFive cofiSymbolZeroSix]_block_invoke
@@ -840,7 +846,7 @@ cofiSymbolZeroTwo
 -[NSData(FFMCategoryZeroThree) cgzthSymbolZeroTwo]
 __OBJC_$_CATEGORY_INSTANCE_METHODS_NSData_$_FFMCategoryZeroThree
 __OBJC_$_CATEGORY_NSData_$_FFMCategoryZeroThree
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/NSData+Deflate.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/NSData+Deflate.m
 IOVBlackbox.obfuscated/NSData+Deflate.m
 +[FFMClassTwoOne ctwzSymbolZeroOne:key:ctwoSymbolZeroOne:ctwoSymbolZeroTwo:ctwoSymbolZeroThree:]
 -[FFMClassTwoOne initCtwzSymbolZeroTwo:key:ctwoSymbolZeroOne:ctwoSymbolZeroTwo:ctwoSymbolZeroThree:]
@@ -869,7 +875,7 @@ _OBJC_IVAR_$_FFMClassTwoOne._key
 __OBJC_$_INSTANCE_VARIABLES_FFMClassTwoOne
 __OBJC_$_PROP_LIST_FFMClassTwoOne
 __OBJC_CLASS_RO_$_FFMClassTwoOne
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVPrefTokenFinder.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVPrefTokenFinder.m
 IOVBlackbox.obfuscated/IOVPrefTokenFinder.m
 IOVBlackbox.obfuscated/IOVPrefTokenFinder.h
 +[FraudForce start]
@@ -882,20 +888,29 @@ IOVBlackbox.obfuscated/IOVPrefTokenFinder.h
 __OBJC_$_CLASS_METHODS_FraudForce
 __OBJC_METACLASS_RO_$_FraudForce
 __OBJC_CLASS_RO_$_FraudForce
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/libiovation/FraudForce.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/libiovation/FraudForce.m
 libiovation/FraudForce.m
 -[FFMClassOneFour cofoSymbolZeroFour]
 -[FFMClassOneFour cofoSymbolZeroOne]
 -[FFMClassOneFour cofoSymbolZeroTwo]
 -[FFMClassOneFour cofoSymbolZeroThree]
 -[FFMClassOneFour pzoSymbolZeroOne:pzoSymbolZeroTwo:]
+-[FFMClassOneFour cofoSymbolZeroNine]
+-[FFMClassOneFour cofoSymbolOneZero]
+-[FFMClassOneFour cofoSymbolOneOne]
+-[FFMClassOneFour cofoSymbolOneTwo]
+-[FFMClassOneFour cofoSymbolOneThree]
+-[FFMClassOneFour cofoSymbolOneFour:]
+_OBJC_CLASSLIST_REFERENCES_$_.65
 __OBJC_CLASS_PROTOCOLS_$_FFMClassOneFour
 __OBJC_METACLASS_RO_$_FFMClassOneFour
 __OBJC_$_INSTANCE_METHODS_FFMClassOneFour
 __OBJC_$_PROP_LIST_FFMClassOneFour
 __OBJC_CLASS_RO_$_FFMClassOneFour
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVSecurityCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVSecurityCollector.m
 IOVBlackbox.obfuscated/IOVSecurityCollector.m
+CFBridgingRelease
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h
 +[FFMClassZeroFour ctwfoSymbolOneOne]
 -[FFMClassZeroFour ctwfoSymbolOneOne]
 +[FFMClassZeroFour czfoSymbolZeroOne]
@@ -911,7 +926,7 @@ __OBJC_$_INSTANCE_METHODS_FFMClassZeroFour
 __OBJC_$_INSTANCE_VARIABLES_FFMClassZeroFour
 __OBJC_$_PROP_LIST_FFMClassZeroFour
 __OBJC_CLASS_RO_$_FFMClassZeroFour
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVNuidOperation.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVNuidOperation.m
 IOVBlackbox.obfuscated/IOVNuidOperation.m
 -[FFMClassZeroNine main]
 ___24-[FFMClassZeroNine main]_block_invoke
@@ -919,12 +934,11 @@ ___24-[FFMClassZeroNine main]_block_invoke
 -[FFMClassZeroNine czfoSymbolZeroThree]
 ___block_descriptor_48_e8_32w40w_e22_v16?0"NSDictionary"8l
 _OBJC_CLASSLIST_REFERENCES_$_.40
-_OBJC_CLASSLIST_REFERENCES_$_.47
 __OBJC_$_CLASS_METHODS_FFMClassZeroNine
 __OBJC_METACLASS_RO_$_FFMClassZeroNine
 __OBJC_$_INSTANCE_METHODS_FFMClassZeroNine
 __OBJC_CLASS_RO_$_FFMClassZeroNine
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVHomeNuidOperation.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVHomeNuidOperation.m
 IOVBlackbox.obfuscated/IOVHomeNuidOperation.m
 __24-[FFMClassZeroNine main]_block_invoke
 -[FFMClassTwoSix ctwsiSymbolZeroTwo:]
@@ -968,7 +982,7 @@ __OBJC_$_INSTANCE_METHODS_FFMClassTwoSix
 __OBJC_$_INSTANCE_VARIABLES_FFMClassTwoSix
 __OBJC_$_PROP_LIST_FFMClassTwoSix
 __OBJC_CLASS_RO_$_FFMClassTwoSix
-/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.3.0/IOVBlackbox.obfuscated/IOVReverseGeoCollector.m
+/Users/Shared/newJenkinsmac03/workspace/_cocoa-libiovation_release_5.4.0/IOVBlackbox.obfuscated/IOVReverseGeoCollector.m
 IOVBlackbox.obfuscated/IOVReverseGeoCollector.m
 __23-[FFMClassTwoSix start]_block_invoke
 __destroy_helper_block_e8_32s40w

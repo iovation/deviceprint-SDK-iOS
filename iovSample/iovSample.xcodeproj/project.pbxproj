@@ -389,7 +389,7 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.3.0;
+				MARKETING_VERSION = 5.4.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +427,7 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.3.0;
+				MARKETING_VERSION = 5.4.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
