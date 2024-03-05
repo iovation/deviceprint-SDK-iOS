@@ -14,23 +14,27 @@
 		</data>
 		<key>ios-arm64/FraudForce.framework/FraudForce</key>
 		<data>
-		luSVLAjMr7oYANN0vrZt1RISnpQ=
+		Za0uUwKBJlTQY72yCcn9vYk1k1k=
 		</data>
 		<key>ios-arm64/FraudForce.framework/Headers/FraudForce.h</key>
 		<data>
-		XlZm+PP6BOF2jmtVHB/cTW2bz/I=
+		pyTMtHvzB+ei5DgeLjtCuXphCX4=
 		</data>
 		<key>ios-arm64/FraudForce.framework/Info.plist</key>
 		<data>
-		Pz+TxITCHbgmX04R6KUNBpf25Ig=
+		C4OburSi3zPaSflFeNWK91JfMDM=
 		</data>
 		<key>ios-arm64/FraudForce.framework/Modules/module.modulemap</key>
 		<data>
 		8IYysKhOunO9nbOT35dQehXOFzA=
 		</data>
+		<key>ios-arm64/FraudForce.framework/PrivacyInfo.xcprivacy</key>
+		<data>
+		bVzJtGcMJc5ASJunTfst+ETInE0=
+		</data>
 		<key>ios-arm64/FraudForce.framework/_CodeSignature/CodeResources</key>
 		<data>
-		hrgaIBFo9/ahfpO3Z9OeEpAKiUw=
+		LEErCFPbSbgrtpNuR2OpxR635jE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/DigiCertRootCert.der</key>
 		<data>
@@ -42,23 +46,27 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/FraudForce</key>
 		<data>
-		dM3kAMqaBKjae5E24MRK2GRWkHA=
+		PjxtPgRSvBbNB0B4GTC/acaJOxY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/Headers/FraudForce.h</key>
 		<data>
-		XlZm+PP6BOF2jmtVHB/cTW2bz/I=
+		pyTMtHvzB+ei5DgeLjtCuXphCX4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/Info.plist</key>
 		<data>
-		ZXCfn0cGR5R8IML+Ybdt7eCHn4I=
+		dnXivtMt4PHU8dOLtQOuGO2Q6xw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/Modules/module.modulemap</key>
 		<data>
 		8IYysKhOunO9nbOT35dQehXOFzA=
 		</data>
+		<key>ios-arm64_x86_64-simulator/FraudForce.framework/PrivacyInfo.xcprivacy</key>
+		<data>
+		bVzJtGcMJc5ASJunTfst+ETInE0=
+		</data>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/_CodeSignature/CodeResources</key>
 		<data>
-		2+APlyfWobs2ezgOPfOxehP6jm0=
+		+key1z4VtL9rkLgPg8aZoVEFFuE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -89,33 +97,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			luSVLAjMr7oYANN0vrZt1RISnpQ=
+			Za0uUwKBJlTQY72yCcn9vYk1k1k=
 			</data>
 			<key>hash2</key>
 			<data>
-			R0H2Mo+81VbY3aXewigqb/a5qre4S/RhKDDAMqpmPQU=
+			yC5cMPo0hq/8DBgd00Nm1k8yxOBOxsPq0fFRV2r7b2c=
 			</data>
 		</dict>
 		<key>ios-arm64/FraudForce.framework/Headers/FraudForce.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XlZm+PP6BOF2jmtVHB/cTW2bz/I=
+			pyTMtHvzB+ei5DgeLjtCuXphCX4=
 			</data>
 			<key>hash2</key>
 			<data>
-			IEGOhjuB+fpvlX8+L2q3QPzsmCcEtWWnNgEw+6aXAg4=
+			nEU4Yasba1gMTFp5LrKNM1UGmAhJm/8TAggFIeYT3MM=
 			</data>
 		</dict>
 		<key>ios-arm64/FraudForce.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Pz+TxITCHbgmX04R6KUNBpf25Ig=
+			C4OburSi3zPaSflFeNWK91JfMDM=
 			</data>
 			<key>hash2</key>
 			<data>
-			PCsmckO+9JPtE0AAIA8gTqXY+rCFCCPab5uKnzZMKF4=
+			3RHQ68mO5l1JN6IX1bTZPGExIff6k2Q61NaHSSUxDDU=
 			</data>
 		</dict>
 		<key>ios-arm64/FraudForce.framework/Modules/module.modulemap</key>
@@ -129,15 +137,26 @@
 			+WHxzVheaqaid7+enhXiAKz2Sh49tjvWnhcoYX4iFQ8=
 			</data>
 		</dict>
+		<key>ios-arm64/FraudForce.framework/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bVzJtGcMJc5ASJunTfst+ETInE0=
+			</data>
+			<key>hash2</key>
+			<data>
+			NwEKX/ZYpakzs6/LMbuulgrDeAV4XBS3Yw089pZNTZY=
+			</data>
+		</dict>
 		<key>ios-arm64/FraudForce.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hrgaIBFo9/ahfpO3Z9OeEpAKiUw=
+			LEErCFPbSbgrtpNuR2OpxR635jE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hij9w/NRHHyoKkrpYPLXP0ExMnQZGs9H9XLgLp/qAdA=
+			xCXETAE0R5XZ7mhq09FxQyFpcf4GjZKexJJi6842voI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/DigiCertRootCert.der</key>
@@ -166,33 +185,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dM3kAMqaBKjae5E24MRK2GRWkHA=
+			PjxtPgRSvBbNB0B4GTC/acaJOxY=
 			</data>
 			<key>hash2</key>
 			<data>
-			MthoZb+qtSuVPIxBOldSHm/EEowKgHfMD8Ogl0oI8wA=
+			kVR6TRcBQ6Ncxd1CRqIWCMMQesKiK0GeaZ82MjNRHiE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/Headers/FraudForce.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XlZm+PP6BOF2jmtVHB/cTW2bz/I=
+			pyTMtHvzB+ei5DgeLjtCuXphCX4=
 			</data>
 			<key>hash2</key>
 			<data>
-			IEGOhjuB+fpvlX8+L2q3QPzsmCcEtWWnNgEw+6aXAg4=
+			nEU4Yasba1gMTFp5LrKNM1UGmAhJm/8TAggFIeYT3MM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZXCfn0cGR5R8IML+Ybdt7eCHn4I=
+			dnXivtMt4PHU8dOLtQOuGO2Q6xw=
 			</data>
 			<key>hash2</key>
 			<data>
-			XVxtoi3tWm5xbLZ0sS7enKi1MaZYU744a8gL7Ej3J0s=
+			R66WtrBaQLER+8idpfQqucgZls0EoQjpWL7S/56G64w=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/Modules/module.modulemap</key>
@@ -206,15 +225,26 @@
 			+WHxzVheaqaid7+enhXiAKz2Sh49tjvWnhcoYX4iFQ8=
 			</data>
 		</dict>
+		<key>ios-arm64_x86_64-simulator/FraudForce.framework/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bVzJtGcMJc5ASJunTfst+ETInE0=
+			</data>
+			<key>hash2</key>
+			<data>
+			NwEKX/ZYpakzs6/LMbuulgrDeAV4XBS3Yw089pZNTZY=
+			</data>
+		</dict>
 		<key>ios-arm64_x86_64-simulator/FraudForce.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2+APlyfWobs2ezgOPfOxehP6jm0=
+			+key1z4VtL9rkLgPg8aZoVEFFuE=
 			</data>
 			<key>hash2</key>
 			<data>
-			fxT0FKV58x+Led4J56OHDos6TR5t+QBkCcx0kcXXv88=
+			RwZIexn6Rwf99GLiYDdq62FSAeP0NmPkUhcTIW0ki9s=
 			</data>
 		</dict>
 	</dict>
