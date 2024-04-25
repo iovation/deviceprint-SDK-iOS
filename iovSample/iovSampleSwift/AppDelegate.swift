@@ -18,7 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        switch CLLocationManager.authorizationStatus() {
+        locationManager = CLLocationManager()
+        var authorizationStatus: CLAuthorizationStatus
+        
+        if #available(iOS 14.0, *) {
+            authorizationStatus = locationManager!.authorizationStatus
+        } else {
+            authorizationStatus = CLLocationManager.authorizationStatus()
+        }
+        
+        switch authorizationStatus {
         case .authorizedAlways, .authorizedWhenInUse:
             // The app is authorized to track the device location. FraudForce will be able to do so as
             // well, however, this sample app is not designed to demonstrate the collection of such data.
@@ -29,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             break
         case .notDetermined:
             // Request permission to access location data.
-            locationManager = CLLocationManager()
             locationManager?.delegate = self
             locationManager?.requestWhenInUseAuthorization()
         }

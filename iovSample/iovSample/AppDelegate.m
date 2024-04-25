@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     if (CLLocationManager.locationServicesEnabled) {
-        switch (CLLocationManager.authorizationStatus) {
+        switch (self.locationManager.authorizationStatus) {
             case kCLAuthorizationStatusAuthorizedAlways:
             case kCLAuthorizationStatusAuthorizedWhenInUse:
                 // The app is authorized to track the device location. FraudForce will be able to do so as
@@ -72,9 +72,9 @@
 
 #pragma mark - Location Manager Delegate
 
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+- (void)locationManagerDidChangeAuthorization:(CLLocationManager *)manager
 {
-    switch (status) {
+    switch (manager.authorizationStatus) {
         case kCLAuthorizationStatusAuthorizedAlways:
         case kCLAuthorizationStatusAuthorizedWhenInUse:
             // The app is authorized to track the device location. FraudForce will be able to do so as

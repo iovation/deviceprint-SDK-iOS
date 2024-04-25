@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -172,7 +172,6 @@
 				ORGANIZATIONNAME = "iovation, Inc.";
 				TargetAttributes = {
 					6497813D17E10C4300DC9FF9 = {
-						DevelopmentTeam = 36BVZ544YC;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -371,7 +370,7 @@
 				CODE_SIGN_ENTITLEMENTS = iovSample/iovSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 36BVZ544YC;
+				DEVELOPMENT_TEAM = WY8P975J56;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -389,9 +388,9 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.4.1;
+				MARKETING_VERSION = 5.6.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iovSample/iovSample-Bridging-Header.h";
@@ -409,7 +408,7 @@
 				CODE_SIGN_ENTITLEMENTS = iovSample/iovSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 36BVZ544YC;
+				DEVELOPMENT_TEAM = WY8P975J56;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -427,9 +426,9 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.4.1;
+				MARKETING_VERSION = 5.6.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iovation.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iovSample/iovSample-Bridging-Header.h";

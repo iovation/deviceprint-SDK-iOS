@@ -14,15 +14,19 @@
 		</data>
 		<key>Headers/FraudForce.h</key>
 		<data>
-		7QGRRDdtMk6JoblbaSJ+0K/tsNc=
+		pyTMtHvzB+ei5DgeLjtCuXphCX4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		i6QH6UpKMEKY+F3BrkrVR3T4nR4=
+		C4OburSi3zPaSflFeNWK91JfMDM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		8IYysKhOunO9nbOT35dQehXOFzA=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		bVzJtGcMJc5ASJunTfst+ETInE0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -45,7 +49,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i8eS3YlzN+j5xqdOA+U2tNLXsLyP3ZTuUgIDfnqLfvs=
+			nEU4Yasba1gMTFp5LrKNM1UGmAhJm/8TAggFIeYT3MM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -53,6 +57,13 @@
 			<key>hash2</key>
 			<data>
 			+WHxzVheaqaid7+enhXiAKz2Sh49tjvWnhcoYX4iFQ8=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NwEKX/ZYpakzs6/LMbuulgrDeAV4XBS3Yw089pZNTZY=
 			</data>
 		</dict>
 	</dict>
