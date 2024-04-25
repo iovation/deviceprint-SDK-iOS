@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "DeviceRisk"
-    s.version      = "5.4.1"
+    s.version      = "5.6.0"
     s.summary      = "Device Risk SDK for iOS"
     s.description  = <<-DESC
     FraudForce is now Device Risk. Our device-based products, such as Device Risk and Device-Based Authentication 
