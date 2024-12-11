@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,7 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		40658C92263764DC006E8FA9 /* FraudForce.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FraudForce.xcframework; sourceTree = "<group>"; };
+		40658C92263764DC006E8FA9 /* FraudForce.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:WY8P975J56:iovation Inc."; lastKnownFileType = wrapper.xcframework; path = FraudForce.xcframework; sourceTree = "<group>"; };
 		4428561A1EA95DDF00D0C4C8 /* iovSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iovSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4428561D1EA95DDF00D0C4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4428561F1EA95DDF00D0C4C8 /* SampleUIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUIKitViewController.swift; sourceTree = "<group>"; };
@@ -312,12 +312,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/iovSampleSwift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.6.0;
+				MARKETING_VERSION = 5.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -335,12 +335,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/iovSampleSwift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.6.0;
+				MARKETING_VERSION = 5.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

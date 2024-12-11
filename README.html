@@ -254,34 +254,34 @@ mix native code with content that runs inside web view.</p>
 <thead>
 <tr>
 	<th>      </th>
-	<th>              </th>
+	<th>                 </th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 	<td> File    </td>
-	<td> <code>FraudForce.xcframework</code>        </td>
+	<td> <code>FraudForce.xcframework</code>          </td>
 </tr>
 <tr>
 	<td> Version    </td>
-	<td> 5.6.0             </td>
+	<td> 5.7.0               </td>
 </tr>
 <tr>
 	<td> Required OS Version </td>
-	<td> iOS 12.0 and higher         </td>
+	<td> iOS 15.0 and higher            </td>
 </tr>
 <tr>
 	<td> Supported Devices </td>
-	<td> iPhone 5S &amp; up, iPod Touch 6th Gen &amp; up, iPad Air &amp; up</td>
+	<td> iPhone SE 1st Gen &amp; up, iPod Touch 7th Gen &amp; up, iPad Air 2 &amp; up</td>
 </tr>
 <tr>
 	<td> Required Frameworks </td>
-	<td> CoreTelephony, Security, SystemConfiguration   </td>
+	<td> CoreTelephony, Security, SystemConfiguration     </td>
 </tr>
 <tr>
 	<td> Optional Frameworks </td>
-	<td> AdSupport, CoreLocation        </td>
+	<td> AdSupport, CoreLocation           </td>
 </tr>
 </tbody>
 </table>
@@ -361,6 +361,9 @@ permission from the user.</li>
 SDK for iOS. These projects require at least Xcode 11 and iOS 11.0.</p>
 
 <ul>
+<li><p>The <code>iovSample/iovSampleSwiftUI.xcodeproj</code> project uses SwiftUI to demonstrate
+integration technique. This application is fully implemented in SwiftUI and can be
+tested on a simulator or device.</p></li>
 <li><p>The <code>iovSample/iovSampleSwift.xcodeproj</code> project uses Swift to demonstrate
 two integration techniques: UIKit and WebKit. Each is implemented in its own
 view controller, and may be tested in a tabbed interface on a simulator or device.</p></li>
@@ -476,6 +479,19 @@ OS for time to finish any tasks it has running.</p>
 may be found in the <code>SampleUIKitViewController</code> class for both Swift (iovSampleSwift) and
 Objective-C (iovSample) in the sample Xcode projects included in the Device Risk SDK download.</p>
 
+<p>To integrate into a native app using SwiftUI:</p>
+
+<ol>
+<li><p>Start the asynchronous data collection as described in the
+<a href="#asynchronousprocessingintegration">Asynchronous Processing Integration</a> section.</p></li>
+<li><p>Import <code>FraudForce</code> and call <code>blackbox</code> wherever you need a blackbox:</p></li>
+</ol>
+
+<p>Example of displaying blackBox in a text label in SwiftUI:</p>
+
+<pre><code>    Text(FraudForce.blackbox())
+</code></pre>
+
 <h2 id="webkitintegration">WebKit Integration</h2>
 
 <p>For a hybrid application using <a href="https://developer.apple.com/documentation/webkit" title="WebKit Framework Reference">WebKit</a>, create a JavaScript message handler
@@ -582,11 +598,21 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the D
 
 <h2 id="changes">Changes</h2>
 
+<h3 id="v5.7.0">v5.7.0</h3>
+
+<ul>
+<li>Recognition improvements.</li>
+<li>Performance improvements.</li>
+<li>OS requirement raised to iOS 15.</li>
+<li>XCFramework is now signed under TransUnion Developer Account.</li>
+<li>Added SwiftUI Sample App to sample projects.</li>
+</ul>
+
 <h3 id="v5.6.0">v5.6.0</h3>
 
 <ul>
-<li>Added privacy manifest file</li>
-<li>Collection changes required by privacy manifest</li>
+<li>Added privacy manifest file.</li>
+<li>Collection changes required by privacy manifest.</li>
 </ul>
 
 <h3 id="v5.5.0">v5.5.0</h3>

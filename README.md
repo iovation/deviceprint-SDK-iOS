@@ -23,14 +23,14 @@ mix native code with content that runs inside web view.
 Integration Files and Requirements
 ----------------------------------
 
-|                     |                                                       |
-|---------------------|-------------------------------------------------------|
-| File                | `FraudForce.xcframework`                              |
-| Version             | 5.6.0                                                 |
-| Required OS Version | iOS 12.0 and higher                                   |
-| Supported Devices   | iPhone 5S & up, iPod Touch 6th Gen & up, iPad Air & up|
-| Required Frameworks | CoreTelephony, Security, SystemConfiguration          |
-| Optional Frameworks | AdSupport, CoreLocation                               |
+|                     |                                                                 |
+|---------------------|-----------------------------------------------------------------|
+| File                | `FraudForce.xcframework`                                        |
+| Version             | 5.7.0                                                           |
+| Required OS Version | iOS 15.0 and higher                                             |
+| Supported Devices   | iPhone SE 1st Gen & up, iPod Touch 7th Gen & up, iPad Air 2 & up|
+| Required Frameworks | CoreTelephony, Security, SystemConfiguration                    |
+| Optional Frameworks | AdSupport, CoreLocation                                         |
 
 Installation
 ------------
@@ -88,6 +88,10 @@ Sample Projects
 
 This download includes two sample Xcode projects that demonstrate the integration of the Device Risk 
 SDK for iOS. These projects require at least Xcode 11 and iOS 11.0.
+
+* The `iovSample/iovSampleSwiftUI.xcodeproj` project uses SwiftUI to demonstrate 
+integration technique. This application is fully implemented in SwiftUI and can be
+tested on a simulator or device.
 
 * The `iovSample/iovSampleSwift.xcodeproj` project uses Swift to demonstrate 
 two integration techniques: UIKit and WebKit. Each is implemented in its own 
@@ -180,7 +184,7 @@ To integrate into a native app using UIKit:
 1.  Start the asynchronous data collection as described in the
     [Asynchronous Processing Integration] section.
 
-1. Import `FraudForce` and call `+blackbox` wherever you need a blackbox:
+2. Import `FraudForce` and call `+blackbox` wherever you need a blackbox:
 
         #import "SampleViewController.h"
         @import FraudForce;
@@ -199,6 +203,17 @@ To integrate into a native app using UIKit:
 A more extensive example, including submitting a blackbox in an HTTP request,
 may be found in the `SampleUIKitViewController` class for both Swift (iovSampleSwift) and 
 Objective-C (iovSample) in the sample Xcode projects included in the Device Risk SDK download.
+
+To integrate into a native app using SwiftUI:
+
+1.  Start the asynchronous data collection as described in the
+    [Asynchronous Processing Integration] section.
+    
+2. Import `FraudForce` and call `blackbox` wherever you need a blackbox:
+
+Example of displaying blackBox in a text label in SwiftUI:
+
+        Text(FraudForce.blackbox())
 
 WebKit Integration
 ------------------
@@ -314,9 +329,16 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the D
 
 Changes
 -------
+### v5.7.0 ###
+* Recognition improvements.
+* Performance improvements.
+* OS requirement raised to iOS 15.
+* XCFramework is now signed under TransUnion Developer Account.
+* Added SwiftUI Sample App to sample projects.
+
 ### v5.6.0 ###
-* Added privacy manifest file
-* Collection changes required by privacy manifest
+* Added privacy manifest file.
+* Collection changes required by privacy manifest.
 
 ### v5.5.0 ###
 * Recognition improvements.

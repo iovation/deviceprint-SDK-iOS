@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,7 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		40658C8F2637648D006E8FA9 /* FraudForce.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FraudForce.xcframework; sourceTree = "<group>"; };
+		40658C8F2637648D006E8FA9 /* FraudForce.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:WY8P975J56:iovation Inc."; lastKnownFileType = wrapper.xcframework; path = FraudForce.xcframework; sourceTree = "<group>"; };
 		440432A8218CE5AA0083507F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		442D073D1DC902D80092F73A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		634D32421BC72EAB00AD74C4 /* iovSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iovSample.entitlements; sourceTree = "<group>"; };
@@ -379,7 +379,7 @@
 				GCC_PREFIX_HEADER = "iovSample/iovSample-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "iovSample/iovSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +388,7 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.6.0;
+				MARKETING_VERSION = 5.7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,7 +417,7 @@
 				GCC_PREFIX_HEADER = "iovSample/iovSample-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "iovSample/iovSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,7 +426,7 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.6.0;
+				MARKETING_VERSION = 5.7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -17,26 +17,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    if (CLLocationManager.locationServicesEnabled) {
-        switch (self.locationManager.authorizationStatus) {
-            case kCLAuthorizationStatusAuthorizedAlways:
-            case kCLAuthorizationStatusAuthorizedWhenInUse:
-                // The app is authorized to track the device location. FraudForce will be able to do so as
-                // well, however, this sample app is not designed to demonstrate the collection of such data.
-                break;
-            case kCLAuthorizationStatusDenied:
-            case kCLAuthorizationStatusRestricted:
-                // (Apple docs) "If the authorization status is restricted or denied, your app is not
-                // permitted to use location services and you should abort your attempt to use them."
-                break;
-            case kCLAuthorizationStatusNotDetermined:
-                // Request permission to access location data.
-                self.locationManager = [CLLocationManager new];
-                self.locationManager.delegate = self;
-                [self.locationManager requestWhenInUseAuthorization];
-                break;
+    dispatch_queue_attr_t qos = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_USER_INITIATED, -1);
+    dispatch_queue_t locationQueue = dispatch_queue_create("locationQueue", qos);
+    dispatch_async(locationQueue, ^{
+        if (CLLocationManager.locationServicesEnabled) {
+            switch (self.locationManager.authorizationStatus) {
+                case kCLAuthorizationStatusAuthorizedAlways:
+                case kCLAuthorizationStatusAuthorizedWhenInUse:
+                    // The app is authorized to track the device location. FraudForce will be able to do so as
+                    // well, however, this sample app is not designed to demonstrate the collection of such data.
+                    break;
+                case kCLAuthorizationStatusDenied:
+                case kCLAuthorizationStatusRestricted:
+                    // (Apple docs) "If the authorization status is restricted or denied, your app is not
+                    // permitted to use location services and you should abort your attempt to use them."
+                    break;
+                case kCLAuthorizationStatusNotDetermined:
+                    // Request permission to access location data.
+                    self.locationManager = [CLLocationManager new];
+                    self.locationManager.delegate = self;
+                    [self.locationManager requestWhenInUseAuthorization];
+                    break;
+            }
         }
-    }
+    });
+
     
     [FraudForce delegation:self];
     return YES;
