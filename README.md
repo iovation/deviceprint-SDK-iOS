@@ -26,7 +26,7 @@ Integration Files and Requirements
 |                     |                                                                 |
 |---------------------|-----------------------------------------------------------------|
 | File                | `FraudForce.xcframework`                                        |
-| Version             | 5.7.0                                                           |
+| Version             | 5.8.0                                                           |
 | Required OS Version | iOS 15.0 and higher                                             |
 | Supported Devices   | iPhone SE 1st Gen & up, iPod Touch 7th Gen & up, iPad Air 2 & up|
 | Required Frameworks | CoreTelephony, Security, SystemConfiguration                    |
@@ -329,6 +329,10 @@ class for Objective-C (iovSample) in the sample Xcode projects included in the D
 
 Changes
 -------
+### v5.8.0 ###
+* Recognition improvements.
+* Performance improvements.
+
 ### v5.7.0 ###
 * Recognition improvements.
 * Performance improvements.

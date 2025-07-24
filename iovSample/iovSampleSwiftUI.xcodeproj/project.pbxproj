@@ -294,7 +294,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iovSampleSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = WY8P975J56;
+				DEVELOPMENT_TEAM = 7HFQXGXSPS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -315,8 +315,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
-				MARKETING_VERSION = 5.7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleSwiftUI;
+				MARKETING_VERSION = 5.8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transunion.iovSampleSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -336,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iovSampleSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = WY8P975J56;
+				DEVELOPMENT_TEAM = 7HFQXGXSPS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -357,8 +357,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
-				MARKETING_VERSION = 5.7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleSwiftUI;
+				MARKETING_VERSION = 5.8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transunion.iovSampleSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";

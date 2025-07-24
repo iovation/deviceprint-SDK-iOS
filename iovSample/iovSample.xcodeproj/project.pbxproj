@@ -370,7 +370,7 @@
 				CODE_SIGN_ENTITLEMENTS = iovSample/iovSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WY8P975J56;
+				DEVELOPMENT_TEAM = 7HFQXGXSPS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -388,9 +388,9 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.7.0;
+				MARKETING_VERSION = 5.8.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transunion.iovSampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iovSample/iovSample-Bridging-Header.h";
@@ -408,7 +408,7 @@
 				CODE_SIGN_ENTITLEMENTS = iovSample/iovSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WY8P975J56;
+				DEVELOPMENT_TEAM = 7HFQXGXSPS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -426,9 +426,9 @@
 					"$(inherited)",
 					.,
 				);
-				MARKETING_VERSION = 5.7.0;
+				MARKETING_VERSION = 5.8.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iovation.iovSampleObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transunion.iovSampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iovSample/iovSample-Bridging-Header.h";
