@@ -9,6 +9,20 @@
 @import CoreLocation;
 @import FraudForce;
 
+@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
+@end
+
+@implementation SceneDelegate
+
+@synthesize window = _window;
+
+- (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+    // https://dev.to/kevinmaarek/add-a-scene-delegate-to-your-current-project-5on
+    // This method is empty because we are using Main Storyboard
+}
+
+@end
+
 @interface AppDelegate () <CLLocationManagerDelegate, FraudForceDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @end
@@ -103,6 +117,13 @@
 
 - (BOOL)shouldEnableNetworkCalls {
     return YES;
+}
+
+#pragma mark - Scene Delegate Methods
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+    UISceneConfiguration *configuration = [[UISceneConfiguration alloc] initWithName:nil sessionRole:connectingSceneSession.role];
+    configuration.delegateClass = SceneDelegate.class;
+    return configuration;
 }
 
 @end

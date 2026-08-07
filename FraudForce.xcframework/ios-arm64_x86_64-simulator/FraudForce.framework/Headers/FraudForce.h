@@ -20,7 +20,7 @@
  * transmitted to your servers to be used in a reputation check (for example a
  * @p CheckTransactionDetails call).
  *
- * @version 5.8.0
+ * @version 5.9.0
  * @copyright 2010-2021 iovation, Inc. All rights reserved.
  *
  * iovation hereby grants to Client a nonexclusive, limited, non-transferable,
@@ -94,7 +94,7 @@
  * @since v4.0.0
  *
  */
-+ (void)stop __attribute__((deprecated("discrete control of device inspector is unnecessary, stop will be removed in a future release")));
++ (void)stop __attribute__((deprecated("discrete control of device inspector is unnecessary, stop will be removed in the v5.10.0 release")));
 
 /*!
  * Suspends the device inspector and returns. Calling this method prevents
@@ -112,7 +112,7 @@
  * @since v4.0.0
  *
  */
-+ (void)suspend __attribute__((deprecated("discrete control of device inspector is unnecessary, suspend will be removed in a future release")));
++ (void)suspend __attribute__((deprecated("discrete control of device inspector is unnecessary, suspend will be removed in the v5.10.0 release")));
 
 /*!
  * Resumes a suspended device inspector and returns. Call this method after
@@ -128,7 +128,7 @@
  * @since v4.0.0
  *
  */
-+ (void)resume __attribute__((deprecated("discrete control of device inspector is unnecessary, resume will be removed in a future release")));
++ (void)resume __attribute__((deprecated("discrete control of device inspector is unnecessary, resume will be removed in the v5.10.0 release")));
 
 /*!
  * Install a delegate object that is queried to determine certain behaviors of 

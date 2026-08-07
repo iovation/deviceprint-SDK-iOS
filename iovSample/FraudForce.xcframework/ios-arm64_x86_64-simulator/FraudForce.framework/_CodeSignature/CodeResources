@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>DigiCertGlobalRootG2.der</key>
+		<data>
+		3zwk+b/WZnYbJoBz/gbRzI1PgqQ=
+		</data>
 		<key>DigiCertRootCert.der</key>
 		<data>
 		X7fuBjPiWdutDEya5tOPGmHH3CU=
@@ -14,11 +18,11 @@
 		</data>
 		<key>Headers/FraudForce.h</key>
 		<data>
-		fY2HHFO45W4kAd1v0bNoaPJ6uyA=
+		FqHse65U/Q12ny55G4APw7KPpzY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GTA2igEFiQQfLwctsIbADrKfdAk=
+		gGhmpfS3EYJnHIDMMRObn6ryOIk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,6 +35,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>DigiCertGlobalRootG2.der</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yzzLt2Ax5eATj43TmiP53kf/w15DwRRM6ifUalqxy18=
+			</data>
+		</dict>
 		<key>DigiCertRootCert.der</key>
 		<dict>
 			<key>hash2</key>
@@ -49,7 +60,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IXUfC2DqjAaUE5ZozowA6bQV6wxDuCs48S5hY+cX2EI=
+			Oo05r+3SoQ0jzPAh12OCsZgzvRXdbjhhYN7FZ/W+sUU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
