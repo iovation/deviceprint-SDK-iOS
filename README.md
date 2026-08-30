@@ -35,6 +35,38 @@ Integration Files and Requirements
 Installation
 ------------
 
+### Swift Package Manager
+
+The SDK ships a `Package.swift` manifest that exposes `FraudForce.xcframework` as a binary target.
+
+In Xcode, choose **File → Add Package Dependencies…** and enter:
+
+```
+https://github.com/iovation/deviceprint-SDK-iOS.git
+```
+
+Pick a version rule (e.g. "Up to Next Major" from `5.8.0`) and add the `FraudForce` library to your application target.
+
+Or add it to your own `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/iovation/deviceprint-SDK-iOS.git", from: "5.8.0")
+],
+targets: [
+    .target(
+        name: "YourTarget",
+        dependencies: [
+            .product(name: "FraudForce", package: "deviceprint-SDK-iOS")
+        ]
+    )
+]
+```
+
+Then continue with steps 4–6 below to configure optional frameworks, Keychain Sharing, and Wi-Fi entitlements.
+
+### Manual XCFramework
+
 1.  Download and unzip the SDK from [Github](https://github.com/iovation/deviceprint-SDK-iOS/releases).
 
 2.  Bring `FraudForce.xcframework` into your project repository.
